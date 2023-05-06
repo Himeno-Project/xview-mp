@@ -4,14 +4,14 @@
 <x-card title="You are using {{nowbrand}}" subtitle="with {{nowos}} Operating System" />
 
 <t-cell-group theme="card" title="产品类别">
-    <t-cell leftIcon="mobile" title="智能手机" hover arrow />
-    <t-cell leftIcon="laptop" title="平板电脑" hover arrow />
-    <t-cell leftIcon="desktop" title="电脑设备" hover arrow />
-    <t-cell leftIcon="cloud" title="智能穿戴" bindtap="" hover arrow />
-    <t-cell leftIcon="play-circle" title="电视" bindtap="" hover arrow />
-    <t-cell leftIcon="server" title="路由器" bindtap="" hover arrow />
-    <t-cell leftIcon="tools" title="软件应用" bindtap="" hover arrow />
-    <t-cell leftIcon="more" title="其他" bindtap="" hover arrow />
+    <t-cell leftIcon="mobile" title="智能手机" url="../detail/index?pd_type=phone" hover arrow />
+    <t-cell leftIcon="laptop" title="平板电脑" url="../detail/index?pd_type=tablet" hover arrow />
+    <t-cell leftIcon="desktop" title="电脑设备" url="../detail/index?pd_type=computer" hover arrow />
+    <t-cell leftIcon="cloud" title="智能穿戴" url="../detail/index?pd_type=smart" hover arrow />
+    <t-cell leftIcon="play-circle" title="电视" url="../detail/index?pd_type=tv" hover arrow />
+    <t-cell leftIcon="server" title="路由器" url="../detail/index?pd_type=router"hover arrow />
+    <t-cell leftIcon="tools" title="软件应用" url="../detail/index?pd_type=software" hover arrow />
+    <t-cell leftIcon="more" title="其他" url="../detail/index?pd_type=other" bindtap="" hover arrow />
 </t-cell-group>
 
 <view class="safe_bottom_view" style="height:160rpx;">
