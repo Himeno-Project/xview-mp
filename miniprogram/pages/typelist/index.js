@@ -8,11 +8,7 @@ Page({
    */
   data: {
     pd_type: '',
-    dtinfo: {},
-    pd_name: '',
-    rel_year: '',
-    model: '',
-    pd_imgs:[]
+    dtinfo: {}
   },
 
   /**
@@ -29,20 +25,12 @@ Page({
     http.cloudGet("/api/model-query/models/" + pd_type).then((res) => {
         console.log(res.data.data);
         let dtinfo = res.data.data
-        let {
-          pd_name,
-          rel_year,
-          model,
-          pd_imgs
-        } = dtinfo
 
         this.setData({
             dtinfo,
-            pd_name,
-            rel_year,
-            model,
-            pd_imgs
+            pd_type
           }),
+          
           console.log(dtinfo)
         wx.hideLoading()
       },

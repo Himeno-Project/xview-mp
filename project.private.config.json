@@ -10,8 +10,15 @@
       "list": [
         {
           "name": "产品列表页",
-          "pathName": "pages/detail/index",
+          "pathName": "pages/typelist/index",
           "query": "pd_type=phone",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "手机",
+          "pathName": "pages/pdinfo/phone/index",
+          "query": "pd_id=000001",
           "launchMode": "default",
           "scene": null
         }

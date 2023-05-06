@@ -15,7 +15,7 @@ Component({
       value: 'user',
       label: '我的',
     }, {
-      icon: 'user',
+      icon: 'chat',
       value: 'about',
       label: '关于'
     }]

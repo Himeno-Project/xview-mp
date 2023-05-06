@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/detail/index",
+    "pages/typelist/index",
     "pages/nowlist/index",
     "pages/about/index",
     "pages/user/index",
