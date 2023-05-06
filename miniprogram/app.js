@@ -11,7 +11,8 @@ App({
       envid: secret.getProdId(),
     })
 
-    $http.cloudGet("/api/model-query/phone-models").then((res)=>console.log(res))
+    //console.log("from app.js ========")
+    //http.cloudGet("/api/model-query/phone-models").then((res)=>console.log(res))
   },
   onShow() {},
 
