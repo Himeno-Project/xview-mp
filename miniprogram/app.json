@@ -1,0 +1,57 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/detail/index",
+        "pages/nowlist/index",
+        "pages/about/index",
+        "pages/user/index",
+        "pages/pdinfo/phone/index",
+        "pages/pdinfo/computer/index",
+        "pages/pdinfo/software/index",
+        "pages/pdinfo/smart/index",
+        "pages/pdinfo/tv/index",
+        "components/classlist/index",
+        "components/x-card/x-card"
+    ],
+    "subpackages": [],
+    "tabBar": {
+        "custom": true,
+        "color": "#000",
+        "selectedColor": "#000",
+        "backgroundColor": "#fff",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "text": "首页"
+        }, {
+            "pagePath": "pages/nowlist/index",
+            "text": "现有"
+        }, {
+            "pagePath": "pages/user/index",
+            "text": "我的"
+        }, {
+            "pagePath": "pages/about/index",
+            "text": "关于"
+        }]
+    },
+    "usingComponents": {
+        "x-card": "components/x-card/x-card",
+        "classlist": "components/classlist/index",
+        "t-button": "tdesign-miniprogram/button/button",
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "t-cell": "tdesign-miniprogram/cell/cell",
+        "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+        "t-indexes": "tdesign-miniprogram/indexes/indexes",
+        "t-indexes-anchor": "tdesign-miniprogram/indexes-anchor/indexes-anchor",
+        "t-image": "tdesign-miniprogram/image/image",
+        "t-skeleton": "tdesign-miniprogram/skeleton/skeleton"
+    },
+
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f6f6f6",
+        "backgroundColor": "#f6f6f6",
+        "navigationBarTitleText": "XView",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json"
+}

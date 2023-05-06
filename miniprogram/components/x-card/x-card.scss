@@ -1,0 +1,30 @@
+/* components/x-card/x-card.wxss */
+
+.x-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30rpx 32rpx;
+    border-radius: 18rpx;
+    justify-content: center;
+    background-color: var(--td-cell-bg-color, var(--td-bg-color-container, var(--td-font-white-1, #ffffff)));
+    padding: 40rpx 0;
+}
+
+.x-text {
+    margin: 3rpx;
+    font-size: 30rpx;
+}
+
+.x-title {
+    font-size: 50rpx;
+    font-weight: bolder;
+}
+
+.x-subtitle {
+    margin: 10rpx 50rpx;
+}
+
+.x-t-grey {
+    color: var(--td-cell-description-color, var(--td-font-gray-2, rgba(0, 0, 0, 0.6)));
+}

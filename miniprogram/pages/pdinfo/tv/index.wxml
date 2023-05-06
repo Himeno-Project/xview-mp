@@ -1,0 +1,75 @@
+<!--pages/pdinfo/tv/index.wxml-->
+<view>
+  <t-cell-group theme="card">
+    <t-cell title="Apple TV" description="这里填写产品口号" align="top" image="" hover bordered="{{false}}" />
+  </t-cell-group>
+
+  <t-cell-group theme="card" title="一般信息">
+    <t-cell title="产品名称" description="{{item.pd_name}}" hover />
+    <t-cell title="型号" description="{{item.model}}" hover />
+    <t-cell title="口号" description="{{item.slogan}}" hover />
+    <t-cell title="发布日期" description="{{item.rel_date}}" hover />
+    <t-cell title="支持状态" description="{{item.isspt}}" hover />
+    <t-cell title="材质" description="{{item.material}}" hover />
+    <t-cell title="尺寸" description="{{item.size}}" hover />
+    <t-cell title="重量" description="{{item.weight}}" hover />
+    <t-cell title="语音助手" description="{{item.voiceassistant}}" hover />
+    <t-cell title="扬声器" description="{{item.camera.speakers}}" hover />
+  </t-cell-group>
+
+
+  <t-cell-group theme="card" title="系统">
+    <t-cell title="处理器" description="{{item.system.cpu_name}}" hover />
+    <t-cell title="处理器速度" description="{{item.system.cpu_speed}}" hover />
+    <t-cell title="处理器核心" description="{{item.system.cpu_core_num}}" hover />
+    <t-cell title="处理器架构" description="{{item.system.cpu_arch}}" hover />
+    <t-cell title="内存大小" description="{{item.system.ram_name}}" hover />
+    <t-cell title="内存架构" description="{{item.system.ram_arch}}" hover />
+  </t-cell-group>
+
+  <t-cell-group theme="card" title="显示">
+    <t-cell title="图形处理器" description="{{item.displays.gpu_name}}" hover />
+    <t-cell title="处理器速度" description="{{item.displays.gpu_speed}}" hover />
+    <t-cell title="处理器跑分" description="{{item.displays.gpu_mark}}" hover />
+    <t-cell title="屏幕" description="{{item.displays.screen_name}}" hover />
+    <t-cell title="分辨率" description="{{item.displays.screen_resol}}" hover />
+    <t-cell title="显示模式" description="{{item.displays.dis_mode}}" hover />
+    <t-cell title="PPI" description="{{item.displays.ppi}}" hover />
+    <t-cell title="亮度" description="{{item.displays.bright}}" hover />
+    <t-cell title="刷新率" description="{{item.displays.other}}" hover />
+    <t-cell title="屏幕材质" description="{{item.scr_material}}" hover="" />
+    <t-cell title="色域" description="{{item.displays.colorgamut}}" hover="" />
+    <t-cell title="HDR" description="{{item.displays.hdr}}" hover="" />
+  </t-cell-group>
+
+  <t-cell-group theme="card" title="多媒体">
+    <t-cell title="支持格式" description="{{item.camera.brand_name}}" hover />
+    <t-cell title="视频解码" description="{{item.camera.cam_num}}" hover />
+    <t-cell title="音频解码" description="{{item.camera.pixel}}" hover />
+  </t-cell-group>
+
+  <t-cell-group theme="card" title="软件">
+    <t-cell title="出厂系统" description="{{item.software.def_os}}" hover />
+    <t-cell title="最高支持系统" description="{{item.software.last_os}}" hover />
+    <t-cell title="基础" description="{{item.software.base_ver}}" hover />
+    <t-cell title="内核" description="{{item.software.krnl}}" hover />
+    <t-cell title="预装" description="{{item.software.presoft}}" hover />
+  </t-cell-group>
+
+  <t-cell-group theme="card" title="连接">
+    <t-cell title="视频输出" description="{{item.connect.videooutput}}" hover />
+    <t-cell title="视频输入" description="{{item.connect.videoinput}}" hover />
+    <t-cell title="音频输出" description="{{item.connect.audiooutput}}" hover />
+    <t-cell title="音频输入" description="{{item.connect.audioinput}}" hover />
+    <t-cell title="支持的电视" description="{{item.connect.tvcompatibility}}" hover /> #适用于电视盒子类产品
+    <t-cell title="接口" description="{{item.connect.port}}" hover />
+    <t-cell title="Wi-Fi" description="{{item.connect.wifi}}" hover />
+    <t-cell title="蓝牙" description="{{item.connect.bluetooth}}" hover />
+    <t-cell title="红外线" description="{{item.connect.ir}}" hover />
+  </t-cell-group>
+
+  <t-cell-group theme="card" title="配件">
+    <t-cell title="遥控器" description="{{item.equipment.remote}}" hover />
+    <t-cell title="其他配件" description="{{item.equipment.extra}}" hover />
+  </t-cell-group>
+</view>

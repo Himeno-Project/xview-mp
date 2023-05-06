@@ -1,0 +1,6 @@
+<!--components/classlist/index.wxml-->
+
+<t-cell-group theme="card">
+    <t-cell title="iPhone 14 Pro" description="2022 年底发布" align="top" image="/images/example.png" hover bordered="{{false}}" />
+    <t-cell title="iPhone 14 Pro" description="2022 年底发布" align="top" image="/images/example.png" hover bordered="{{false}}" />
+</t-cell-group>

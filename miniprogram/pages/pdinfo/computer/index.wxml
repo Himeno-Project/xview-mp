@@ -1,0 +1,80 @@
+<!--pages/pdinfo/computer/index.wxml-->
+<t-cell-group theme="card">
+        <t-cell title="Apple Watch Series 8" description="这里填写产品口号" align="top" image="/images/example.png" hover bordered="{{false}}" />
+    </t-cell-group>
+
+
+<t-cell-group theme="card" title="一般信息">
+    <t-cell title="型号" description="{{item.model}}" hover />
+    <t-cell title="发布日期" description="{{item.rel_date}}" hover />
+    <t-cell title="支持状态" description="{{item.isspt}}" hover />
+    <t-cell title="材质" description="{{item.material}}" hover />
+    <t-cell title="尺寸和重量" description="{{item.weight}}" hover />
+    <t-cell title="售价" description="{{item.price}}" hover />
+</t-cell-group>
+
+
+<t-cell-group theme="card" title="系统">
+    <t-cell title="处理器" description="{{item.system.cpu_name}}" hover />
+    <t-cell title="处理器速度" description="{{item.system.cpu_speed}}" hover />
+    <t-cell title="处理器核心" description="{{item.system.cpu_core_num}}" hover />
+    <t-cell title="处理器架构" description="{{item.system.cpu_arch}}" hover />
+    <t-cell title="处理器跑分" description="{{item.system.cpu_mark}}" hover />
+    <t-cell title="内存大小" description="{{item.system.ram_name}}" hover />
+    <t-cell title="内存架构" description="{{item.system.ram_arch}}" hover />
+    <t-cell title="系统固件" description="{{item.system.sys_firm}}" hover />
+</t-cell-group>
+
+<t-cell-group theme="card" title="芯片组">
+    <t-cell title="厂商" description="{{item.chip.brand_name}}" hover />
+    <t-cell title="型号" description="{{item.chip.model}}" hover />
+    <t-cell title="支持" description="{{item.system.spt}}" hover />
+    <t-cell title="处理器架构" description="{{item.system.cpu_arch}}" hover />
+    <t-cell title="处理器跑分" description="{{item.system.cpu_mark}}" hover />
+    <t-cell title="内存大小" description="{{item.system.ram_name}}" hover />
+    <t-cell title="内存架构" description="{{item.system.ram_arch}}" hover />
+</t-cell-group>
+
+<t-cell-group theme="card" title="显示">
+    <t-cell title="图形处理器" description="{{item.displays.gpu_name}}" hover />
+    <t-cell title="处理器频率" description="{{item.displays.gpu_speed}}" hover />
+    <t-cell title="显存" description="{{item.displays.gpu_ram}}" hover />
+    <t-cell title="处理器跑分" description="{{item.displays.gpu_mark}}" hover />
+    <t-cell title="屏幕" description="{{item.displays.screen_name}}" hover />
+    <t-cell title="分辨率" description="{{item.displays.screen_resol}}" hover />
+    <t-cell title="显示模式" description="{{item.displays.dis_mode}}" hover />
+    <t-cell title="PPI" description="{{item.displays.ppi}}" hover />
+    <t-cell title="亮度" description="{{item.displays.bright}}" hover />
+    <t-cell title="其他" description="{{item.displays.other}}" hover />
+</t-cell-group>
+
+<t-cell-group theme="card" title="能源">
+    <t-cell title="电池容量" description="{{item.power.capa}}" hover />
+    <t-cell title="功率" description="{{item.displays.w}}" hover />
+</t-cell-group>
+
+
+<t-cell-group theme="card" title="存储">
+    <t-cell title="硬盘数量" description="{{item.disk.hd_num}}" hover />
+    <t-cell title="硬盘连接" description="{{item.disk.connect}}" hover />
+    <t-cell title="硬盘容量" description="{{item.disk.size}}" hover />
+    <t-cell title="其他存储设备" description="{{item.disk.other}}" hover />
+    <t-cell title="说明" description="{{item.disk.des}}" hover />
+</t-cell-group>
+
+<t-cell-group theme="card" title="软件">
+    <t-cell title="预装系统" description="{{item.software.def_os}}" hover />
+    <t-cell title="操作系统提供商" description="{{item.software.dev}}" hover />
+    <t-cell title="预装软件" description="{{item.software.presoft}}" hover />
+    <t-cell title="说明" description="{{item.software.des}}" hover />
+</t-cell-group>
+
+<t-cell-group theme="card" title="连接">
+    <t-cell title="接口" description="{{item.connect.port}}" hover />
+    <t-cell title="网络" description="{{item.connect.wifi}}" hover />
+    <t-cell title="声音" description="{{item.connect.wifi}}" hover />
+    <t-cell title="蓝牙" description="{{item.connect.bluetooth}}" hover />
+    <t-cell title="NFC" description="{{item.connect.nfc}}" hover />
+    <t-cell title="调制解调器" description="{{item.connect.bluetooth}}" hover />
+    <t-cell title="预装" description="{{item.connect.presoft}}" hover />
+</t-cell-group>
