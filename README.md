@@ -14,3 +14,21 @@ npm install -S
 安装依赖，然后打开工具栏的 "构建 npm" 进行构建。
 
 方可使用。
+
+
+
+## TO-DO LIST
+
+- 收藏夹的实现和完善
+- 搜索的实现和完善
+- 图片支持
+- UI 设计微调
+
+
+
+## 作者
+
+- [XiaoHe321](https://github.com/xh321)
+
+- [Luke Na](https://github.com/narukeu)
+
