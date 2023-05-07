@@ -68,9 +68,9 @@
     </t-cell-group>
 
     <t-cell-group theme="card" title="工作环境">
-        <t-cell title="工作温度" description="{{phinfo.opt_temp}}" hover="" />
-        <t-cell title="工作湿度" description="{{phinfo.opt_humidity}}" hover="" />
-        <t-cell title="工作海拔" description="{{phinfo.opt_alti}}" hover="" />
+        <t-cell title="工作温度" description="{{phinfo.env.opt_temp}}" hover="" />
+        <t-cell title="工作湿度" description="{{phinfo.env.opt_humidity}}" hover="" />
+        <t-cell title="工作海拔" description="{{phinfo.env.opt_alti}}" hover="" />
     </t-cell-group>
 
     <t-cell-group theme="card" title="传感器">

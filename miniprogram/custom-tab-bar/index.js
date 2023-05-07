@@ -1,4 +1,3 @@
-
 Component({
   data: {
     value: 'index',
@@ -6,11 +5,11 @@ Component({
       icon: 'home',
       value: 'index',
       label: '首页',
-    },{
+    }, {
       icon: 'tips',
       value: 'nowlist',
       label: '现有',
-    },{
+    }, {
       icon: 'user',
       value: 'user',
       label: '我的',
@@ -28,7 +27,7 @@ Component({
 
       if (curPage) {
         const nameRe = /pages\/(\w+)\/index/.exec(curPage.route);
-
+        console.log("nameRe is :" + nameRe)
         if (nameRe[1]) {
           this.setData({
             value: nameRe[1]
@@ -39,7 +38,9 @@ Component({
   },
   methods: {
     handleChange(e) {
-      const { value } = e.detail;
+      const {
+        value
+      } = e.detail;
 
       // this.setData({ value });
       wx.switchTab({
