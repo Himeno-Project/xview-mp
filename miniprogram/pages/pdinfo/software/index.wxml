@@ -1,30 +1,30 @@
 <!--pages/pdinfo/software/index.wxml-->
 <view>
     <t-cell-group theme="card" title="一般信息">
-        <t-cell title="{{item.name}}" description="{{item.slogan}}" align="top" image="" hover bordered="{{false}}" />
+        <t-cell title="{{swinfo.name}}" description="{{swinfo.slogan}}" align="top" image="" hover bordered="{{false}}" />
     </t-cell-group>
 
 <t-cell-group theme="card">
-    <t-cell title="发布日期" description="{{item.rel_date}}" hover />
-    <t-cell title="支持状态" description="{{item.isspt}}" hover />
-    <t-cell title="市场取向" description="{{item.marketgoal}}" hover />
-    <t-cell title="支持平台" description="{{item.arch}}" hover />
-    <t-cell title="国际化" description="{{item.lang}}" hover />
-    <t-cell title="系统要求" description="需要______" hover />
+    <t-cell title="发布日期" description="{{swinfo.rel_date}}" hover />
+    <t-cell title="支持状态" description="{{swinfo.isspt}}" hover />
+    <t-cell title="市场取向" description="{{swinfo.marketgoal}}" hover />
+    <t-cell title="支持平台" description="{{swinfo.arch}}" hover />
+    <t-cell title="国际化" description="{{swinfo.lang}}" hover />
+    <t-cell title="系统要求" description="{{swinfo.req}}" hover />
 </t-cell-group>
 
 <t-cell-group theme="card" title="设计和开发" >
-    <t-cell title="编程语言" description="C、C++、Rust、汇编" hover />
-    <t-cell title="许可证" description="商业专有软件" hover />
+    <t-cell title="编程语言" description="{{swinfo.dev.lang}}" hover />
+    <t-cell title="许可证" description="{{swinfo.dev.license}}" hover />
     <!-- 模式：开源、闭源、混合 -->
-    <t-cell title="源码模式" description="封闭源代码" hover />
-    <t-cell title="软件格式" description=".iso .esd" hover />
+    <t-cell title="源码模式" description="{{swinfo.dev.srcmode}}" hover />
+    <t-cell title="软件格式" description="{{swinfo.dev.swformat}}" hover />
 </t-cell-group>
 
 <t-cell-group theme="card" title="版本和更新" >
-    <t-cell title="初始版本" description="Windows 1.0" hover />
-    <t-cell title="稳定版本" description="Windows 11 22H2" hover />
-    <t-cell title="开发版本" description="Windows 11 Dev" hover />
-    <t-cell title="更新方式" description="Windows Update" hover />
+    <t-cell title="初始版本" description="{{swinfo.upd.init}}" hover />
+    <t-cell title="稳定版本" description="{{swinfo.upd.stable}}" hover />
+    <t-cell title="开发版本" description="{{swinfo.upd.dever}}" hover />
+    <t-cell title="更新方式" description="{{swinfo.dev.upway}}" hover />
 </t-cell-group>
 </view>
