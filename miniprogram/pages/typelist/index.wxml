@@ -11,7 +11,7 @@
     item.pd_imgs 的意思是第0个数组表达的图片永远是头图。
   -->
   <t-cell title="{{item.pd_name}}"
-  description="手机型号：{{item.model}}，{{item.rel_year}} 发"
+  description="型号：{{item.model}}，{{item.rel_year}} 年"
   align="top" image="{{item.pd_imgs[0]}}"
   hover bordered="{{false}}"
   url="../pdinfo/{{page_type}}/index?pd_id={{item.pd_id}}&pd_type={{pd_type}}"
