@@ -30,7 +30,7 @@ Page({
             dtinfo,
             pd_type
           }),
-          
+
           console.log(dtinfo)
         wx.hideLoading()
       },

@@ -22,7 +22,7 @@ Page({
         title: '正在加载',
       })
   
-      http.cloudGet("/api/model-query/phone/" + pd_id).then((res) => {
+      http.cloudGet("/api/model-query/detail/phone/" + pd_id).then((res) => {
           console.log(res.data.data);
           let phinfo = res.data.data
   
