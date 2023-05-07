@@ -14,7 +14,7 @@
   description="手机型号：{{item.model}}，{{item.rel_year}} 发"
   align="top" image="{{item.pd_imgs[0]}}"
   hover bordered="{{false}}"
-  url="../pdinfo/{{pd_type}}/index?pd_id={{item.pd_id}}"
+  url="../pdinfo/{{page_type}}/index?pd_id={{item.pd_id}}&pd_type={{pd_type}}"
   wx:for="{{dtinfo}}"
   wx:key="index" arrow />
 </t-cell-group>

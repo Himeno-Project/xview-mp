@@ -8,6 +8,7 @@ Page({
    */
   data: {
     pd_type: '',
+    page_type: '',
     dtinfo: {}
   },
 
@@ -15,8 +16,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+
+    // 因为考虑到了有些产品共用页面的情况（比如手机和平板，所以页面要相同）。
     var pd_type = options.pd_type
-    console.log("调试：接收的参数（产品类型）是 " + pd_type)
+    var page_type = pd_type
+
+    console.log("接收的参数（产品类型）是 " + pd_type)
+    console.log("接收的参数（页面类型）是 " + page_type)
 
     wx.showLoading({
       title: '正在加载',
@@ -28,14 +34,23 @@ Page({
 
         this.setData({
             dtinfo,
+            page_type,
             pd_type
           }),
 
           console.log(dtinfo)
         wx.hideLoading()
       },
+
       //console.log(dtname)
     )
+
+    // 手机和平板电脑共用一个详情页，因此这里重定向到手机
+    if (page_type == 'tablet') {
+      var page_type = 'phone'
+      console.log("检测到平板类，修正后的参数（页面类型）是 " + page_type)
+    }
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
