@@ -21,6 +21,13 @@
           "query": "pd_id=32ca67668152468bb59c8e94ba67b467",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "路由器",
+          "pathName": "pages/pdinfo/router/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
