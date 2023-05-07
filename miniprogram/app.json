@@ -10,7 +10,6 @@
     "pages/pdinfo/software/index",
     "pages/pdinfo/smart/index",
     "pages/pdinfo/tv/index",
-    "components/classlist/index",
     "components/x-card/x-card",
     "pages/pdinfo/router/index"
   ],
@@ -41,7 +40,6 @@
   },
   "usingComponents": {
     "x-card": "components/x-card/x-card",
-    "classlist": "components/classlist/index",
     "t-button": "tdesign-miniprogram/button/button",
     "t-icon": "tdesign-miniprogram/icon/icon",
     "t-cell": "tdesign-miniprogram/cell/cell",
