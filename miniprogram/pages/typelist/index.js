@@ -9,7 +9,15 @@ Page({
   data: {
     pd_type: '',
     page_type: '',
-    dtinfo: {}
+    dtinfo: {},
+    search_value:''
+  },
+
+
+  search(e) {
+    console.log("搜索按钮已经点击")
+    var search_vaule = e.options
+    console.log(search_vaule)
   },
 
   /**

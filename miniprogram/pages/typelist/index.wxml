@@ -1,15 +1,11 @@
 <!--pages/typelist/index.wxml-->
 <view class="detail-search">
-  <t-search model:value="{{value}}" placeholder="搜索" />
+  <t-search model:value="{{search_value}}" placeholder="搜索" bind:submit="search" />
 </view>
 
 
 <t-cell-group title="列表" theme="card">
-  <!-- 
-    目前的开发者工具很无语的一点就是格式化文档的时候会把换行符去掉，
-    这样针对标签存在多种参数的时候会很难看。
-    item.pd_imgs 的意思是第0个数组表达的图片永远是头图。
-  -->
+  <!-- item.pd_imgs 的意思是第0个数组表达的图片永远是头图。-->
   <t-cell title="{{item.pd_name}}"
   description="型号：{{item.model}}，{{item.rel_year}} 年"
   align="top" image="{{item.pd_imgs[0]}}"
