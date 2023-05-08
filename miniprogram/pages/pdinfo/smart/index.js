@@ -1,18 +1,33 @@
 // pages/pdinfo/smart/index.js
+
+var getinfo = require("../../../utils/getinfo.js")
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      pd_type: '',
+      stinfo: {}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+      var pd_type = options.pd_type
+      var pd_id = options.pd_id
+  
+      getinfo(pd_type, pd_id).then((stinfo) => {
+        this.setData({
+          stinfo,
+          pd_id,
+          pd_type
+        })
+      })
+      
+      console.log("函数的返回值：" + stinfo)
     },
 
     /**

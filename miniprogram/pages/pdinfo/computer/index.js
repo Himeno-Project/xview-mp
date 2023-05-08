@@ -1,4 +1,6 @@
 // pages/pdinfo/computer/index.js
+var getinfo = require("../../../utils/getinfo.js")
+
 Page({
 
     /**
@@ -23,7 +25,7 @@ Page({
           pd_type
         })
       })
-      
+
       console.log("函数的返回值：" + pcinfo)
     },
 
