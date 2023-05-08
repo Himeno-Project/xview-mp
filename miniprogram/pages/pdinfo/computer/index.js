@@ -5,14 +5,36 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+      pd_type: '',
+      pcinfo: {}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+      var pd_type = options.pd_type
+      var pd_id = options.pd_id
+      console.log("now id is:" + pd_id)
 
+      wx.showLoading({
+        title: '正在加载',
+      })
+  
+      http.cloudGet("/api/model-query/detail/"+ pd_type +"/" + pd_id).then((res) => {
+          console.log(res.data.data);
+          let pcinfo = res.data.data
+  
+          this.setData({
+              pcinfo,
+              pd_id
+            }),
+            
+            console.log(pcinfo)
+          wx.hideLoading()
+        },
+        //console.log(dtname)
+      )
     },
 
     /**

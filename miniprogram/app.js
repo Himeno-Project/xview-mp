@@ -2,6 +2,8 @@
 // 之前用了 TS 插件，引入模块的时候提示不可用，JS 倒是没问题。
 
 var http = require("./utils/http.js");
+
+// secret.js 是微信云托管的密钥，因此不开源。去掉密钥的 secret.js 为 secret_public.js。
 var secret = require("./utils/secret.js")
 
 App({
