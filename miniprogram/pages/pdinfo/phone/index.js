@@ -17,7 +17,6 @@ Page({
   onLoad(options) {
     var pd_type = options.pd_type
     var pd_id = options.pd_id
-    console.log("now id is:" + pd_id)
 
     getinfo(pd_type, pd_id).then((phinfo) => {
       this.setData({
@@ -26,8 +25,8 @@ Page({
         pd_type
       })
     })
+    
     console.log("函数的返回值：" + phinfo)
-    wx.hideLoading()
   },
 
 
