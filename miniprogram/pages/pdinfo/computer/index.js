@@ -16,25 +16,16 @@ Page({
       var pd_type = options.pd_type
       var pd_id = options.pd_id
       console.log("now id is:" + pd_id)
-
-      wx.showLoading({
-        title: '正在加载',
+  
+      getinfo(pd_type, pd_id).then((pcinfo) => {
+        this.setData({
+          pcinfo,
+          pd_id,
+          pd_type
+        })
       })
-  
-      http.cloudGet("/api/model-query/detail/"+ pd_type +"/" + pd_id).then((res) => {
-          console.log(res.data.data);
-          let pcinfo = res.data.data
-  
-          this.setData({
-              pcinfo,
-              pd_id
-            }),
-            
-            console.log(pcinfo)
-          wx.hideLoading()
-        },
-        //console.log(dtname)
-      )
+      console.log("函数的返回值：" + pcinfo)
+      wx.hideLoading()
     },
 
     /**
