@@ -24,6 +24,7 @@ Page({
         })
       })
       
+      console.log("函数的返回值：" + pcinfo)
     },
 
     /**
