@@ -26,8 +26,6 @@ Page({
           pd_type
         })
       })
-      
-      console.log("函数的返回值：" + stinfo)
     },
 
     /**
