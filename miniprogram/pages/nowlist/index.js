@@ -1,3 +1,5 @@
+const http = require("../../utils/http.js")
+
 Page({
   data: {
     yrinfo:{},
@@ -8,7 +10,7 @@ Page({
     }]
   },
 
-  onload(options) {
+  onLoad(options) {
     http.cloudGet("/api/model-query/group").then((res) => {
       console.log(res.data.data);
       let yrinfo = res.data.data

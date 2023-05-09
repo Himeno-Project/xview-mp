@@ -3,7 +3,7 @@
 <t-cell-group theme="card" title="关于我们">
     <t-cell title="关于项目" description="本项目是非盈利性质的不带有付费推广的小米产品信息收集站。基于 T-Design 开源组件库构建。" hover />
     <t-cell title="隐私" description="本项目承诺不收集您的隐私。项目中读取的个人信息和系统信息均来自微信官方 API，并不会上传。" hover />
-    <t-cell title="著作权" description="本项目所收集的产品信息禁止用于盈利。本项目和小米科技没有关系，产品的商标属于小米科技有限责任公司所有。" hover />
+    <t-cell title="著作权" description="本项目所收集的产品信息禁止用于盈利。本项目和小米科技没有关联，产品的商标属于小米科技有限责任公司所有。" hover />
     <t-cell leftIcon="logo-wechat" title="微信公众号" note="@Himeno-Project" hover />
     <t-cell leftIcon="logo-github-filled" bind:click="handleCopy" data-msg="https://github.com/Himeno-Project" title="GitHub" note="@Himeno-Project" hover />
 </t-cell-group>
