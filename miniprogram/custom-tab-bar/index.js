@@ -5,18 +5,22 @@ Component({
       icon: 'home',
       value: 'index',
       label: '首页',
+      props: 'default'
     }, {
       icon: 'tips',
       value: 'pdlist',
       label: '现有',
+      props: 'pd_type=allist'
     }, {
       icon: 'user',
       value: 'user',
       label: '我的',
+      props: 'default'
     }, {
       icon: 'chat',
       value: 'about',
-      label: '关于'
+      label: '关于',
+      props: 'default'
     }]
   },
 
@@ -38,10 +42,15 @@ Component({
   },
 
   methods: {
-    handleChange({ detail }) {
-      const { value } = detail;
+    handleChange({
+      detail
+    }) {
+      const {
+        value,
+        props
+      } = detail;
       wx.switchTab({
-        url: `/pages/${value}/index`,
+        url: `/pages/${value}/index?${props}`,
       });
     },
   },
