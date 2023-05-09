@@ -27,25 +27,22 @@ Component({
 
       if (curPage) {
         const nameRe = /pages\/(\w+)\/index/.exec(curPage.route);
-        console.log("nameRe is :" + nameRe)
-        if (nameRe[1]) {
+        console.log(`nameRe is : ${nameRe}`);
+        if (nameRe && nameRe[1]) {
           this.setData({
             value: nameRe[1]
-          })
+          });
         }
       }
     }
   },
-  methods: {
-    handleChange(e) {
-      const {
-        value
-      } = e.detail;
 
-      // this.setData({ value });
+  methods: {
+    handleChange({ detail }) {
+      const { value } = detail;
       wx.switchTab({
         url: `/pages/${value}/index`,
-      })
-    }
-  }
-})
+      });
+    },
+  },
+});
