@@ -30,15 +30,8 @@
           "scene": null
         },
         {
-          "name": "",
-          "pathName": "关于",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "现有的产品列表",
-          "pathName": "pages/nowlist/index",
+          "name": "关于",
+          "pathName": "pages/about/index",
           "query": "",
           "launchMode": "default",
           "scene": null

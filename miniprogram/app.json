@@ -1,8 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/typelist/index",
-    "pages/nowlist/index",
+    "pages/pdlist/index",
     "pages/about/index",
     "pages/user/index",
     "pages/pdinfo/phone/index",
@@ -25,7 +24,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/nowlist/index",
+        "pagePath": "pages/pdlist/index",
         "text": "现有"
       },
       {

@@ -7,7 +7,7 @@ Component({
       label: '首页',
     }, {
       icon: 'tips',
-      value: 'nowlist',
+      value: 'pdlist',
       label: '现有',
     }, {
       icon: 'user',
