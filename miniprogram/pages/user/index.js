@@ -12,16 +12,15 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad() {
-        console.log(youros())
-        this.setData({
-            'nowbrand': youros()[0],
-            'nowos': youros()[1],
-            'nowmodel':youros()[2],
-            'scrwidth':youros()[3],
-            'scrheight':youros()[4],
-        })
-    },
+    async onLoad() {
+      const [brand, system, model, screenWidth, screenHeight] = youros();
+      await this.setData({
+        nowbrand: brand,
+        nowos: system,
+        nowmodel: model,
+        scrwidth: screenWidth,
+        scrheight: screenHeight,
+      });},
 
     /**
      * 生命周期函数--监听页面初次渲染完成
