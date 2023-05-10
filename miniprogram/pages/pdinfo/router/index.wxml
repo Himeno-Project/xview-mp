@@ -1,80 +1,77 @@
 <!--pages/pdinfo/router/index.wxml-->
-<!--pages/pdinfo/index.wxml-->
-<view>
-    <t-cell-group theme="card">
-        <t-cell title="{{rtinfo.pd_name}}" description="{{rtinfo.slogan}}" align="top" image="{{rtinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
-    </t-cell-group>
 
-    <t-cell-group theme="card" title="一般信息">
-        <t-cell title="型号" description="{{rtinfo.model}}" hover />
-        <t-cell title="发布日期" description="{{rtinfo.rel_date}}" hover />
-        <t-cell title="支持状态" description="{{rtinfo.spt_status}}" hover />
-        <t-cell title="材质" description="{{rtinfo.material}}" hover />
-        <t-cell title="尺寸和重量" description="{{rtinfo.weight}}" hover />
-        <t-cell title="防水等级" description="{{rtinfo.water}}" hover />
-        <t-cell title="颜色" description="{{rtinfo.colors}}" hover="" />
-        <t-cell title="背板材质" description="{{rtinfo.back_material}}" hover="" />
-        <t-cell title="边框材质" description="{{rtinfo.case_material}}" hover="" />
-        <t-cell title="屏幕材质" description="{{rtinfo.scr_material}}" hover="" />
-    </t-cell-group>
+<t-cell-group theme="card">
+  <t-cell title="{{rtinfo.pd_name}}" description="{{rtinfo.slogan}}" align="top" image="{{rtinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
+</t-cell-group>
 
-    <t-cell-group theme="card" title="系统">
-        <t-cell title="处理器" description="{{rtinfo.system.cpu_name}}" hover />
-        <t-cell title="处理器速度" description="{{rtinfo.system.cpu_speed}}" hover />
-        <t-cell title="处理器核心" description="{{rtinfo.system.cpu_core_num}}" hover />
-        <t-cell title="处理器架构" description="{{rtinfo.system.cpu_arch}}" hover />
-        <t-cell title="处理器跑分" description="{{rtinfo.system.cpu_mark}}" hover />
-        <t-cell title="内存大小" description="{{rtinfo.system.ram_name}}" hover />
-        <t-cell title="内存架构" description="{{rtinfo.system.ram_arch}}" hover />
-    </t-cell-group>
+<t-cell-group theme="card" title="一般信息">
+  <t-cell title="型号" description="{{rtinfo.model}}" hover />
+  <t-cell title="发布日期" description="{{rtinfo.rel_date}}" hover />
+  <t-cell title="支持状态" description="{{rtinfo.spt_status}}" hover />
+  <t-cell title="材质" description="{{rtinfo.material}}" hover />
+  <t-cell title="尺寸和重量" description="{{rtinfo.weight}}" hover />
+  <t-cell title="防水等级" description="{{rtinfo.water}}" hover />
+  <t-cell title="颜色" description="{{rtinfo.colors}}" hover="" />
+  <t-cell title="背板材质" description="{{rtinfo.back_material}}" hover="" />
+  <t-cell title="边框材质" description="{{rtinfo.case_material}}" hover="" />
+  <t-cell title="屏幕材质" description="{{rtinfo.scr_material}}" hover="" />
+</t-cell-group>
 
-    <t-cell-group theme="card" title="相机">
-        <t-cell title="相机厂商" description="{{rtinfo.camera.brand_name}}" hover />
-        <t-cell title="摄像头数" description="{{rtinfo.camera.cam_num}}" hover />
-        <t-cell title="相机像素" description="{{rtinfo.camera.pixel}}" hover />
-        <t-cell title="视频格式" description="{{rtinfo.camera.video_formats}}" hover="" />
-        <t-cell title="照片格式" description="{{rtinfo.camera.photo_formats}}" hover="" />
-        <t-cell title="说明" description="{{rtinfo.camera.desc}}" hover="" />
-    </t-cell-group>
+<t-cell-group theme="card" title="系统">
+  <t-cell title="处理器" description="{{rtinfo.system.cpu_name}}" hover />
+  <t-cell title="处理器速度" description="{{rtinfo.system.cpu_speed}}" hover />
+  <t-cell title="处理器核心" description="{{rtinfo.system.cpu_core_num}}" hover />
+  <t-cell title="处理器架构" description="{{rtinfo.system.cpu_arch}}" hover />
+  <t-cell title="处理器跑分" description="{{rtinfo.system.cpu_mark}}" hover />
+  <t-cell title="内存大小" description="{{rtinfo.system.ram_name}}" hover />
+  <t-cell title="内存架构" description="{{rtinfo.system.ram_arch}}" hover />
+</t-cell-group>
 
-    <t-cell-group theme="card" title="软件">
-        <t-cell title="出厂系统" description="{{rtinfo.software.def_os}}" hover />
-        <t-cell title="最高支持系统" description="{{rtinfo.software.last_os}}" hover />
-        <t-cell title="基础" description="{{rtinfo.software.base_ver}}" hover />
-        <t-cell title="内核" description="{{rtinfo.software.krnl}}" hover />
-        <t-cell title="预装" description="{{rtinfo.software.presoft}}" hover />
-    </t-cell-group>
+<t-cell-group theme="card" title="相机">
+  <t-cell title="相机厂商" description="{{rtinfo.camera.brand_name}}" hover />
+  <t-cell title="摄像头数" description="{{rtinfo.camera.cam_num}}" hover />
+  <t-cell title="相机像素" description="{{rtinfo.camera.pixel}}" hover />
+  <t-cell title="视频格式" description="{{rtinfo.camera.video_formats}}" hover="" />
+  <t-cell title="照片格式" description="{{rtinfo.camera.photo_formats}}" hover="" />
+  <t-cell title="说明" description="{{rtinfo.camera.desc}}" hover="" />
+</t-cell-group>
 
-    <t-cell-group theme="card" title="电源">
-        <t-cell title="配套充电器" description="{{rtinfo.power.charger}}" hover="" />
-    </t-cell-group>
+<t-cell-group theme="card" title="软件">
+  <t-cell title="出厂系统" description="{{rtinfo.software.def_os}}" hover />
+  <t-cell title="最高支持系统" description="{{rtinfo.software.last_os}}" hover />
+  <t-cell title="基础" description="{{rtinfo.software.base_ver}}" hover />
+  <t-cell title="内核" description="{{rtinfo.software.krnl}}" hover />
+  <t-cell title="预装" description="{{rtinfo.software.presoft}}" hover />
+</t-cell-group>
 
-    <t-cell-group theme="card" title="工作环境">
-        <t-cell title="工作温度" description="{{rtinfo.env.opt_temp}}" hover="" />
-        <t-cell title="工作湿度" description="{{rtinfo.env.opt_humidity}}" hover="" />
-        <t-cell title="工作海拔" description="{{rtinfo.env.opt_alti}}" hover="" />
-    </t-cell-group>
+<t-cell-group theme="card" title="电源">
+  <t-cell title="配套充电器" description="{{rtinfo.power.charger}}" hover="" />
+</t-cell-group>
 
-    <t-cell-group theme="card" title="传感器">
-        <t-cell title="传感器" description="{{rtinfo.sensor.sensor}}" hover="" />
-        <t-cell title="附加功能" description="{{rtinfo.sensor.sensor_feature}}" hover="" />
-        <t-cell title="震动马达" description="{{rtinfo.sensor.haptic}}" hover="" />
-        <t-cell title="扬声器" description="{{rtinfo.sensor.speaker}}" hover="" />
-    </t-cell-group>
+<t-cell-group theme="card" title="工作环境">
+  <t-cell title="工作温度" description="{{rtinfo.env.opt_temp}}" hover="" />
+  <t-cell title="工作湿度" description="{{rtinfo.env.opt_humidity}}" hover="" />
+  <t-cell title="工作海拔" description="{{rtinfo.env.opt_alti}}" hover="" />
+</t-cell-group>
 
-    <t-cell-group theme="card" title="网络">
-        <t-cell title="接口" description="{{rtinfo.network.port}}" hover />
-        <t-cell title="Wi-Fi" description="{{rtinfo.network.wifi}}" hover />
-        <t-cell title="蓝牙" description="{{rtinfo.network.bluetooth}}" hover />
-        <t-cell title="调制解调器" description="{{rtinfo.network.modem}}" hover />
-    </t-cell-group>
+<t-cell-group theme="card" title="传感器">
+  <t-cell title="传感器" description="{{rtinfo.sensor.sensor}}" hover="" />
+  <t-cell title="附加功能" description="{{rtinfo.sensor.sensor_feature}}" hover="" />
+  <t-cell title="震动马达" description="{{rtinfo.sensor.haptic}}" hover="" />
+  <t-cell title="扬声器" description="{{rtinfo.sensor.speaker}}" hover="" />
+</t-cell-group>
 
-    <t-cell-group theme="card" title="连接">
-        <t-cell title="接口" description="{{rtinfo.connect.port}}" hover />
-        <t-cell title="蓝牙" description="{{rtinfo.connect.bluetooth}}" hover />
-        <t-cell title="NFC" description="{{rtinfo.connect.nfc}}" hover />
-        <t-cell title="调制解调器" description="{{rtinfo.connect.modem}}" hover />
-        <t-cell title="SIM卡槽" description="{{rtinfo.connect.sim_slots}}" hover />
-    </t-cell-group>
+<t-cell-group theme="card" title="网络">
+  <t-cell title="接口" description="{{rtinfo.network.port}}" hover />
+  <t-cell title="Wi-Fi" description="{{rtinfo.network.wifi}}" hover />
+  <t-cell title="蓝牙" description="{{rtinfo.network.bluetooth}}" hover />
+  <t-cell title="调制解调器" description="{{rtinfo.network.modem}}" hover />
+</t-cell-group>
 
-</view>
+<t-cell-group theme="card" title="连接">
+  <t-cell title="接口" description="{{rtinfo.connect.port}}" hover />
+  <t-cell title="蓝牙" description="{{rtinfo.connect.bluetooth}}" hover />
+  <t-cell title="NFC" description="{{rtinfo.connect.nfc}}" hover />
+  <t-cell title="调制解调器" description="{{rtinfo.connect.modem}}" hover />
+  <t-cell title="SIM卡槽" description="{{rtinfo.connect.sim_slots}}" hover />
+</t-cell-group>

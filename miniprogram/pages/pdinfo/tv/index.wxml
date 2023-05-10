@@ -1,81 +1,80 @@
 <!--pages/pdinfo/tv/index.wxml-->
-<view>
-  <t-cell-group theme="card">
-    <t-cell title="Apple TV" description="这里填写产品口号" align="top" image="" hover bordered="{{false}}" />
-  </t-cell-group>
 
-  <t-cell-group theme="card" title="一般信息">
-    <t-cell title="产品名称" description="{{tvinfo.pd_name}}" hover />
-    <t-cell title="型号" description="{{tvinfo.model}}" hover />
-    <t-cell title="口号" description="{{tvinfo.slogan}}" hover />
-    <t-cell title="发布日期" description="{{tvinfo.rel_date}}" hover />
-    <t-cell title="支持状态" description="{{tvinfo.isspt}}" hover />
-    <t-cell title="材质" description="{{tvinfo.material}}" hover />
-    <t-cell title="尺寸" description="{{tvinfo.size}}" hover />
-    <t-cell title="重量" description="{{tvinfo.weight}}" hover />
-    <t-cell title="语音助手" description="{{tvinfo.voiceassistant}}" hover />
-    <t-cell title="扬声器" description="{{tvinfo.camera.speakers}}" hover />
-  </t-cell-group>
+<t-cell-group theme="card">
+  <t-cell title="Apple TV" description="这里填写产品口号" align="top" image="" hover bordered="{{false}}" />
+</t-cell-group>
+
+<t-cell-group theme="card" title="一般信息">
+  <t-cell title="产品名称" description="{{tvinfo.pd_name}}" hover />
+  <t-cell title="型号" description="{{tvinfo.model}}" hover />
+  <t-cell title="口号" description="{{tvinfo.slogan}}" hover />
+  <t-cell title="发布日期" description="{{tvinfo.rel_date}}" hover />
+  <t-cell title="支持状态" description="{{tvinfo.isspt}}" hover />
+  <t-cell title="材质" description="{{tvinfo.material}}" hover />
+  <t-cell title="尺寸" description="{{tvinfo.size}}" hover />
+  <t-cell title="重量" description="{{tvinfo.weight}}" hover />
+  <t-cell title="语音助手" description="{{tvinfo.voiceassistant}}" hover />
+  <t-cell title="扬声器" description="{{tvinfo.camera.speakers}}" hover />
+</t-cell-group>
 
 
-  <t-cell-group theme="card" title="系统">
-    <t-cell title="处理器" description="{{tvinfo.system.cpu_name}}" hover />
-    <t-cell title="处理器速度" description="{{tvinfo.system.cpu_speed}}" hover />
-    <t-cell title="处理器核心" description="{{tvinfo.system.cpu_core_num}}" hover />
-    <t-cell title="处理器架构" description="{{tvinfo.system.cpu_arch}}" hover />
-    <t-cell title="内存大小" description="{{tvinfo.system.ram_name}}" hover />
-    <t-cell title="内存架构" description="{{tvinfo.system.ram_arch}}" hover />
-  </t-cell-group>
+<t-cell-group theme="card" title="系统">
+  <t-cell title="处理器" description="{{tvinfo.system.cpu_name}}" hover />
+  <t-cell title="处理器速度" description="{{tvinfo.system.cpu_speed}}" hover />
+  <t-cell title="处理器核心" description="{{tvinfo.system.cpu_core_num}}" hover />
+  <t-cell title="处理器架构" description="{{tvinfo.system.cpu_arch}}" hover />
+  <t-cell title="内存大小" description="{{tvinfo.system.ram_name}}" hover />
+  <t-cell title="内存架构" description="{{tvinfo.system.ram_arch}}" hover />
+</t-cell-group>
 
-  <t-cell-group theme="card" title="显示">
-    <t-cell title="图形处理器" description="{{tvinfo.displays.gpu_name}}" hover />
-    <t-cell title="处理器速度" description="{{tvinfo.displays.gpu_speed}}" hover />
-    <t-cell title="处理器跑分" description="{{tvinfo.displays.gpu_mark}}" hover />
-    <t-cell title="屏幕" description="{{tvinfo.displays.screen_name}}" hover />
-    <t-cell title="分辨率" description="{{tvinfo.displays.screen_resol}}" hover />
-    <t-cell title="显示模式" description="{{tvinfo.displays.dis_mode}}" hover />
-    <t-cell title="PPI" description="{{tvinfo.displays.ppi}}" hover />
-    <t-cell title="亮度" description="{{tvinfo.displays.bright}}" hover />
-    <t-cell title="刷新率" description="{{tvinfo.displays.other}}" hover />
-    <t-cell title="屏幕材质" description="{{tvinfo.scr_material}}" hover="" />
-    <t-cell title="色域" description="{{tvinfo.displays.colorgamut}}" hover="" />
-    <t-cell title="HDR" description="{{tvinfo.displays.hdr}}" hover="" />
-  </t-cell-group>
+<t-cell-group theme="card" title="显示">
+  <t-cell title="图形处理器" description="{{tvinfo.displays.gpu_name}}" hover />
+  <t-cell title="处理器速度" description="{{tvinfo.displays.gpu_speed}}" hover />
+  <t-cell title="处理器跑分" description="{{tvinfo.displays.gpu_mark}}" hover />
+  <t-cell title="屏幕" description="{{tvinfo.displays.screen_name}}" hover />
+  <t-cell title="分辨率" description="{{tvinfo.displays.screen_resol}}" hover />
+  <t-cell title="显示模式" description="{{tvinfo.displays.dis_mode}}" hover />
+  <t-cell title="PPI" description="{{tvinfo.displays.ppi}}" hover />
+  <t-cell title="亮度" description="{{tvinfo.displays.bright}}" hover />
+  <t-cell title="刷新率" description="{{tvinfo.displays.other}}" hover />
+  <t-cell title="屏幕材质" description="{{tvinfo.scr_material}}" hover="" />
+  <t-cell title="色域" description="{{tvinfo.displays.colorgamut}}" hover="" />
+  <t-cell title="HDR" description="{{tvinfo.displays.hdr}}" hover="" />
+</t-cell-group>
 
-  <t-cell-group theme="card" title="多媒体">
-    <t-cell title="支持格式" description="{{tvinfo.camera.brand_name}}" hover />
-    <t-cell title="视频解码" description="{{tvinfo.camera.cam_num}}" hover />
-    <t-cell title="音频解码" description="{{tvinfo.camera.pixel}}" hover />
-  </t-cell-group>
+<t-cell-group theme="card" title="多媒体">
+  <t-cell title="支持格式" description="{{tvinfo.camera.brand_name}}" hover />
+  <t-cell title="视频解码" description="{{tvinfo.camera.cam_num}}" hover />
+  <t-cell title="音频解码" description="{{tvinfo.camera.pixel}}" hover />
+</t-cell-group>
 
-  <t-cell-group theme="card" title="软件">
-    <t-cell title="出厂系统" description="{{tvinfo.software.def_os}}" hover />
-    <t-cell title="最高支持系统" description="{{tvinfo.software.last_os}}" hover />
-    <t-cell title="基础" description="{{tvinfo.software.base_ver}}" hover />
-    <t-cell title="内核" description="{{tvinfo.software.krnl}}" hover />
-    <t-cell title="预装" description="{{tvinfo.software.presoft}}" hover />
-  </t-cell-group>
+<t-cell-group theme="card" title="软件">
+  <t-cell title="出厂系统" description="{{tvinfo.software.def_os}}" hover />
+  <t-cell title="最高支持系统" description="{{tvinfo.software.last_os}}" hover />
+  <t-cell title="基础" description="{{tvinfo.software.base_ver}}" hover />
+  <t-cell title="内核" description="{{tvinfo.software.krnl}}" hover />
+  <t-cell title="预装" description="{{tvinfo.software.presoft}}" hover />
+</t-cell-group>
 
-  <t-cell-group theme="card" title="连接">
-    <t-cell title="视频输出" description="{{tvinfo.connect.videooutput}}" hover />
-    <t-cell title="视频输入" description="{{tvinfo.connect.videoinput}}" hover />
-    <t-cell title="音频输出" description="{{tvinfo.connect.audiooutput}}" hover />
-    <t-cell title="音频输入" description="{{tvinfo.connect.audioinput}}" hover />
-    <t-cell title="支持的电视" description="{{tvinfo.connect.tvcompatibility}}" hover /> #适用于电视盒子类产品
-    <t-cell title="接口" description="{{tvinfo.connect.port}}" hover />
-    <t-cell title="Wi-Fi" description="{{tvinfo.connect.wifi}}" hover />
-    <t-cell title="蓝牙" description="{{tvinfo.connect.bluetooth}}" hover />
-    <t-cell title="红外线" description="{{tvinfo.connect.ir}}" hover />
-  </t-cell-group>
+<t-cell-group theme="card" title="连接">
+  <t-cell title="视频输出" description="{{tvinfo.connect.videooutput}}" hover />
+  <t-cell title="视频输入" description="{{tvinfo.connect.videoinput}}" hover />
+  <t-cell title="音频输出" description="{{tvinfo.connect.audiooutput}}" hover />
+  <t-cell title="音频输入" description="{{tvinfo.connect.audioinput}}" hover />
+  <t-cell title="支持的电视" description="{{tvinfo.connect.tvcompatibility}}" hover /> #适用于电视盒子类产品
+  <t-cell title="接口" description="{{tvinfo.connect.port}}" hover />
+  <t-cell title="Wi-Fi" description="{{tvinfo.connect.wifi}}" hover />
+  <t-cell title="蓝牙" description="{{tvinfo.connect.bluetooth}}" hover />
+  <t-cell title="红外线" description="{{tvinfo.connect.ir}}" hover />
+</t-cell-group>
 
-  <t-cell-group theme="card" title="工作环境">
-    <t-cell title="工作温度" description="{{tvinfo.env.opt_temp}}" hover="" />
-    <t-cell title="工作湿度" description="{{tvinfo.env.opt_humidity}}" hover="" />
-    <t-cell title="工作海拔" description="{{tvinfo.env.opt_alti}}" hover="" />
-  </t-cell-group>
+<t-cell-group theme="card" title="工作环境">
+  <t-cell title="工作温度" description="{{tvinfo.env.opt_temp}}" hover="" />
+  <t-cell title="工作湿度" description="{{tvinfo.env.opt_humidity}}" hover="" />
+  <t-cell title="工作海拔" description="{{tvinfo.env.opt_alti}}" hover="" />
+</t-cell-group>
 
-  <t-cell-group theme="card" title="配件">
-    <t-cell title="遥控器" description="{{tvinfo.equipment.remote}}" hover />
-    <t-cell title="其他配件" description="{{tvinfo.equipment.extra}}" hover />
-  </t-cell-group>
-</view>
+<t-cell-group theme="card" title="配件">
+  <t-cell title="遥控器" description="{{tvinfo.equipment.remote}}" hover />
+  <t-cell title="其他配件" description="{{tvinfo.equipment.extra}}" hover />
+</t-cell-group>
