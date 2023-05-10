@@ -1,4 +1,4 @@
-<!--pages/typelist/index.wxml-->
+<!--pages/classlist/index.wxml-->
 <view class="detail-search">
   <t-search model:value="{{search_value}}" placeholder="搜索" bind:change="search_change" bind:clear="search_change" bind:submit="search" />
 </view>

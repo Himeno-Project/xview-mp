@@ -10,8 +10,8 @@
       "list": [
         {
           "name": "产品列表页",
-          "pathName": "pages/typelist/index",
-          "query": "pd_type=phone",
+          "pathName": "pages/classlist/index",
+          "query": "",
           "launchMode": "default",
           "scene": null
         },

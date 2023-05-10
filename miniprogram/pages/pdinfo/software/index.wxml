@@ -1,12 +1,12 @@
 <!--pages/pdinfo/software/index.wxml-->
 
 <t-cell-group theme="card" title="一般信息">
-  <t-cell title="{{swinfo.name}}" description="{{swinfo.slogan}}" align="top" image="" hover bordered="{{false}}" />
+  <t-cell title="{{swinfo.pd_name}}" description="{{swinfo.slogan}}" align="top" image="" hover bordered="{{false}}" />
 </t-cell-group>
 
 <t-cell-group theme="card">
   <t-cell title="发布日期" description="{{swinfo.rel_date}}" hover />
-  <t-cell title="支持状态" description="{{swinfo.isspt}}" hover />
+  <t-cell title="支持状态" description="{{swinfo.spt_status}}" hover />
   <t-cell title="市场取向" description="{{swinfo.marketgoal}}" hover />
   <t-cell title="支持平台" description="{{swinfo.arch}}" hover />
   <t-cell title="国际化" description="{{swinfo.lang}}" hover />
@@ -22,8 +22,8 @@
 </t-cell-group>
 
 <t-cell-group theme="card" title="版本和更新">
-  <t-cell title="初始版本" description="{{swinfo.upd.init}}" hover />
-  <t-cell title="稳定版本" description="{{swinfo.upd.stable}}" hover />
-  <t-cell title="开发版本" description="{{swinfo.upd.dever}}" hover />
+  <t-cell title="初始版本" description="{{swinfo.upd.init_ver}}" hover />
+  <t-cell title="稳定版本" description="{{swinfo.upd.stable_ver}}" hover />
+  <t-cell title="开发版本" description="{{swinfo.upd.dev_ver}}" hover />
   <t-cell title="更新方式" description="{{swinfo.dev.upway}}" hover />
 </t-cell-group>

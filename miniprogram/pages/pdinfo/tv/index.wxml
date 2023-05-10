@@ -1,15 +1,13 @@
 <!--pages/pdinfo/tv/index.wxml-->
 
 <t-cell-group theme="card">
-  <t-cell title="Apple TV" description="这里填写产品口号" align="top" image="" hover bordered="{{false}}" />
+  <t-cell title="{{tvinfo.pd_name}}" description="{{tvinfo.slogan}}" align="top" image="" hover bordered="{{false}}" />
 </t-cell-group>
 
 <t-cell-group theme="card" title="一般信息">
-  <t-cell title="产品名称" description="{{tvinfo.pd_name}}" hover />
   <t-cell title="型号" description="{{tvinfo.model}}" hover />
-  <t-cell title="口号" description="{{tvinfo.slogan}}" hover />
   <t-cell title="发布日期" description="{{tvinfo.rel_date}}" hover />
-  <t-cell title="支持状态" description="{{tvinfo.isspt}}" hover />
+  <t-cell title="支持状态" description="{{tvinfo.spt_status}}" hover />
   <t-cell title="材质" description="{{tvinfo.material}}" hover />
   <t-cell title="尺寸" description="{{tvinfo.size}}" hover />
   <t-cell title="重量" description="{{tvinfo.weight}}" hover />

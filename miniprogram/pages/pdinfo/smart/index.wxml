@@ -7,7 +7,7 @@
 <t-cell-group theme="card" title="一般信息">
   <t-cell title="型号" description="{{stinfo.model}}" hover />
   <t-cell title="发布日期" description="{{stinfo.rel_date}}" hover />
-  <t-cell title="支持状态" description="{{stinfo.isspt}}" hover />
+  <t-cell title="支持状态" description="{{stinfo.spt_status}}" hover />
   <t-cell title="材质" description="{{stinfo.material}}" hover />
   <t-cell title="尺寸和重量" description="{{stinfo.weight}}" hover />
   <t-cell title="用途" description="{{stinfo.use}}" hover />

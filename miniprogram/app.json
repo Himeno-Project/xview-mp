@@ -1,15 +1,15 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/pdlist/index",
+    "pages/fav/index",
+    "pages/my/index",
     "pages/about/index",
-    "pages/user/index",
+    "pages/classlist/index",
     "pages/pdinfo/phone/index",
     "pages/pdinfo/computer/index",
     "pages/pdinfo/software/index",
     "pages/pdinfo/smart/index",
     "pages/pdinfo/tv/index",
-    "components/x-card/x-card",
     "pages/pdinfo/router/index"
   ],
   "subpackages": [],
@@ -24,11 +24,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/pdlist/index",
-        "text": "现有"
-      },
-      {
-        "pagePath": "pages/user/index",
+        "pagePath": "pages/my/index",
         "text": "我的"
       },
       {
@@ -43,8 +39,6 @@
     "t-icon": "tdesign-miniprogram/icon/icon",
     "t-cell": "tdesign-miniprogram/cell/cell",
     "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
-    "t-indexes": "tdesign-miniprogram/indexes/indexes",
-    "t-indexes-anchor": "tdesign-miniprogram/indexes-anchor/indexes-anchor",
     "t-image": "tdesign-miniprogram/image/image",
     "t-skeleton": "tdesign-miniprogram/skeleton/skeleton"
   },

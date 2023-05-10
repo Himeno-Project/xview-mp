@@ -1,4 +1,4 @@
-// pages/detail/detail.ts
+// pages/classlist/index.js
 var http = require("../../utils/http.js");
 Page({
 
@@ -8,6 +8,7 @@ Page({
   data: {
     pd_type: '',
     page_type: '',
+    list_type: '',
     dtinfo: {},
     search_value: ''
   },
@@ -16,7 +17,7 @@ Page({
   search(e) {
     this.show_device_list(this.data.search_value)
   },
-  
+
   search_change(e) {
     console.log(e)
     if (e.detail.value == "") {
@@ -25,7 +26,7 @@ Page({
   },
 
   show_device_list(search_text = "") {
-    http.cloudGet(`/api/model-query/models/${ this.data.pd_type}/${encodeURIComponent(search_text)}`).then((res) => {
+    http.cloudGet(`/api/model-query/models/${this.data.list_type}/${encodeURIComponent(search_text)}`).then((res) => {
       console.log(res.data.data);
       let dtinfo = res.data.data
       this.setData({
@@ -46,9 +47,11 @@ Page({
     // 因为考虑到了有些产品共用页面的情况（比如手机和平板，所以页面要相同）。
     this.setData({
       pd_type: options.pd_type,
+      list_type: options.pd_type,
       page_type: options.pd_type
     })
 
+    console.log("接收的参数（列表类型）是 " + this.data.list_type)
     console.log("接收的参数（产品类型）是 " + this.data.pd_type)
     console.log("接收的参数（页面类型）是 " + this.data.page_type)
 
