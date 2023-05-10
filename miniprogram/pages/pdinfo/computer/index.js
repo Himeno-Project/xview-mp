@@ -18,11 +18,10 @@ Page({
       var pd_type = options.pd_type
       var pd_id = options.pd_id
   
-      getinfo(pd_type, pd_id).then((pcinfo) => {
+      getinfo(pd_id).then((pcinfo) => {
         this.setData({
           pcinfo,
-          pd_id,
-          pd_type
+          pd_id
         })
       })
     },

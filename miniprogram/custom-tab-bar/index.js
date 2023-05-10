@@ -7,6 +7,10 @@ Component({
       label: '首页'
     }, {
       icon: 'user',
+      value: 'fav',
+      label: '收藏'
+    },{
+      icon: 'user',
       value: 'my',
       label: '我的'
     }, {

@@ -12,28 +12,19 @@
   <t-cell title="尺寸和重量" description="{{rtinfo.weight}}" hover />
   <t-cell title="防水等级" description="{{rtinfo.water}}" hover />
   <t-cell title="颜色" description="{{rtinfo.colors}}" hover="" />
-  <t-cell title="背板材质" description="{{rtinfo.back_material}}" hover="" />
-  <t-cell title="边框材质" description="{{rtinfo.case_material}}" hover="" />
-  <t-cell title="屏幕材质" description="{{rtinfo.scr_material}}" hover="" />
 </t-cell-group>
 
 <t-cell-group theme="card" title="系统">
+  <!-- 无线路由器的处理器频率和核心数量不需要单独分类，因此直接合并到处理器的数据里面。 -->
   <t-cell title="处理器" description="{{rtinfo.system.cpu_name}}" hover />
-  <t-cell title="处理器速度" description="{{rtinfo.system.cpu_speed}}" hover />
-  <t-cell title="处理器核心" description="{{rtinfo.system.cpu_core_num}}" hover />
   <t-cell title="处理器架构" description="{{rtinfo.system.cpu_arch}}" hover />
-  <t-cell title="处理器跑分" description="{{rtinfo.system.cpu_mark}}" hover />
   <t-cell title="内存大小" description="{{rtinfo.system.ram_name}}" hover />
-  <t-cell title="内存架构" description="{{rtinfo.system.ram_arch}}" hover />
+  <t-cell title="存储容量" description="{{rtinfo.system.stor_size}}" hover />
 </t-cell-group>
 
-<t-cell-group theme="card" title="相机">
-  <t-cell title="相机厂商" description="{{rtinfo.camera.brand_name}}" hover />
-  <t-cell title="摄像头数" description="{{rtinfo.camera.cam_num}}" hover />
-  <t-cell title="相机像素" description="{{rtinfo.camera.pixel}}" hover />
-  <t-cell title="视频格式" description="{{rtinfo.camera.video_formats}}" hover="" />
-  <t-cell title="照片格式" description="{{rtinfo.camera.photo_formats}}" hover="" />
-  <t-cell title="说明" description="{{rtinfo.camera.desc}}" hover="" />
+<t-cell-group theme="card" title="网络">
+  <t-cell title="WAN口数量" description="{{rtinfo.network.wan_num}}" hover />
+  <t-cell title="LAN口数量" description="{{rtinfo.network.lan_num}}" hover />
 </t-cell-group>
 
 <t-cell-group theme="card" title="软件">
@@ -52,13 +43,6 @@
   <t-cell title="工作温度" description="{{rtinfo.env.opt_temp}}" hover="" />
   <t-cell title="工作湿度" description="{{rtinfo.env.opt_humidity}}" hover="" />
   <t-cell title="工作海拔" description="{{rtinfo.env.opt_alti}}" hover="" />
-</t-cell-group>
-
-<t-cell-group theme="card" title="传感器">
-  <t-cell title="传感器" description="{{rtinfo.sensor.sensor}}" hover="" />
-  <t-cell title="附加功能" description="{{rtinfo.sensor.sensor_feature}}" hover="" />
-  <t-cell title="震动马达" description="{{rtinfo.sensor.haptic}}" hover="" />
-  <t-cell title="扬声器" description="{{rtinfo.sensor.speaker}}" hover="" />
 </t-cell-group>
 
 <t-cell-group theme="card" title="网络">

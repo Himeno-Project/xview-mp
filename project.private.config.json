@@ -35,6 +35,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/fav/index",
+          "query": "收藏夹",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

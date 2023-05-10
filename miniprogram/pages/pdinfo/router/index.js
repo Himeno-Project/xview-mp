@@ -19,11 +19,10 @@ Page({
     var pd_type = options.pd_type
     var pd_id = options.pd_id
 
-    getinfo(pd_type, pd_id).then((rtinfo) => {
+    getinfo(pd_id).then((rtinfo) => {
       this.setData({
         rtinfo,
-        pd_id,
-        pd_type
+        pd_id
       })
     })
   },

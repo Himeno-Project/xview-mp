@@ -43,34 +43,41 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
     // 因为考虑到了有些产品共用页面的情况（比如手机和平板，所以页面要相同）。
-    this.setData({
-      pd_type: options.pd_type,
-      list_type: options.pd_type,
-      page_type: options.pd_type
-    })
+    const pdType = options.pd_type;
+    const listType = options.pd_type;
+    let pageType = options.pd_type;
 
-    console.log("接收的参数（列表类型）是 " + this.data.list_type)
-    console.log("接收的参数（产品类型）是 " + this.data.pd_type)
-    console.log("接收的参数（页面类型）是 " + this.data.page_type)
+    console.log(`接收的参数（列表类型）是 ${listType}`);
+    console.log(`接收的参数（产品类型）是 ${pdType}`);
+    console.log(`接收的参数（页面类型）是 ${pageType}`);
 
     wx.showLoading({
       title: '正在加载',
-    })
+    });
 
-    // 手机和平板电脑共用一个详情页，因此这里重定向到手机
-    if (this.data.page_type == 'tablet') {
-      this.setData({
-        page_type: 'phone'
-      })
-
-      console.log("检测到平板类，修正后的参数（页面类型）是 " + this.data.page_type)
+    // 手机和平板电脑共用一个详情页，因此这里重定向到手机 
+    if (pageType === 'tablet') {
+      pageType = 'phone';
+      console.log(`检测到平板类，修正后的参数（页面类型）是 ${pageType}`);
     }
 
+    /*
+        优化说明：设置数据
+        原来的代码中，先设置一遍整体的 setData 数据，
+        再根据平板类的特殊情况修改数据再 setData，
+        因此没有必要，优化为先修改，再统一 setData
+    */
 
-    this.show_device_list()
+    this.setData({
+      pd_type: pdType,
+      list_type: listType,
+      page_type: pageType,
+    });
+
+    this.show_device_list();
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

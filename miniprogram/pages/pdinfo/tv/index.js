@@ -16,14 +16,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-      var pd_type = options.pd_type
       var pd_id = options.pd_id
   
-      getinfo(pd_type, pd_id).then((tvinfo) => {
+      getinfo(pd_id).then((tvinfo) => {
         this.setData({
           tvinfo,
-          pd_id,
-          pd_type
+          pd_id
         })
       })
     },

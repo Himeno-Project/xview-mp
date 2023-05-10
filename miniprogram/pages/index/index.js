@@ -26,6 +26,21 @@ Page({
       scrwidth: screenWidth,
       scrheight: screenHeight,
     });
+
+    // 对于电脑的处理
+    if (this.data.nowbrand == "microsoft") {
+      this.setData({
+        nowbrand: 'PC'
+      })
+    } else if (this.data.nowbrand.startsWith('Mac')) {
+      this.setData({
+        nowbrand: 'Macintosh'
+      })
+    } else if (this.data.nowbrand == "devtools") {
+      this.setData({
+        nowbrand: '开发者工具'
+      })
+    }
   },
 
   /**

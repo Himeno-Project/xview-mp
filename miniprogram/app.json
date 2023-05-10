@@ -24,6 +24,10 @@
         "text": "首页"
       },
       {
+        "pagePath": "pages/fav/index",
+        "text": "收藏"
+      },
+      {
         "pagePath": "pages/my/index",
         "text": "我的"
       },

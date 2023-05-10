@@ -5,7 +5,7 @@
 
 const http = require("./http.js");
 
-async function getinfo(now_type, now_id) {
+async function getinfo(now_id) {
   console.log(`now id is: ${now_id}`);
 
   wx.showLoading({
@@ -13,7 +13,7 @@ async function getinfo(now_type, now_id) {
   });
 
   try {
-    const res = await http.cloudGet(`/api/model-query/detail/${now_type}/${now_id}`);
+    const res = await http.cloudGet(`/api/model-query/detail/${now_id}`);
     wx.hideLoading();
     return res.data.data;
   } catch (error) {
