@@ -57,5 +57,4 @@
   <t-cell title="蓝牙" description="{{rtinfo.connect.bluetooth}}" hover />
   <t-cell title="NFC" description="{{rtinfo.connect.nfc}}" hover />
   <t-cell title="调制解调器" description="{{rtinfo.connect.modem}}" hover />
-  <t-cell title="SIM卡槽" description="{{rtinfo.connect.sim_slots}}" hover />
 </t-cell-group>

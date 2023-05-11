@@ -1,5 +1,7 @@
 // pages/pdinfo/index.js
-var getinfo = require("../../../utils/getinfo.js")
+var getinfo = require("../../../utils/getinfo.js");
+var favorite = require("../../../utils/favorite.js");
+
 
 Page({
 
@@ -8,7 +10,34 @@ Page({
    */
   data: {
     pd_type: '',
-    phinfo: {}
+    phinfo: {},
+    deldialogShow: false
+  },
+
+  favOperate(e) {
+    var nowid = e.currentTarget.dataset.pd_id
+    // 判断是否已经被收藏
+    if (favorite.isFavorite(nowid)) {
+      console.log("已经添加过！");
+      this.setData({
+        deldialogShow: true
+      });
+    } else {
+      console.log("没有添加过！");
+      favorite.addFavorite(nowid);
+    }
+  },
+
+  favRemove(e){
+    var nowid = e.currentTarget.dataset.pd_id
+    favorite.removeFavorite(nowid)
+    this.closeDialog();
+  },
+
+  closeDialog(){
+    this.setData({
+      deldialogShow: false
+    })
   },
 
   /**
@@ -19,8 +48,7 @@ Page({
 
     getinfo(pd_id).then((phinfo) => {
       this.setData({
-        phinfo,
-        pd_id
+        phinfo
       })
     })
   },

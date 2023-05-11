@@ -1,7 +1,7 @@
 <!--pages/pdinfo/tv/index.wxml-->
 
 <t-cell-group theme="card">
-  <t-cell title="{{tvinfo.pd_name}}" description="{{tvinfo.slogan}}" align="top" image="" hover bordered="{{false}}" />
+  <t-cell title="{{tvinfo.pd_name}}" description="{{tvinfo.slogan}}" align="top" image="{{tvinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
 
 <t-cell-group theme="card" title="一般信息">
@@ -59,7 +59,8 @@
   <t-cell title="视频输入" description="{{tvinfo.connect.videoinput}}" hover />
   <t-cell title="音频输出" description="{{tvinfo.connect.audiooutput}}" hover />
   <t-cell title="音频输入" description="{{tvinfo.connect.audioinput}}" hover />
-  <t-cell title="支持的电视" description="{{tvinfo.connect.tvcompatibility}}" hover /> #适用于电视盒子类产品
+  <!-- 适用于电视盒子类产品 -->
+  <t-cell title="支持的电视" wx:if="{{tvinfo.connect.is_tvcompat}}" description="{{tvinfo.connect.tvcompatibility}}" hover />
   <t-cell title="接口" description="{{tvinfo.connect.port}}" hover />
   <t-cell title="Wi-Fi" description="{{tvinfo.connect.wifi}}" hover />
   <t-cell title="蓝牙" description="{{tvinfo.connect.bluetooth}}" hover />

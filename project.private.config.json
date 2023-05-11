@@ -37,9 +37,16 @@
           "scene": null
         },
         {
-          "name": "",
+          "name": "收藏夹",
           "pathName": "pages/fav/index",
-          "query": "收藏夹",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "彩蛋",
+          "pathName": "pages/about/why_not_js/index",
+          "query": "",
           "launchMode": "default",
           "scene": null
         }

@@ -4,8 +4,6 @@
   <t-cell title="{{phinfo.pd_name}}" description="{{phinfo.slogan}}" align="top" image="{{phinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
 
-
-
 <t-cell-group theme="card" title="一般信息">
   <t-cell title="型号" description="{{phinfo.model}}" hover />
   <t-cell title="发布日期" description="{{phinfo.rel_date}}" hover />
@@ -91,4 +89,6 @@
   <t-cell title="SIM卡槽" description="{{phinfo.connect.sim_slots}}" hover />
 </t-cell-group>
 
-<t-fab icon="heart" bind:click="handleClick" aria-label="收藏"></t-fab>
+<t-fab icon="heart" data-pd_id="{{phinfo.pd_id}}" bind:click="favOperate" aria-label="收藏"></t-fab>
+
+<t-dialog visible="{{deldialogShow}}" data-pd_id="{{phinfo.pd_id}}" title="已经收藏" content="是否取消收藏？" confirm-btn="取消收藏" cancel-btn="返回" bind:cancel="closeDialog" bind:confirm="favRemove" />

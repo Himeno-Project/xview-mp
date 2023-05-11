@@ -15,13 +15,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-      var pd_type = options.pd_type
       var pd_id = options.pd_id
   
       getinfo(pd_id).then((pcinfo) => {
         this.setData({
-          pcinfo,
-          pd_id
+          pcinfo
         })
       })
     },

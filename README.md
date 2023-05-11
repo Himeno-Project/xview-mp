@@ -35,6 +35,12 @@ npm install -S
 
 
 
+## 已知 Bug 和 Bug 反馈
+
+点击 Issue 菜单查询已知 Bug 和反馈新 Bug。
+
+
+
 ## 作者
 
 - [XiaoHe321](https://github.com/xh321)

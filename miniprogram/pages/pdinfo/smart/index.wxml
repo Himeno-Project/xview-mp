@@ -1,7 +1,7 @@
 <!--pages/pdinfo/smart/index.wxml-->
 
 <t-cell-group theme="card">
-  <t-cell title="{{stinfo.pd_name}}" description="{{stinfo.slogan}}" align="top" image="" hover bordered="{{false}}" />
+  <t-cell title="{{stinfo.pd_name}}" description="{{stinfo.slogan}}" align="top" image="{{stinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
 
 <t-cell-group theme="card" title="一般信息">

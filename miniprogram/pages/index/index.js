@@ -36,6 +36,10 @@ Page({
       this.setData({
         nowbrand: 'Macintosh'
       })
+    } else if (this.data.nowbrand == "apple") { // 新版微信客户的判断
+      this.setData({
+        nowbrand: 'Macintosh'
+      })
     } else if (this.data.nowbrand == "devtools") {
       this.setData({
         nowbrand: '开发者工具'

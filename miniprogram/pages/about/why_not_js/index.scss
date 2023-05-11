@@ -1,0 +1,36 @@
+/* pages/about/why_not_js/index.wxss */
+
+.why_not_js {
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx 32rpx;
+  background-color: white;
+  border-radius: 18rpx;
+  padding: 40rpx;
+  justify-content: center;
+
+  &-header {
+    font-size: 32rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10rpx 0;
+  }
+
+  &-article {
+    font-size: 32rpx;
+
+    view {
+      margin: 10rpx 0;
+    }
+
+    &-sub {
+      font-size: smaller;
+    }
+  }
+
+  &-note {
+    font-style: oblique;
+    color: red;
+  }
+}
