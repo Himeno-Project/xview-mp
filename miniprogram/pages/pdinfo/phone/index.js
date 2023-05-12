@@ -11,7 +11,8 @@ Page({
   data: {
     pd_type: '',
     phinfo: {},
-    deldialogShow: false
+    deldialogShow: false,
+    fav_status: false
   },
 
   favOperate(e) {
@@ -25,16 +26,22 @@ Page({
     } else {
       console.log("没有添加过！");
       favorite.addFavorite(nowid);
+      this.setData({
+        fav_status: true
+      })
     }
   },
 
-  favRemove(e){
+  favRemove(e) {
     var nowid = e.currentTarget.dataset.pd_id
     favorite.removeFavorite(nowid)
+    this.setData({
+      fav_status: false
+    })
     this.closeDialog();
   },
 
-  closeDialog(){
+  closeDialog() {
     this.setData({
       deldialogShow: false
     })
@@ -50,6 +57,11 @@ Page({
       this.setData({
         phinfo
       })
+    })
+
+    var fav_status = favorite.isFavorite(pd_id)
+    this.setData({
+      fav_status: fav_status
     })
   },
 
