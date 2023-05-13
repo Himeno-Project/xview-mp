@@ -8,6 +8,10 @@
   border-radius: 18rpx;
   background-color: var(--td-cell-bg-color, var(--td-bg-color-container, var(--td-font-white-1, #ffffff)));
   padding: 40rpx 40rpx;
+  
+  &:active{
+    background-color: var(--td-cell-hover-color, var(--td-bg-color-secondarycontainer, var(--td-gray-color-1, #f3f3f3)));
+  }
 }
 
 .x-text {
