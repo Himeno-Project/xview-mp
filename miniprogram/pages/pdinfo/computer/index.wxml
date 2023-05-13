@@ -79,3 +79,7 @@
   <t-cell title="NFC" description="{{pcinfo.connect.nfc}}" hover />
   <t-cell title="调制解调器" description="{{pcinfo.connect.bluetooth}}" hover />
 </t-cell-group>
+
+<t-fab icon="{{fav_status?'heart-filled':'heart'}}" data-pd_id="{{pcinfo.pd_id}}" bind:click="favOperate" aria-label="收藏"></t-fab>
+
+<t-dialog visible="{{deldialogShow}}" data-pd_id="{{pcinfo.pd_id}}" title="已经收藏" content="是否取消收藏？" confirm-btn="取消收藏" cancel-btn="返回" bind:cancel="closeDialog" bind:confirm="favRemove" />

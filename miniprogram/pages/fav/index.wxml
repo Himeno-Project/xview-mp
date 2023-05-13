@@ -1,2 +1,2 @@
 <!--pages/fav/index.wxml-->
-<text>pages/fav/index.wxml</text>
+<t-empty style="padding:50rpx;" icon="info-circle-filled" description="您还没有进行收藏哦～" />

@@ -16,16 +16,18 @@ Page({
   },
 
   favOperate(e) {
+    // 获取当前的产品id
     var nowid = e.currentTarget.dataset.pd_id
-    // 判断是否已经被收藏
-    if (favorite.isFavorite(nowid)) {
-      console.log("已经添加过！");
+    // 获取当前的收藏状态
+    var fav_status = favorite.isFavorite(nowid);
+    // 如果已经被收藏，弹出删除对话框
+    if (fav_status) {
       this.setData({
         deldialogShow: true
       });
     } else {
-      console.log("没有添加过！");
-      favorite.addFavorite(nowid);
+      // 如果没有被收藏，添加到收藏列表，并更新收藏状态
+      favorite.addFavorite(nowid)
       this.setData({
         fav_status: true
       })
@@ -51,21 +53,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    var pd_id = options.pd_id
-
+    // 优化说明：将获取收藏状态的代码放在了 getinfo 的回调函数中，
+    // 这样可以保证在获取产品信息后才更新收藏状态，避免了可能的异步问题。
+    
+    // 获取产品id
+    var pd_id = options.pd_id;
+    // 获取产品信息，并更新数据
     getinfo(pd_id).then((phinfo) => {
       this.setData({
-        phinfo
-      })
-    })
-
-    var fav_status = favorite.isFavorite(pd_id)
-    this.setData({
-      fav_status: fav_status
-    })
+        phinfo,
+        // 获取收藏状态，并更新数据
+        fav_status: favorite.isFavorite(pd_id)
+      });
+    });
   },
-
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成

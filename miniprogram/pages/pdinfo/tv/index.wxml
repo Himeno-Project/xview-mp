@@ -77,3 +77,7 @@
   <t-cell title="遥控器" description="{{tvinfo.equipment.remote}}" hover />
   <t-cell title="其他配件" description="{{tvinfo.equipment.extra}}" hover />
 </t-cell-group>
+
+<t-fab icon="{{fav_status?'heart-filled':'heart'}}" data-pd_id="{{tvinfo.pd_id}}" bind:click="favOperate" aria-label="收藏"></t-fab>
+
+<t-dialog visible="{{deldialogShow}}" data-pd_id="{{tvinfo.pd_id}}" title="已经收藏" content="是否取消收藏？" confirm-btn="取消收藏" cancel-btn="返回" bind:cancel="closeDialog" bind:confirm="favRemove" />

@@ -6,7 +6,7 @@ Component({
       value: 'index',
       label: '首页'
     }, {
-      icon: 'user',
+      icon: 'heart',
       value: 'fav',
       label: '收藏'
     },{

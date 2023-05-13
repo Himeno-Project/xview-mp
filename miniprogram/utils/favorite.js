@@ -66,6 +66,7 @@ function clearFavorites() {
 }
 
 module.exports = {
+  getFavorites,
   isFavorite,
   addFavorite,
   removeFavorite,
