@@ -1,4 +1,6 @@
 <!--components/x-card/x-card.wxml-->
+<!-- 自制卡片组件 -->
+
 <view class="x-card">
     <view class="x-text x-title"> {{ title }} </view>
     <view class="x-text x-subtitle x-t-grey">{{ subtitle }} </view>
