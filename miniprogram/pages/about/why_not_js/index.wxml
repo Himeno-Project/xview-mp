@@ -1,84 +1,12 @@
 <!--pages/about/why_not_js/index.wxml-->
 
 <!-- 
-小程序的彩蛋，来自 GNU 的网站
+小程序的彩蛋，部分文字来自 GNU 的网站
 https://www.gnu.org/philosophy/javascript-trap.en.html
 许可证基于 Creative Commons Attribution-NoDerivatives 4.0 International License  
 -->
 <view class="why_not_js">
-
-  <view class="why_not_js-header">
-    <view style="font-size: 40rpx; font-weight: bolder;">The JavaScript Trap</view>
-    <view>by Richard Stallman</view>
-  </view>
-
-  <view class="why_not_js-article">
+    <view style="font-weight: bolder;">Important Message of Our Miniprogram</view>
     <view>You may be running nonfree programs on your computer every day without realizing it—through your web browser.</view>
-
-    <view class="why_not_js-note">Webmasters: there are several ways to indicate the license of JavaScript programs in a web site.</view>
-
-    <view>In the free software community, the idea that any nonfree program mistreats its users is familiar. Some of us defend our freedom by rejecting all proprietary software on our computers. Many others recognize nonfreeness as a strike against the program.</view>
-
-    <view>Many users are aware that this issue applies to the plug-ins that browsers offer to install, since they can be free or nonfree. But browsers run other nonfree programs which they don't ask you about, or even tell you about—programs that web pages contain or link to. These programs are most often written in JavaScript, though other languages are also used.</view>
-
-    <view>JavaScript (officially called ECMAScript, but few use that name) was once used for minor frills in web pages, such as cute but inessential navigation and display features. It was acceptable to consider these as mere extensions of HTML markup, rather than as true software, and disregard the issue.</view>
-
-    <view>Some sites still use JavaScript that way, but many use it for major programs that do large jobs. For instance, Google Docs tries to install into your browser a JavaScript program which measures half a megabyte, in a compacted form that we could call Obfuscript. This compacted form is made from the source code, by deleting the extra spaces that make the code readable and the explanatory remarks that make it comprehensible, and replacing each meaningful name in the code with an arbitrary short name so we can't tell what it is supposed to mean.</view>
-
-    <view>Part of the meaning of free software is that users have access to the program's source code (its plan). The source code of a program means the preferred form for programmers to modify—including helpful spacing, explanatory remarks, and meaningful names. Compacted code is a bogus, useless substitute for source code; the real source code of these programs is not available to the users, so users cannot understand it; therefore the programs are nonfree.</view>
-
-    <view>In addition to being nonfree, many of these programs are malware because they snoop on the user. Even nastier, some sites use services which record all the user's actions while looking at the page. The services supposedly “redact” the recordings to exclude some sensitive data that the web site shouldn't get. But even if that works reliably, the whole purpose of these services is to give the web site other personal data that it shouldn't get.</view>
-
-    <view>Browsers don't normally tell you when they load JavaScript programs. Some browsers have a way to turn off JavaScript entirely, but even if you're aware of this issue, it would take you considerable trouble to identify the nontrivial nonfree programs and block them. However, even in the free software community most users are not aware of this issue; the browsers' silence tends to conceal it.</view>
-
-    <view>To be clear, the language JavaScript is not inherently better or worse for users' freedom than any other language. It is possible to release a JavaScript program as free software, by distributing the source code under a free software license. If the program is self-contained—if its functioning and purpose are independent of the page it came in—that is fine; you can copy it to a file on your machine, modify it, and visit that file with a browser to run it. It's even possible to package it for installation just like other free programs and invocation with a shell command. These programs present no special moral issue different from those of C programs.</view>
-
-    <view>The issue of the JavaScript trap applies when the JavaScript program comes along with a web page that users visit. Those JavaScript programs are written to work with a particular page or site, and the page or site depends on them to function.</view>
-
-    <view>Suppose you copy and modify the page's JavaScript code. Then another problem arises: even if the program's source is available, browsers do not offer a way to run your modified version instead of the original when visiting that page or site. The effect is comparable to tivoization, although in principle not quite so hard to overcome.</view>
-
-    <view>JavaScript is not the only language web sites use for programs sent to the user. Flash supported programming through an extended variant of JavaScript, but that is a thing of the past. Microsoft Silverlight seems likely to create a problem similar to Flash, except worse, since Microsoft uses it as a platform for nonfree codecs. A free replacement for Silverlight does not do the job adequately for the free world unless it normally comes with free replacement codecs.</view>
-
-    <view>Java applets also run in the browser, and raise similar issues. In general, any sort of applet system poses this sort of problem. Having a free execution environment for an applet only brings us far enough to encounter the problem.</view>
-
-    <view>It is theoretically possible to program in HTML and CSS, but in practice this capability is limited and inconvenient; merely to make it do something is an impressive hack. Such programs ought to be free, but CSS is not a serious problem for users' freedom as of 2019.</view>
-
-    <view>A strong movement has developed that calls for web sites to communicate only through formats and protocols that are free (some say “open”); that is to say, whose documentation is published and which anyone is free to implement. However, the presence of JavaScript programs in web pages makes that criterion insufficient. The JavaScript language itself, as a format, is free, and use of JavaScript in a web site is not necessarily bad. However, as we've seen above, it can be bad—if the JavaScript program is nonfree. When the site transmits a program to the user, it is not enough for the program to be written in a documented and unencumbered language; that program must be free, too. “Transmits only free programs to the user” must become part of the criterion for an ethical web site.</view>
-
-    <view>Silently loading and running nonfree programs is one among several issues raised by “web applications.” The term “web application” was designed to disregard the fundamental distinction between software delivered to users and software running on a server. It can refer to a specialized client program running in a browser; it can refer to specialized server software; it can refer to a specialized client program that works hand in hand with specialized server software. The client and server sides raise different ethical issues, even if they are so closely integrated that they arguably form parts of a single program. This article addresses only the issue of the client-side software. We are addressing the server issue separately.</view>
-
-    <view>In practical terms, how can we deal with the problem of nontrivial nonfree JavaScript programs in web sites? The first step is to avoid running it.</view>
-
-    <view>What do we mean by “nontrivial”? It is a matter of degree, so this is a matter of designing a simple criterion that gives good results, rather than finding the one correct answer.</view>
-
-    <view>
-      <view>Our current criterion is to consider a JavaScript program nontrivial if any of these conditions is met:</view>
-      <view class="why_not_js-article-sub">
-        <view>it is referred to as an external script (from another page).</view>
-        <view>it declares an array more than 50 elements long.</view>
-        <view>it defines a named entity (function or method) that calls anything other than a primitive.</view>
-        <view>it defines a named entity with more than three conditional constructs and loop construction.</view>
-        <view>code outside of named definitions calls anything but primitives and functions defined further up in the page.</view>
-        <view>code outside of named definitions contains more than three conditional constructs and loop construction, total.</view>
-        <view>it calls eval.</view>
-        <view>it does Ajax calls.</view>
-        <view>it uses bracket notation for dynamic object property access, which looks like object[property].</view>
-        <view>it alters the DOM.</view>
-        <view>it uses dynamic JavaScript constructs that are difficult to analyze without interpreting the program, or is loaded along with scripts that use such constructs. Specifically, using any other construct than a string literal with certain methods (Obj.write, Obj.createElement, and others).</view>
-      </view>
-      <view>How do we tell whether the JavaScript code is free? In a separate article, we propose a method by which a nontrivial JavaScript program in a web page can state the URL where its source code is located, and can state its license too, using stylized comments.</view>
-    </view>
-
-    <view>Finally, we need to change free browsers to detect and block nontrivial nonfree JavaScript in web pages. The program LibreJS detects nonfree, nontrivial JavaScript in pages you visit, and blocks it. LibreJS is included in IceCat, and available as an add-on for Firefox.</view>
-
-    <view>Browser users also need a convenient facility to specify JavaScript code to use instead of the JavaScript in a certain page. (The specified code might be total replacement, or a modified version of the free JavaScript program in that page.) Greasemonkey comes close to being able to do this, but not quite, since it doesn't guarantee to modify the JavaScript code in a page before that program starts to execute. Using a local proxy works, but is too inconvenient now to be a real solution. We need to construct a solution that is reliable and convenient, as well as sites for sharing changes. The GNU Project would like to recommend sites which are dedicated to free changes only.</view>
-
-    <view>These features will make it possible for a JavaScript program included in a web page to be free in a real and practical sense. JavaScript will no longer be a particular obstacle to our freedom—no more than C and Java are now. We will be able to reject and even replace the nonfree nontrivial JavaScript programs, just as we reject and replace nonfree packages that are offered for installation in the usual way. Our campaign for web sites to free their JavaScript can then begin.</view>
-
-    <view>In the mean time, there's one case where it is acceptable to run a nonfree JavaScript program: to send a complaint to the website operators saying they should free or remove the JavaScript code in the site. Please don't hesitate to enable JavaScript temporarily to do that—but remember to disable it again afterwards.</view>
-
-    <view class="why_not_js-note">Webmasters: there are several ways to indicate the license of JavaScript programs in a web site.</view>
-
-    <view class="why_not_js-note">Acknowledgements: I thank Matt Lee and John Resig for their help in defining our proposed criterion, and David Parunakian for bringing the problem to my attention.</view>
-  </view>
+    <view style="font-style:oblique; text-align: right;">-- The GNU Project Website</view>
 </view>

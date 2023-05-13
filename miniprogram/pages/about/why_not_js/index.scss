@@ -8,29 +8,9 @@
   border-radius: 18rpx;
   padding: 40rpx;
   justify-content: center;
+  font-size: 32rpx;
 
-  &-header {
-    font-size: 32rpx;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10rpx 0;
-  }
-
-  &-article {
-    font-size: 32rpx;
-
-    view {
-      margin: 10rpx 0;
-    }
-
-    &-sub {
-      font-size: smaller;
-    }
-  }
-
-  &-note {
-    font-style: oblique;
-    color: red;
+  view{
+    margin:10rpx 0;
   }
 }
