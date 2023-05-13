@@ -7,6 +7,6 @@ https://www.gnu.org/philosophy/javascript-trap.en.html
 -->
 <view class="why_not_js">
     <view style="font-weight: bolder;">Important Message of Our Miniprogram</view>
-    <view>You may be running nonfree programs on your computer every day without realizing it—through your web browser.</view>
-    <view style="font-style:oblique; text-align: right;">-- The GNU Project Website</view>
+    <view>The GNU Project website says, "You may be running nonfree programs on your computer every day without realizing it—through your web browser."</view>
+    <view>Please give up using the JavaScript language, now!</view>
 </view>
