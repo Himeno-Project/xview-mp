@@ -3,6 +3,13 @@
   <t-cell title="{{pcinfo.pd_name}}" description="{{pcinfo.slogan}}" align="top" image="{{pcinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
 
+<view style="padding:20rpx"></view>
+
+<t-grid column="3" theme="card">
+  <t-grid-item text="处理器" description="{{pcinfo.system.cpu_name}}" icon="layers" />
+  <t-grid-item text="常见内存大小" description="{{pcinfo.common_ram_size}}" icon="dashboard" />
+  <t-grid-item text="起售价" description="{{pcinfo.init_price}}" icon="shop" />
+</t-grid>
 
 <t-cell-group theme="card" title="一般信息">
   <t-cell title="型号" description="{{pcinfo.model}}" hover />
@@ -46,6 +53,8 @@
   <t-cell title="电池类型" description="{{pcinfo.power.batt_type}}" hover />
   <t-cell title="电池容量" description="{{pcinfo.power.batt_capacity}}" hover />
   <t-cell title="充电" description="{{pcinfo.power.charger}}" hover />
+  <!-- 没有就写不需要 -->
+  <t-cell title="续航" description="{{pcinfo.power.battery_life}}" hover="" />
 </t-cell-group>
 
 

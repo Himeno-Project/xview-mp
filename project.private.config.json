@@ -49,6 +49,34 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "软件",
+          "pathName": "pages/pdinfo/software/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "可穿戴",
+          "pathName": "pages/pdinfo/smart/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "电视",
+          "pathName": "pages/pdinfo/tv/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "其他",
+          "pathName": "pages/pdinfo/other/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

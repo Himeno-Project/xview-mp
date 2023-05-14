@@ -4,6 +4,14 @@
   <t-cell title="{{rtinfo.pd_name}}" description="{{rtinfo.slogan}}" align="top" image="{{rtinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
 
+<view style="padding:20rpx"></view>
+
+<t-grid column="3" theme="card">
+  <t-grid-item text="无线芯片" description="{{rtinfo.network.wifi}}" icon="wifi" />
+  <t-grid-item text="无线速率" description="{{rtinfo.network.wifispeed}}" icon="loading" />
+  <t-grid-item text="起售价" description="{{rtinfo.init_price}}" icon="shop" />
+</t-grid>
+
 <t-cell-group theme="card" title="一般信息">
   <t-cell title="型号" description="{{rtinfo.model}}" hover />
   <t-cell title="发布日期" description="{{rtinfo.rel_date}}" hover />
@@ -36,7 +44,7 @@
 </t-cell-group>
 
 <t-cell-group theme="card" title="电源">
-  <t-cell title="配套充电器" description="{{rtinfo.power.charger}}" hover="" />
+  <t-cell title="配套电源" description="{{rtinfo.power.charger}}" hover="" />
 </t-cell-group>
 
 <t-cell-group theme="card" title="工作环境">
@@ -47,16 +55,13 @@
 
 <t-cell-group theme="card" title="网络">
   <t-cell title="接口" description="{{rtinfo.network.port}}" hover />
-  <t-cell title="Wi-Fi" description="{{rtinfo.network.wifi}}" hover />
-  <t-cell title="蓝牙" description="{{rtinfo.network.bluetooth}}" hover />
+  <t-cell title="无线芯片" description="{{rtinfo.network.wifi}}" hover />
+  <t-cell title="无线速率" description="{{rtinfo.network.wifispeed}}" hover />
   <t-cell title="调制解调器" description="{{rtinfo.network.modem}}" hover />
 </t-cell-group>
 
 <t-cell-group theme="card" title="连接">
   <t-cell title="接口" description="{{rtinfo.connect.port}}" hover />
-  <t-cell title="蓝牙" description="{{rtinfo.connect.bluetooth}}" hover />
-  <t-cell title="NFC" description="{{rtinfo.connect.nfc}}" hover />
-  <t-cell title="调制解调器" description="{{rtinfo.connect.modem}}" hover />
 </t-cell-group>
 
 <t-fab icon="{{fav_status?'heart-filled':'heart'}}" data-pd_id="{{rtinfo.pd_id}}" bind:click="favOperate" aria-label="收藏"></t-fab>

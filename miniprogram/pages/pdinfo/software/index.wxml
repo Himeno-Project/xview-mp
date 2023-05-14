@@ -4,7 +4,15 @@
   <t-cell title="{{swinfo.pd_name}}" description="{{swinfo.slogan}}" align="top" image="{{swinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
 
-<t-cell-group theme="card">
+<view style="padding:20rpx"></view>
+
+<t-grid column="3" theme="card">
+  <t-grid-item text="编程语言" description="{{swinfo.dev.lang}}" icon="code" />
+  <t-grid-item text="源码模式" description="{{swinfo.dev.srcmode}}" icon="check" />
+  <t-grid-item text="稳定版本" description="{{swinfo.upd.stable_ver}}" icon="refresh" />
+</t-grid>
+
+<t-cell-group theme="card" title="一般信息">
   <t-cell title="发布日期" description="{{swinfo.rel_date}}" hover />
   <t-cell title="支持状态" description="{{swinfo.spt_status}}" hover />
   <t-cell title="市场取向" description="{{swinfo.marketgoal}}" hover />

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "t-empty": "tdesign-miniprogram/empty/empty"
+    "t-empty": "tdesign-miniprogram/empty/empty",
+    "t-button": "tdesign-miniprogram/button/button"
   }
 }

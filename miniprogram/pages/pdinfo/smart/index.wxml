@@ -4,6 +4,14 @@
   <t-cell title="{{stinfo.pd_name}}" description="{{stinfo.slogan}}" align="top" image="{{stinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
 
+<view style="padding:20rpx"></view>
+
+<t-grid column="3" theme="card">
+  <t-grid-item text="处理器" description="{{stinfo.system.cpu_name}}" icon="layers" />
+  <t-grid-item text="续航" description="{{stinfo.power.battery_life}}" icon="poweroff" />
+  <t-grid-item text="起售价" description="{{stinfo.init_price}}" icon="shop" />
+</t-grid>
+
 <t-cell-group theme="card" title="一般信息">
   <t-cell title="型号" description="{{stinfo.model}}" hover />
   <t-cell title="发布日期" description="{{stinfo.rel_date}}" hover />

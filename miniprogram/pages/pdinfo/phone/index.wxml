@@ -4,6 +4,14 @@
   <t-cell title="{{phinfo.pd_name}}" description="{{phinfo.slogan}}" align="top" image="{{phinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
 
+<view style="padding:20rpx"></view>
+
+<t-grid column="3" theme="card">
+  <t-grid-item text="处理器" description="{{phinfo.system.cpu_name}}" icon="layers" />
+  <t-grid-item text="常见内存大小" description="{{phinfo.common_ram_size}}" icon="dashboard" />
+  <t-grid-item text="起售价" description="{{phinfo.init_price}}" icon="shop" />
+</t-grid>
+
 <t-cell-group theme="card" title="一般信息">
   <t-cell title="型号" description="{{phinfo.model}}" hover />
   <t-cell title="发布日期" description="{{phinfo.rel_date}}" hover />
@@ -65,6 +73,7 @@
   <t-cell title="电池续航" description="{{phinfo.power.batt_life}}" hover="" />
   <t-cell title="配套充电器" description="{{phinfo.power.charger}}" hover="" />
   <t-cell title="充电速度" description="{{phinfo.power.charge_spd}}" hover="" />
+  <t-cell title="续航" description="{{phinfo.power.battery_life}}" hover="" />
 </t-cell-group>
 
 <t-cell-group theme="card" title="工作环境">

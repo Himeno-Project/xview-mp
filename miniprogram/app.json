@@ -11,6 +11,7 @@
     "pages/pdinfo/smart/index",
     "pages/pdinfo/tv/index",
     "pages/pdinfo/router/index",
+    "pages/pdinfo/other/index",
     "pages/about/why_not_js/index"
   ],
   "subpackages": [],
@@ -39,20 +40,10 @@
     ]
   },
   "usingComponents": {
-    "x-card": "components/x-card/x-card",
-    "t-button": "tdesign-miniprogram/button/button",
     "t-icon": "tdesign-miniprogram/icon/icon",
     "t-cell": "tdesign-miniprogram/cell/cell",
-    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
-    "t-image": "tdesign-miniprogram/image/image",
-    "t-skeleton": "tdesign-miniprogram/skeleton/skeleton",
-    "t-message": "tdesign-miniprogram/message/message",
-    "t-dialog": "tdesign-miniprogram/dialog/dialog",
-    "t-grid": "tdesign-miniprogram/grid/grid",
-    "t-grid-item": "tdesign-miniprogram/grid-item/grid-item",
-    "t-fab": "tdesign-miniprogram/fab/fab"
+    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group"
   },
-  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f6f6f6",
