@@ -1,2 +1,13 @@
 <!--pages/fav/index.wxml-->
-<t-empty style="padding:50rpx;" icon="info-circle-filled" description="您还没有进行收藏哦～" />
+<t-empty wx-if="{{emptyFav}}" icon="info-circle-filled" description="你还没有收藏商品呢~" />
+
+<t-cell-group wx-if="{{emptyFav == false}}" title="我的收藏" theme="card">
+  <!-- item.pd_imgs 的意思是第0个数组表达的图片永远是头图。-->
+  <t-cell title="{{item.pd_name}}"
+  description="型号：{{item.model}}，{{item.rel_year}} 年"
+  align="top" image="{{item.pd_imgs[0]}}"
+  hover bordered="{{false}}"
+  url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}"
+  wx:for="{{favInfo}}"
+  wx:key="index" arrow />
+</t-cell-group>

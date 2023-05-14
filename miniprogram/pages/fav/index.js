@@ -1,13 +1,43 @@
 // pages/fav/index.js
+
+const favorite = require("../../utils/favorite.js");
+const http = require("../../utils/http.js");
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    favList: [],
+    favInfo: [],
+    emptyFav: false
   },
 
+  async showList() {
+    // 将收藏夹中的数据提交给后端
+    var favList = favorite.getFavorites();
+
+    // 判断收藏是否为空或者空数组，设置data对象的emptyFav属性
+    this.setData({
+      emptyFav: !favList || favList.length == 0
+    })
+    // 只有收藏状态非空的时候才会考虑调接口，减轻服务器压力
+    if (!this.data.emptyFav) {
+      wx.showLoading({
+        title: '正在加载...',
+      })
+      // 使用 async/await 语法简化异步操作
+      const res = await http.cloudPost("/api/model-query/models/by-id", favList);
+      // 设置data对象的 favInfo 属性为返回的数据
+      this.setData({ favInfo: res.data.data });
+      // 打印数据
+      console.log(this.data.favInfo);
+      // 隐藏加载提示
+      wx.hideLoading()
+    }
+  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,7 +56,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.showList();
   },
 
   /**
