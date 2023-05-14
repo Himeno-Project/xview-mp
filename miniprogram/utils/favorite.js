@@ -8,6 +8,18 @@
 这样可以避免重复添加或者删除失败的情况。 
 */
 
+// 设置收藏夹更改状态
+function setFavChange(opt) {
+  // 使用布尔值作为参数，避免字符串比较
+  wx.setStorageSync('fav_status', opt);
+}
+
+// 检查收藏夹是否被更改
+function checkFavChange() {
+  // 直接返回布尔值，无需判断
+  return wx.getStorageSync('fav_status');
+}
+
 // 获取收藏列表
 function getFavorites() {
   return wx.getStorageSync('favorites') || [];
@@ -66,6 +78,8 @@ function clearFavorites() {
 }
 
 module.exports = {
+  setFavChange,
+  checkFavChange,
   getFavorites,
   isFavorite,
   addFavorite,
