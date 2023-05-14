@@ -11,7 +11,28 @@ Page({
   data: {
     favList: [],
     favInfo: [],
-    emptyFav: false
+    emptyFav: false,
+    cledialogShow: false
+  },
+
+  onDelete(e) {
+    var nowid = e.currentTarget.dataset.pd_id
+    favorite.removeFavorite(nowid)
+    this.showList()
+  },
+
+  cleClick() {
+    this.setData({ cledialogShow: true })
+  },
+
+  onClear() {
+    favorite.clearFavorites();
+    this.closeDialog();
+    this.showList();
+  },
+
+  closeDialog() {
+    this.setData({ cledialogShow: false })
   },
 
   async showList() {
@@ -37,7 +58,7 @@ Page({
       wx.hideLoading()
     }
   },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
