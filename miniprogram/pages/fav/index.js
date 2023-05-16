@@ -15,23 +15,30 @@ Page({
     cledialogShow: false
   },
 
+  // 收藏夹删除操作
   onDelete(e) {
     var nowid = e.currentTarget.dataset.pd_id
     favorite.removeFavorite(nowid)
+    // 刷新列表
     this.showList()
   },
 
+  // 清空收藏夹点击事件
   cleClick() {
+    // 显示对话框
     this.setData({ cledialogShow: true })
   },
 
+  // 收藏夹清空操作
   onClear() {
     favorite.clearFavorites();
     this.closeDialog();
+    // 刷新列表
     this.showList();
   },
 
   closeDialog() {
+    // 只需要将 cledialogShow 标记为 false 就可以
     this.setData({ cledialogShow: false })
   },
 

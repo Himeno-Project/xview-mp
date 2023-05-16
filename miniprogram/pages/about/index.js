@@ -25,16 +25,10 @@ Page({
     this.setData({
       card_count: card_count + 1
     })
-
-    if (this.data.card_count == 3) {
+    // 点击五次之后跳转到彩蛋
+    if (this.data.card_count == 5) {
       wx.navigateTo({
         url: '/pages/about/why_not_js/index'
-      })
-    }
-
-    if (this.data.card_count > 3) {
-      this.setData({
-        card_count: 0
       })
     }
   },
