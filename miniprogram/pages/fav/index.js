@@ -16,22 +16,27 @@ Page({
   },
 
   // 收藏夹删除操作
-  onDelete(e) {
-    var nowid = e.currentTarget.dataset.pd_id
-    favorite.removeFavorite(nowid)
+  async onDelete(e) {
+    // 使用 const 声明常量，避免变量被修改
+    const nowid = e.currentTarget.dataset.pd_id;
+    // 使用 await 等待异步操作完成，避免回调地狱
+    await favorite.removeFavorite(nowid);
     // 刷新列表
-    this.showList()
+    this.showList();
   },
 
   // 清空收藏夹点击事件
   cleClick() {
     // 显示对话框
-    this.setData({ cledialogShow: true })
+    this.setData({
+      cledialogShow: true
+    });
   },
 
   // 收藏夹清空操作
-  onClear() {
-    favorite.clearFavorites();
+  async onClear() {
+    // 使用 await 等待异步操作完成，避免回调地狱
+    await favorite.clearFavorites();
     this.closeDialog();
     // 刷新列表
     this.showList();
@@ -39,7 +44,9 @@ Page({
 
   closeDialog() {
     // 只需要将 cledialogShow 标记为 false 就可以
-    this.setData({ cledialogShow: false })
+    this.setData({
+      cledialogShow: false
+    });
   },
 
   async showList() {
@@ -48,21 +55,30 @@ Page({
 
     // 判断收藏是否为空或者空数组，设置data对象的emptyFav属性
     this.setData({
-      emptyFav: !favList || favList.length == 0
-    })
+      emptyFav: !favList || favList.length == 0,
+    });
     // 只有收藏状态非空的时候才会考虑调接口，减轻服务器压力
     if (!this.data.emptyFav) {
       wx.showLoading({
-        title: '正在加载...',
-      })
-      // 使用 async/await 语法简化异步操作
-      const res = await http.cloudPost("/api/model-query/models/by-id", favList);
-      // 设置data对象的 favInfo 属性为返回的数据
-      this.setData({ favInfo: res.data.data });
-      // 打印数据
-      console.log(this.data.favInfo);
-      // 隐藏加载提示
-      wx.hideLoading()
+        title: "正在加载...",
+      });
+      // 使用 try/catch 捕获可能的错误，避免程序崩溃
+      try {
+        // 使用 async/await 语法简化异步操作
+        const res = await http.cloudPost("/api/model-query/models/by-id", favList);
+        // 设置 data 对象的 favInfo 属性为返回的数据
+        this.setData({
+          favInfo: res.data.data
+        });
+        // 打印数据
+        console.log(this.data.favInfo);
+      } catch (err) {
+        // 处理错误情况，例如提示用户或者记录日志
+        console.error(err);
+      } finally {
+        // 隐藏加载提示
+        wx.hideLoading();
+      }
     }
   },
 
