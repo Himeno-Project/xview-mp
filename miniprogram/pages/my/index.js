@@ -1,4 +1,4 @@
-import youros from '../../utils/youros';
+const youros = require("../../utils/youros.js");
 
 Page({
 
@@ -13,7 +13,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     async onLoad() {
-      const [brand, system, model, screenWidth, screenHeight] = youros();
+      const [brand, system, model, screenWidth, screenHeight] = youros;
       await this.setData({
         nowbrand: brand,
         nowos: system,
