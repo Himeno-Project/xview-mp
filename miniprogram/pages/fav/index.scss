@@ -18,8 +18,8 @@
 }
 
 .tips {
-  font-size: 30rpx;
-  color: grey;
+  font-size: 28rpx;
+  color: var(--td-cell-description-color, var(--td-font-gray-2, rgba(0, 0, 0, 0.6))); 
   text-align: center;
   flex-direction: column;
   margin-top: 50rpx;
@@ -27,4 +27,11 @@
   &-item {
     margin: 10rpx;
   }
+}
+
+.empty-view {
+  padding: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
