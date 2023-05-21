@@ -1,6 +1,6 @@
-<!--pages/fav/index.wxml-->\
-<view class="empty-view">
-  <t-empty wx-if="{{emptyFav}}" icon="info-circle-filled" description="你还没有收藏商品呢~" />
+<!--pages/fav/index.wxml-->
+<view wx-if="{{emptyFav}}" class="empty-view">
+  <t-empty icon="info-circle-filled" description="你还没有收藏商品呢~" />
 </view>
 
 <t-cell-group wx-if="{{emptyFav == false}}" title="我的收藏" theme="card">
