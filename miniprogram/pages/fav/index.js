@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    now_loading: true,
+    now_loading: '',
     favList: [],
     favInfo: [],
     emptyFav: false,
@@ -58,8 +58,13 @@ Page({
     this.setData({
       emptyFav: !favList || favList.length == 0,
     });
+
     // 只有收藏状态非空的时候才会考虑调接口，减轻服务器压力
     if (!this.data.emptyFav) {
+      this.setData({
+        now_loading: true
+      })
+
       // 使用 try/catch 捕获可能的错误，避免程序崩溃
       try {
         // 使用 async/await 语法简化异步操作
@@ -75,7 +80,9 @@ Page({
         console.error(err);
       } finally {
         // 隐藏加载提示
-        this.setData({now_loading:false});
+        this.setData({
+          now_loading: false
+        });
       }
     }
   },
