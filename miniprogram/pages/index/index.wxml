@@ -4,7 +4,7 @@
 <x-card title="You are using {{nowbrand}}" subtitle="with {{nowos}} Operating System" />
 
 <t-cell-group theme="card">
-  <t-cell leftIcon="browse" title="随便看看" hover arrow />
+  <t-cell leftIcon="browse" title="随便看看" url="../pdinfo/{{rd_type == 'tablet' ? 'phone' : rd_type}}/index?pd_id={{rd_id}}" hover arrow />
 </t-cell-group>
 
 <view style="padding-top: 30rpx;"></view>

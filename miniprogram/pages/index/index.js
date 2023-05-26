@@ -1,6 +1,7 @@
 // pages/index/index.ts
 
 const youros = require("../../utils/youros.js")
+const http = require("../../utils/http.js");
 
 Page({
   /**
@@ -12,6 +13,8 @@ Page({
     nowmodel: '',
     scrwidth: '',
     scrheight: '',
+    rd_type: '',
+    rd_id: ''
   },
 
   /**
@@ -39,55 +42,67 @@ Page({
     } else if (this.data.nowbrand == "apple") { // 新版微信客户的判断
       this.setData({
         nowbrand: 'Macintosh'
-      })}
-},
+      })
+    }
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
 
-},
+  },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    wx.showLoading()
+    // 在页面显示的时候调取随机产品接口 ID
+    http.cloudGet("/api/model-query/models/random-id").then((res) => {
+      let productType = res.data.data.productType
+      let productId = res.data.data.productId
 
-},
+      this.setData({
+        rd_id: productId,
+        rd_type:productType
+      })
+      wx.hideLoading()
+    })
+  },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
 
-},
+  },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
 
-},
+  },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
 
-},
+  },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
 
-},
+  },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage() {
 
-}
+  }
 })

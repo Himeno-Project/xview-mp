@@ -1,5 +1,5 @@
 // pages/classlist/index.js
-var http = require("../../utils/http.js");
+const http = require("../../utils/http.js");
 Page({
 
   /**
@@ -26,7 +26,7 @@ Page({
 
   show_device_list(search_text = "") {
     http.cloudGet(`/api/model-query/models/${this.data.list_type}/${encodeURIComponent(search_text)}`).then((res) => {
-      console.log(res.data.data);
+      wx.showLoading()
       let dtinfo = res.data.data
       this.setData({
         dtinfo
