@@ -3,7 +3,13 @@
 <!-- x-card 自封装组件 -->
 <x-card title="You are using {{nowbrand}}" subtitle="with {{nowos}} Operating System" />
 
-<t-cell-group theme="card" title="产品类别">
+<t-cell-group theme="card">
+  <t-cell leftIcon="browse" title="随便看看" hover arrow />
+</t-cell-group>
+
+<view style="padding-top: 30rpx;"></view>
+
+<t-cell-group theme="card">
   <t-cell leftIcon="layers" title="现有产品" url="../classlist/index?pd_type=all" hover arrow />
   <t-cell leftIcon="mobile" title="智能手机" url="../classlist/index?pd_type=phone" hover arrow />
   <t-cell leftIcon="mobile" title="平板电脑" url="../classlist/index?pd_type=tablet" hover arrow />
