@@ -1,5 +1,9 @@
 <!--pages/pdinfo/tv/index.wxml-->
 
+<view wx:if="{{now_loading}}">
+  <x-skel></x-skel>
+</view>
+
 <t-cell-group theme="card">
   <t-cell title="{{tvinfo.pd_name}}" description="{{tvinfo.slogan}}" align="top" image="{{tvinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>

@@ -1,5 +1,9 @@
 <!--pages/pdinfo/smart/index.wxml-->
 
+<view wx:if="{{now_loading}}">
+  <x-skel></x-skel>
+</view>
+
 <t-cell-group theme="card">
   <t-cell title="{{stinfo.pd_name}}" description="{{stinfo.slogan}}" align="top" image="{{stinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>

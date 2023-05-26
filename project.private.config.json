@@ -11,7 +11,7 @@
         {
           "name": "产品列表页",
           "pathName": "pages/classlist/index",
-          "query": "",
+          "query": "pd_type=all",
           "launchMode": "default",
           "scene": null
         },
@@ -81,6 +81,13 @@
         {
           "name": "我的",
           "pathName": "pages/my/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "骨架屏",
+          "pathName": "components/x-skel/x-skel",
           "query": "",
           "launchMode": "default",
           "scene": null

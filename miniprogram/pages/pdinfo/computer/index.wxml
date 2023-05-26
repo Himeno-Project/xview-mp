@@ -1,4 +1,8 @@
 <!--pages/pdinfo/computer/index.wxml-->
+<view wx:if="{{now_loading}}">
+  <x-skel></x-skel>
+</view>
+
 <t-cell-group theme="card">
   <t-cell title="{{pcinfo.pd_name}}" description="{{pcinfo.slogan}}" align="top" image="{{pcinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>

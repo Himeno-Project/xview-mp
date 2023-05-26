@@ -9,6 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    now_loading: true,
     pd_type: '',
     otinfo: {},
     deldialogShow: false,
@@ -62,6 +63,7 @@ Page({
     getinfo(pd_id).then((otinfo) => {
       this.setData({
         otinfo,
+        now_loading: false,
         // 获取收藏状态，并更新数据
         fav_status: favorite.isFavorite(pd_id)
       });

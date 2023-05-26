@@ -1,0 +1,5 @@
+<!--components/x-skel/x-skel.wxml-->
+
+<view style="margin:40rpx" wx:for="{{for_count}}">
+  <t-skeleton style="margin-top:10rpx" theme="paragraph" animation="gradient" loading></t-skeleton>
+</view>

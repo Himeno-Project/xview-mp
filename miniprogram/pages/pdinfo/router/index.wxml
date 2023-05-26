@@ -1,5 +1,9 @@
 <!--pages/pdinfo/router/index.wxml-->
 
+<view wx:if="{{now_loading}}">
+  <x-skel></x-skel>
+</view>
+
 <t-cell-group theme="card">
   <t-cell title="{{rtinfo.pd_name}}" description="{{rtinfo.slogan}}" align="top" image="{{rtinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
@@ -63,6 +67,7 @@
 <t-cell-group theme="card" title="连接">
   <t-cell title="接口" description="{{rtinfo.connect.port}}" hover />
 </t-cell-group>
+
 
 <t-fab icon="{{fav_status?'heart-filled':'heart'}}" data-pd_id="{{rtinfo.pd_id}}" bind:click="favOperate" aria-label="收藏"></t-fab>
 

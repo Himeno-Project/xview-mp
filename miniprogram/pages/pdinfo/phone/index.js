@@ -9,6 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    now_loading: true,
     pd_type: '',
     phinfo: {},
     deldialogShow: false,
@@ -55,13 +56,15 @@ Page({
   onLoad(options) {
     // 优化说明：将获取收藏状态的代码放在了 getinfo 的回调函数中，
     // 这样可以保证在获取产品信息后才更新收藏状态，避免了可能的异步问题。
-    
+
     // 获取产品id
     var pd_id = options.pd_id;
     // 获取产品信息，并更新数据
     getinfo(pd_id).then((phinfo) => {
       this.setData({
         phinfo,
+        // 骨架屏
+        now_loading: false,
         // 获取收藏状态，并更新数据
         fav_status: favorite.isFavorite(pd_id)
       });

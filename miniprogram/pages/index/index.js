@@ -57,7 +57,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    wx.showLoading()
     // 在页面显示的时候调取随机产品接口 ID
     http.cloudGet("/api/model-query/models/random-id").then((res) => {
       let productType = res.data.data.productType
@@ -67,7 +66,6 @@ Page({
         rd_id: productId,
         rd_type:productType
       })
-      wx.hideLoading()
     })
   },
 

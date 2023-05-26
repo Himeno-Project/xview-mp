@@ -3,14 +3,20 @@
   <t-empty icon="info-circle-filled" description="你还没有收藏商品呢~" />
 </view>
 
-<t-cell-group wx-if="{{emptyFav == false}}" title="我的收藏" theme="card">
-  <!-- item.pd_imgs 的意思是第0个数组表达的图片永远是头图。-->
-  <t-swipe-cell wx:for="{{favInfo}}" wx:key="index">
-    <t-cell title="{{item.pd_name}}" description="型号：{{item.model}}，{{item.rel_year}} 年" align="top" image="{{item.pd_imgs[0]}}" hover bordered="{{false}}" url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}" arrow />
-    <view slot="right" data-pd_id="{{item.pd_id}}" class="btn delete-btn" bind:tap="onDelete">删除</view>
-    <view slot="right" class="btn clear-btn" bind:tap="cleClick">清空</view>
-  </t-swipe-cell>
-</t-cell-group>
+<view>
+  <view wx:if="{{now_loading}}">
+    <x-skel></x-skel>
+  </view>
+
+  <t-cell-group wx-if="{{emptyFav == false}}" title="我的收藏" theme="card">
+    <!-- item.pd_imgs 的意思是第0个数组表达的图片永远是头图。-->
+    <t-swipe-cell wx:for="{{favInfo}}" wx:key="index">
+      <t-cell title="{{item.pd_name}}" description="型号：{{item.model}}，{{item.rel_year}} 年" align="top" image="{{item.pd_imgs[0]}}" hover bordered="{{false}}" url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}" arrow />
+      <view slot="right" data-pd_id="{{item.pd_id}}" class="btn delete-btn" bind:tap="onDelete">删除</view>
+      <view slot="right" class="btn clear-btn" bind:tap="cleClick">清空</view>
+    </t-swipe-cell>
+  </t-cell-group>
+</view>
 
 <view class="tips">
   <view class="tips-item">向左滑动可以取消收藏或清空收藏列表，</view>

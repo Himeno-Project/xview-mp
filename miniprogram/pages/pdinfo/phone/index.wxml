@@ -1,5 +1,9 @@
 <!--pages/pdinfo/index.wxml-->
 
+<view wx:if="{{now_loading}}">
+  <x-skel></x-skel>
+</view>
+
 <t-cell-group theme="card">
   <t-cell title="{{phinfo.pd_name}}" description="{{phinfo.slogan}}" align="top" image="{{phinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
 </t-cell-group>
