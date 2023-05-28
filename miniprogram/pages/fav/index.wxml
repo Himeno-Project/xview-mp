@@ -1,9 +1,9 @@
 <!--pages/fav/index.wxml-->
-<view wx-if="{{emptyFav}}" class="empty-view">
+<view wx:if="{{emptyFav}}" class="empty-view">
   <t-empty icon="info-circle-filled" description="你还没有收藏商品呢~" />
 </view>
 
-<view wx-if="{{emptyFav == false}}">
+<view wx:if="{{emptyFav == false}}">
   <view wx:if="{{now_loading}}">
     <x-skel></x-skel>
   </view>
