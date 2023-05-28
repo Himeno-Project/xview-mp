@@ -3,12 +3,12 @@
   <t-empty icon="info-circle-filled" description="你还没有收藏商品呢~" />
 </view>
 
-<view>
+<view wx-if="{{emptyFav == false}}">
   <view wx:if="{{now_loading}}">
     <x-skel></x-skel>
   </view>
 
-  <t-cell-group wx-if="{{emptyFav == false}}" title="我的收藏" theme="card">
+  <t-cell-group wx:if="{{now_loading == false}}" title="我的收藏" theme="card">
     <!-- item.pd_imgs 的意思是第0个数组表达的图片永远是头图。-->
     <t-swipe-cell wx:for="{{favInfo}}" wx:key="index">
       <t-cell title="{{item.pd_name}}" description="型号：{{item.model}}，{{item.rel_year}} 年" align="top" image="{{item.pd_imgs[0]}}" hover bordered="{{false}}" url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}" arrow />
