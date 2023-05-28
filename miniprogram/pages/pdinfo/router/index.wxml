@@ -1,7 +1,7 @@
 <!--pages/pdinfo/router/index.wxml-->
 
 <view wx:if="{{now_loading}}">
-  <x-skel></x-skel>
+  <x-skel skstyle="detail"></x-skel>
 </view>
 
 <!-- 如果这里不加 {{now_loading == false}} 那么效果会不好看 -->

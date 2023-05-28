@@ -1,7 +1,7 @@
 <!--pages/classlist/index.wxml-->
 
 <view wx:if="{{now_loading}}">
-  <x-skel></x-skel>
+  <x-skel skstyle="list" ></x-skel>
 </view>
 
 <view wx:if="{{now_loading == false}}">

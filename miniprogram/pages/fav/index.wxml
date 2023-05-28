@@ -5,7 +5,7 @@
 
 <view wx:if="{{emptyFav == false}}">
   <view wx:if="{{now_loading}}">
-    <x-skel></x-skel>
+    <x-skel skstyle="list"></x-skel>
   </view>
 
   <t-cell-group wx:if="{{now_loading == false}}" title="我的收藏" theme="card">

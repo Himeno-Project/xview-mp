@@ -1,5 +1,17 @@
 <!--components/x-skel/x-skel.wxml-->
 
-<view style="margin:40rpx" wx:for="{{for_count}}">
+<view style="display:flex; margin:32rpx">
+  <t-skeleton style="margin-right: 24rpx;" animation="gradient" rowCol="{{rowColsImage}}" loading></t-skeleton>
+  <t-skeleton style="width: 566rpx;" animation="gradient" rowCol="{{rowColsContent}}" loading></t-skeleton>
+</view>
+
+<!-- 列表页的骨架屏样式 -->
+<view wx:if="{{skstyle ==  'list'}}" style="display:flex; margin:32rpx" wx:for="{{list_for_count}}">
+  <t-skeleton style="margin-right: 24rpx;" animation="gradient" rowCol="{{rowColsImage}}" loading></t-skeleton>
+  <t-skeleton style="width: 566rpx;" animation="gradient" rowCol="{{rowColsContent}}" loading></t-skeleton>
+</view>
+
+<!-- 产品信息页的骨架屏样式 -->
+<view wx:if="{{skstyle == 'detail'}}" style="margin:32rpx" wx:for="{{detail_for_count}}">
   <t-skeleton style="margin-top:10rpx" theme="paragraph" animation="gradient" loading></t-skeleton>
 </view>
