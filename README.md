@@ -19,21 +19,14 @@ npm install -S
 ## TO-DO LIST
 
 - ~~收藏夹的实现和完善~~
-
 - ~~类别页搜索的实现和完善~~
-
-- ~~图片支持~~
-
 - ~~UI 设计微调~~
-
 - ~~列出所有现有产品~~
-
 - ~~从所有现有产品中搜索内容~~
-
-
 - 产品信息页项目仍然需要完善
-- 使用插槽完成产品页（项目初期没使用插槽）
 - 更多的使用卡片式显示效果
+- 视情况推出 Flutter 版本，Flutter 将支持国际化
+- 菜单层级优化
 
 
 
@@ -43,9 +36,8 @@ npm install -S
 
 
 
-## 作者
+## 著作权
 
-- [XiaoHe321](https://github.com/xh321)
+Copyright 2023 Himeno Project（姬野计画） All Rights Reserved.
 
-- [Luke Na](https://github.com/narukeu)
-
+代码本体基于 MIT 许可协议授权。
