@@ -3,41 +3,43 @@
   <x-skel></x-skel>
 </view>
 
-<t-cell-group theme="card">
-  <t-cell title="{{otinfo.pd_name}}" description="{{otinfo.slogan}}" align="top" image="{{otinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
-</t-cell-group>
+<view wx:if="{{now_loading == false}}">
+  <t-cell-group theme="card">
+    <t-cell title="{{otinfo.pd_name}}" description="{{otinfo.slogan}}" align="top" image="{{otinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
+  </t-cell-group>
 
-<view style="padding:20rpx"></view>
+  <view style="padding:20rpx"></view>
 
-<t-grid column="3" theme="card">
-  <t-grid-item text="型号" description="{{otinfo.model}}" icon="root-list" />
-  <t-grid-item text="颜色" description="{{otinfo.colors}}" icon="browse" />
-  <t-grid-item text="起售价" description="{{otinfo.init_price}}" icon="shop" />
-</t-grid>
+  <t-grid column="3" theme="card">
+    <t-grid-item text="型号" description="{{otinfo.model}}" icon="root-list" />
+    <t-grid-item text="颜色" description="{{otinfo.colors}}" icon="browse" />
+    <t-grid-item text="起售价" description="{{otinfo.init_price}}" icon="shop" />
+  </t-grid>
 
-<t-cell-group theme="card" title="一般信息">
-  <t-cell title="型号" description="{{otinfo.model}}" hover />
-  <t-cell title="发布日期" description="{{otinfo.rel_date}}" hover />
-  <t-cell title="支持状态" description="{{otinfo.spt_status}}" hover />
-  <t-cell title="材质" description="{{otinfo.material}}" hover />
-  <t-cell title="尺寸和重量" description="{{otinfo.weight}}" hover />
-  <t-cell title="颜色" description="{{otinfo.colors}}" hover="" />
-</t-cell-group>
+  <t-cell-group theme="card" title="一般信息">
+    <t-cell title="型号" description="{{otinfo.model}}" hover />
+    <t-cell title="发布日期" description="{{otinfo.rel_date}}" hover />
+    <t-cell title="支持状态" description="{{otinfo.spt_status}}" hover />
+    <t-cell title="材质" description="{{otinfo.material}}" hover />
+    <t-cell title="尺寸和重量" description="{{otinfo.weight}}" hover />
+    <t-cell title="颜色" description="{{otinfo.colors}}" hover="" />
+  </t-cell-group>
 
-<t-cell-group theme="card" title="电源">
-  <t-cell title="配套电源" description="{{otinfo.power.charger}}" hover="" />
-</t-cell-group>
+  <t-cell-group theme="card" title="电源">
+    <t-cell title="配套电源" description="{{otinfo.power.charger}}" hover="" />
+  </t-cell-group>
 
-<t-cell-group theme="card" title="工作环境">
-  <t-cell title="工作温度" description="{{otinfo.env.opt_temp}}" hover="" />
-  <t-cell title="工作湿度" description="{{otinfo.env.opt_humidity}}" hover="" />
-  <t-cell title="工作海拔" description="{{otinfo.env.opt_alti}}" hover="" />
-</t-cell-group>
+  <t-cell-group theme="card" title="工作环境">
+    <t-cell title="工作温度" description="{{otinfo.env.opt_temp}}" hover="" />
+    <t-cell title="工作湿度" description="{{otinfo.env.opt_humidity}}" hover="" />
+    <t-cell title="工作海拔" description="{{otinfo.env.opt_alti}}" hover="" />
+  </t-cell-group>
 
-<t-cell-group theme="card" title="传感器">
-  <t-cell title="传感器" description="{{otinfo.sensor.sensor}}" hover="" />
-  <t-cell title="附加功能" description="{{otinfo.sensor.sensor_feature}}" hover="" />
-</t-cell-group>
+  <t-cell-group theme="card" title="传感器">
+    <t-cell title="传感器" description="{{otinfo.sensor.sensor}}" hover="" />
+    <t-cell title="附加功能" description="{{otinfo.sensor.sensor_feature}}" hover="" />
+  </t-cell-group>
+</view>
 
 <t-fab icon="{{fav_status?'heart-filled':'heart'}}" data-pd_id="{{otinfo.pd_id}}" bind:click="favOperate" aria-label="收藏"></t-fab>
 

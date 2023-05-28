@@ -4,41 +4,43 @@
   <x-skel></x-skel>
 </view>
 
-<t-cell-group theme="card">
-  <t-cell title="{{swinfo.pd_name}}" description="{{swinfo.slogan}}" align="top" image="{{swinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
-</t-cell-group>
+<view wx:if="{{now_loading == false}}">
+  <t-cell-group theme="card">
+    <t-cell title="{{swinfo.pd_name}}" description="{{swinfo.slogan}}" align="top" image="{{swinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
+  </t-cell-group>
 
-<view style="padding:20rpx"></view>
+  <view style="padding:20rpx"></view>
 
-<t-grid column="3" theme="card">
-  <t-grid-item text="编程语言" description="{{swinfo.dev.lang}}" icon="code" />
-  <t-grid-item text="源码模式" description="{{swinfo.dev.srcmode}}" icon="check" />
-  <t-grid-item text="稳定版本" description="{{swinfo.upd.stable_ver}}" icon="refresh" />
-</t-grid>
+  <t-grid column="3" theme="card">
+    <t-grid-item text="编程语言" description="{{swinfo.dev.lang}}" icon="code" />
+    <t-grid-item text="源码模式" description="{{swinfo.dev.srcmode}}" icon="check" />
+    <t-grid-item text="稳定版本" description="{{swinfo.upd.stable_ver}}" icon="refresh" />
+  </t-grid>
 
-<t-cell-group theme="card" title="一般信息">
-  <t-cell title="发布日期" description="{{swinfo.rel_date}}" hover />
-  <t-cell title="支持状态" description="{{swinfo.spt_status}}" hover />
-  <t-cell title="市场取向" description="{{swinfo.marketgoal}}" hover />
-  <t-cell title="支持平台" description="{{swinfo.arch}}" hover />
-  <t-cell title="国际化" description="{{swinfo.lang}}" hover />
-  <t-cell title="系统要求" description="{{swinfo.req}}" hover />
-</t-cell-group>
+  <t-cell-group theme="card" title="一般信息">
+    <t-cell title="发布日期" description="{{swinfo.rel_date}}" hover />
+    <t-cell title="支持状态" description="{{swinfo.spt_status}}" hover />
+    <t-cell title="市场取向" description="{{swinfo.marketgoal}}" hover />
+    <t-cell title="支持平台" description="{{swinfo.arch}}" hover />
+    <t-cell title="国际化" description="{{swinfo.lang}}" hover />
+    <t-cell title="系统要求" description="{{swinfo.req}}" hover />
+  </t-cell-group>
 
-<t-cell-group theme="card" title="设计和开发">
-  <t-cell title="编程语言" description="{{swinfo.dev.lang}}" hover />
-  <t-cell title="许可证" description="{{swinfo.dev.license}}" hover />
-  <!-- 模式：开源、闭源、混合 -->
-  <t-cell title="源码模式" description="{{swinfo.dev.srcmode}}" hover />
-  <t-cell title="软件格式" description="{{swinfo.dev.swformat}}" hover />
-</t-cell-group>
+  <t-cell-group theme="card" title="设计和开发">
+    <t-cell title="编程语言" description="{{swinfo.dev.lang}}" hover />
+    <t-cell title="许可证" description="{{swinfo.dev.license}}" hover />
+    <!-- 模式：开源、闭源、混合 -->
+    <t-cell title="源码模式" description="{{swinfo.dev.srcmode}}" hover />
+    <t-cell title="软件格式" description="{{swinfo.dev.swformat}}" hover />
+  </t-cell-group>
 
-<t-cell-group theme="card" title="版本和更新">
-  <t-cell title="初始版本" description="{{swinfo.upd.init_ver}}" hover />
-  <t-cell title="稳定版本" description="{{swinfo.upd.stable_ver}}" hover />
-  <t-cell title="开发版本" description="{{swinfo.upd.dev_ver}}" hover />
-  <t-cell title="更新方式" description="{{swinfo.dev.upway}}" hover />
-</t-cell-group>
+  <t-cell-group theme="card" title="版本和更新">
+    <t-cell title="初始版本" description="{{swinfo.upd.init_ver}}" hover />
+    <t-cell title="稳定版本" description="{{swinfo.upd.stable_ver}}" hover />
+    <t-cell title="开发版本" description="{{swinfo.upd.dev_ver}}" hover />
+    <t-cell title="更新方式" description="{{swinfo.dev.upway}}" hover />
+  </t-cell-group>
+</view>
 
 <t-fab icon="{{fav_status?'heart-filled':'heart'}}" data-pd_id="{{swinfo.pd_id}}" bind:click="favOperate" aria-label="收藏"></t-fab>
 

@@ -4,52 +4,54 @@
   <x-skel></x-skel>
 </view>
 
-<t-cell-group theme="card">
-  <t-cell title="{{stinfo.pd_name}}" description="{{stinfo.slogan}}" align="top" image="{{stinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
-</t-cell-group>
+<view wx:if="{{now_loading == false}}">
+  <t-cell-group theme="card">
+    <t-cell title="{{stinfo.pd_name}}" description="{{stinfo.slogan}}" align="top" image="{{stinfo.pd_imgs[0]}}" hover bordered="{{false}}" />
+  </t-cell-group>
 
-<view style="padding:20rpx"></view>
+  <view style="padding:20rpx"></view>
 
-<t-grid column="3" theme="card">
-  <t-grid-item text="处理器" description="{{stinfo.system.cpu_name}}" icon="layers" />
-  <t-grid-item text="续航" description="{{stinfo.power.battery_life}}" icon="poweroff" />
-  <t-grid-item text="起售价" description="{{stinfo.init_price}}" icon="shop" />
-</t-grid>
+  <t-grid column="3" theme="card">
+    <t-grid-item text="处理器" description="{{stinfo.system.cpu_name}}" icon="layers" />
+    <t-grid-item text="续航" description="{{stinfo.power.battery_life}}" icon="poweroff" />
+    <t-grid-item text="起售价" description="{{stinfo.init_price}}" icon="shop" />
+  </t-grid>
 
-<t-cell-group theme="card" title="一般信息">
-  <t-cell title="型号" description="{{stinfo.model}}" hover />
-  <t-cell title="发布日期" description="{{stinfo.rel_date}}" hover />
-  <t-cell title="支持状态" description="{{stinfo.spt_status}}" hover />
-  <t-cell title="材质" description="{{stinfo.material}}" hover />
-  <t-cell title="尺寸和重量" description="{{stinfo.weight}}" hover />
-  <t-cell title="用途" description="{{stinfo.use}}" hover />
-  <t-cell title="生产厂商" description="{{stinfo.factory}}" hover />
-</t-cell-group>
+  <t-cell-group theme="card" title="一般信息">
+    <t-cell title="型号" description="{{stinfo.model}}" hover />
+    <t-cell title="发布日期" description="{{stinfo.rel_date}}" hover />
+    <t-cell title="支持状态" description="{{stinfo.spt_status}}" hover />
+    <t-cell title="材质" description="{{stinfo.material}}" hover />
+    <t-cell title="尺寸和重量" description="{{stinfo.weight}}" hover />
+    <t-cell title="用途" description="{{stinfo.use}}" hover />
+    <t-cell title="生产厂商" description="{{stinfo.factory}}" hover />
+  </t-cell-group>
 
-<t-cell-group theme="card" title="显示">
-  <t-cell title="屏幕" description="{{stinfo.displays.screen_name}}" hover />
-  <t-cell title="分辨率" description="{{stinfo.displays.screen_resol}}" hover />
-  <t-cell title="显示模式" description="{{stinfo.displays.dis_mode}}" hover />
-  <t-cell title="PPI" description="{{stinfo.displays.ppi}}" hover />
-  <t-cell title="亮度" description="{{stinfo.displays.bright}}" hover />
-  <t-cell title="其他" description="{{stinfo.displays.other}}" hover />
-</t-cell-group>
+  <t-cell-group theme="card" title="显示">
+    <t-cell title="屏幕" description="{{stinfo.displays.screen_name}}" hover />
+    <t-cell title="分辨率" description="{{stinfo.displays.screen_resol}}" hover />
+    <t-cell title="显示模式" description="{{stinfo.displays.dis_mode}}" hover />
+    <t-cell title="PPI" description="{{stinfo.displays.ppi}}" hover />
+    <t-cell title="亮度" description="{{stinfo.displays.bright}}" hover />
+    <t-cell title="其他" description="{{stinfo.displays.other}}" hover />
+  </t-cell-group>
 
-<t-cell-group theme="card" title="工作环境">
-  <t-cell title="防水等级" description="{{stinfo.env.opt_water}}" hover="" />
-  <t-cell title="工作温度" description="{{stinfo.env.opt_temp}}" hover="" />
-  <t-cell title="工作湿度" description="{{stinfo.env.opt_humidity}}" hover="" />
-  <t-cell title="工作海拔" description="{{stinfo.env.opt_alti}}" hover="" />
-</t-cell-group>
+  <t-cell-group theme="card" title="工作环境">
+    <t-cell title="防水等级" description="{{stinfo.env.opt_water}}" hover="" />
+    <t-cell title="工作温度" description="{{stinfo.env.opt_temp}}" hover="" />
+    <t-cell title="工作湿度" description="{{stinfo.env.opt_humidity}}" hover="" />
+    <t-cell title="工作海拔" description="{{stinfo.env.opt_alti}}" hover="" />
+  </t-cell-group>
 
-<t-cell-group theme="card" title="其他">
-  <t-cell title="接口" description="{{stinfo.connect.port}}" hover />
-  <t-cell title="Wi-Fi" description="{{stinfo.connect.wifi}}" hover />
-  <t-cell title="蓝牙" description="{{stinfo.connect.bluetooth}}" hover />
-  <t-cell title="NFC" description="{{stinfo.connect.nfc}}" hover />
-  <t-cell title="调制解调器" description="{{stinfo.connect.bluetooth}}" hover />
-  <t-cell title="预装" description="{{stinfo.connect.modem}}" hover />
-</t-cell-group>
+  <t-cell-group theme="card" title="其他">
+    <t-cell title="接口" description="{{stinfo.connect.port}}" hover />
+    <t-cell title="Wi-Fi" description="{{stinfo.connect.wifi}}" hover />
+    <t-cell title="蓝牙" description="{{stinfo.connect.bluetooth}}" hover />
+    <t-cell title="NFC" description="{{stinfo.connect.nfc}}" hover />
+    <t-cell title="调制解调器" description="{{stinfo.connect.bluetooth}}" hover />
+    <t-cell title="预装" description="{{stinfo.connect.modem}}" hover />
+  </t-cell-group>
+</view>
 
 <t-fab icon="{{fav_status?'heart-filled':'heart'}}" data-pd_id="{{stinfo.pd_id}}" bind:click="favOperate" aria-label="收藏"></t-fab>
 
