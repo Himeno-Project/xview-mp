@@ -52,7 +52,7 @@ Page({
 
   async showList() {
     // 将收藏夹中的数据提交给后端
-    var favList = favorite.getFavorites();
+    const favList = favorite.getFavorites();
 
     // 判断收藏是否为空或者空数组，设置data对象的emptyFav属性
     this.setData({
