@@ -18,9 +18,6 @@
   "subpackages": [],
   "tabBar": {
     "custom": true,
-    "color": "#000",
-    "selectedColor": "#000",
-    "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/index/index",
