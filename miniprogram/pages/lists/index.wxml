@@ -10,7 +10,6 @@
   </view>
 
   <t-cell-group title="列表" theme="card">
-    <!-- item.pd_imgs 的意思是第0个数组表达的图片永远是头图。-->
-    <t-cell title="{{item.pd_name}}" description="型号：{{item.model}}，{{item.rel_year}} 年" align="top" image="{{item.pd_imgs[0]}}" hover bordered="{{false}}" url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}" wx:for="{{dtinfo}}" wx:key="index" arrow />
+    <t-cell title="{{item.pd_name}}" description="型号：{{item.model}}，{{item.rel_year}} 年" align="top" image="{{item.pd_head_image}}" hover bordered="{{false}}" url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}" wx:for="{{dtinfo}}" wx:key="index" arrow />
   </t-cell-group>
 </view>

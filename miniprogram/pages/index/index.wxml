@@ -10,15 +10,15 @@
 <view style="padding-top: 30rpx;"></view>
 
 <t-cell-group theme="card">
-  <t-cell leftIcon="layers" title="现有产品" url="../classlist/index?pd_type=all" hover arrow />
-  <t-cell leftIcon="mobile" title="智能手机" url="../classlist/index?pd_type=phone" hover arrow />
-  <t-cell leftIcon="mobile" title="平板电脑" url="../classlist/index?pd_type=tablet" hover arrow />
-  <t-cell leftIcon="desktop" title="电脑设备" url="../classlist/index?pd_type=computer" hover arrow />
-  <t-cell leftIcon="cloud" title="智能穿戴" url="../classlist/index?pd_type=smart" hover arrow />
-  <t-cell leftIcon="play-circle" title="电视" url="../classlist/index?pd_type=tv" hover arrow />
-  <t-cell leftIcon="server" title="路由器" url="../classlist/index?pd_type=router" hover arrow />
-  <t-cell leftIcon="tools" title="软件应用" url="../classlist/index?pd_type=software" hover arrow />
-  <t-cell leftIcon="more" title="其他" url="../classlist/index?pd_type=other" hover arrow />
+  <t-cell leftIcon="layers" title="现有产品" url="../lists/index?pd_type=all" hover arrow />
+  <t-cell leftIcon="mobile" title="智能手机" url="../lists/index?pd_type=phone" hover arrow />
+  <t-cell leftIcon="mobile" title="平板电脑" url="../lists/index?pd_type=tablet" hover arrow />
+  <t-cell leftIcon="desktop" title="电脑设备" url="../lists/index?pd_type=computer" hover arrow />
+  <t-cell leftIcon="cloud" title="智能穿戴" url="../lists/index?pd_type=smart" hover arrow />
+  <t-cell leftIcon="play-circle" title="电视" url="../lists/index?pd_type=tv" hover arrow />
+  <t-cell leftIcon="server" title="路由器" url="../lists/index?pd_type=router" hover arrow />
+  <t-cell leftIcon="tools" title="软件应用" url="../lists/index?pd_type=software" hover arrow />
+  <t-cell leftIcon="more" title="其他" url="../lists/index?pd_type=other" hover arrow />
 </t-cell-group>
 
 <view class="safe_bottom_view" style="height:160rpx;">

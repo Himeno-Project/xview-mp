@@ -10,7 +10,7 @@
       "list": [
         {
           "name": "产品列表页",
-          "pathName": "pages/classlist/index",
+          "pathName": "pages/lists/index",
           "query": "pd_type=all",
           "launchMode": "default",
           "scene": null
