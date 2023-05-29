@@ -20,7 +20,7 @@ Component({
   lifetimes: {
     ready() {
       this.setData({
-        fav_status: favorite.isFavorite(this.x_pd_id)
+        fav_status: favorite.isFavorite(this.properties.x_pd_id)
       });
     },
   },
@@ -31,7 +31,7 @@ Component({
   methods: {
     favOperate() {
       // 获取当前的产品id
-      var nowid = this.x_pd_id
+      var nowid = this.properties.x_pd_id
       // 获取当前的收藏状态
       var fav_status = favorite.isFavorite(nowid);
       // 如果已经被收藏，弹出删除对话框
@@ -49,7 +49,7 @@ Component({
     },
 
     favRemove() {
-      var nowid = this.x_pd_id
+      var nowid = this.properties.x_pd_id
       favorite.removeFavorite(nowid)
       this.setData({
         fav_status: false

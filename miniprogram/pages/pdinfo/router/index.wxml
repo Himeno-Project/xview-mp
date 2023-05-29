@@ -62,6 +62,5 @@
   </t-cell-group>
 </view>
 
-<t-fab icon="{{fav_status?'heart-filled':'heart'}}" data-pd_id="{{rtinfo.pd_id}}" bind:click="favOperate" aria-label="收藏"></t-fab>
 
-<t-dialog visible="{{deldialogShow}}" data-pd_id="{{rtinfo.pd_id}}" title="已经收藏" content="是否取消收藏？" confirm-btn="取消收藏" cancel-btn="返回" bind:cancel="closeDialog" bind:confirm="favRemove" />
+<x-fav x_pd_id="{{rtinfo.pd_id}}"></x-fav>
