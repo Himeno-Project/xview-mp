@@ -1,0 +1,4 @@
+<!--components/x-fav/x-fav.wxml-->
+
+<t-fab icon="{{fav_status?'heart-filled':'heart'}}" bind:click="favOperate" aria-label="收藏"></t-fab>
+<t-dialog visible="{{deldialogShow}}" title="已经收藏" content="是否取消收藏？" confirm-btn="取消收藏" cancel-btn="返回" bind:cancel="closeDialog" bind:confirm="favRemove" />
