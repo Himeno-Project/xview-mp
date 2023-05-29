@@ -14,7 +14,44 @@ Page({
     scrwidth: '',
     scrheight: '',
     rd_type: '',
-    rd_id: ''
+    rd_id: '',
+    typemenu: [{
+      icon: 'layers',
+      title: '现有产品',
+      to: '../lists/index?pd_type=all'
+    }, {
+      icon: 'mobile',
+      title: '智能手机',
+      to: '../lists/index?pd_type=phone'
+    }, {
+      icon: 'mobile',
+      title: '平板电脑',
+      to: '../lists/index?pd_type=tablet'
+    }, {
+      icon: 'desktop',
+      title: '电脑设备',
+      to: '../lists/index?pd_type=all'
+    }, {
+      icon: 'cloud',
+      title: '智能穿戴',
+      to: '../lists/index?pd_type=smart'
+    }, {
+      icon: 'play-circle',
+      title: '电视产品',
+      to: '../lists/index?pd_type=tv'
+    }, {
+      icon: 'server',
+      title: '网络设备',
+      to: '../lists/index?pd_type=router'
+    }, {
+      icon: 'tools',
+      title: '软件应用',
+      to: '../lists/index?pd_type=software'
+    }, {
+      icon: 'more',
+      title: '其他产品',
+      to: '../lists/index?pd_type=other'
+    }, ]
   },
 
   /**
@@ -64,7 +101,7 @@ Page({
 
       this.setData({
         rd_id: productId,
-        rd_type:productType
+        rd_type: productType
       })
     })
   },
