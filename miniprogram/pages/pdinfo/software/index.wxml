@@ -7,7 +7,7 @@
 <view wx:if="{{now_loading == false}}">
   <x-ihead x_pd_name="{{swinfo.pd_name}}" x_slogan="{{swinfo.slogan}}" x_iconlist="{{swinfo.icon_list}}" x_pd_img="{{swinfo.pd_head_image}}"></x-ihead>
 
-  <t-cell-group theme="card" title="一般信息">
+  <t-cell-group theme="card">
     <t-cell title="发布日期" description="{{swinfo.rel_date}}" hover />
     <t-cell title="支持状态" description="{{swinfo.spt_status}}" hover />
     <t-cell title="市场取向" description="{{swinfo.marketgoal}}" hover />

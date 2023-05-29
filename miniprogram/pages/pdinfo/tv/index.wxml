@@ -7,7 +7,7 @@
 <view wx:if="{{now_loading == false}}">
   <x-ihead x_pd_name="{{tvinfo.pd_name}}" x_slogan="{{tvinfo.slogan}}" x_iconlist="{{tvinfo.icon_list}}" x_pd_img="{{tvinfo.pd_head_image}}"></x-ihead>
 
-  <t-cell-group theme="card" title="一般信息">
+  <t-cell-group theme="card">
     <t-cell title="型号" description="{{tvinfo.model}}" hover />
     <t-cell title="发布日期" description="{{tvinfo.rel_date}}" hover />
     <t-cell title="支持状态" description="{{tvinfo.spt_status}}" hover />

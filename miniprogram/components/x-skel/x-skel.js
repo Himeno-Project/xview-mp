@@ -14,7 +14,7 @@ Component({
    */
   data: {
     list_for_count: 6,
-    detail_for_count: 3,
+    detail_for_count: 2,
     rowColsImage: [{
       size: '96rpx',
       type: 'rect'

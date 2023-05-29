@@ -6,7 +6,7 @@
 <view wx:if="{{now_loading == false}}">
   <x-ihead x_pd_name="{{otinfo.pd_name}}" x_slogan="{{otinfo.slogan}}" x_iconlist="{{otinfo.icon_list}}" x_pd_img="{{otinfo.pd_head_image}}"></x-ihead>
 
-  <t-cell-group theme="card" title="一般信息">
+  <t-cell-group theme="card">
     <t-cell title="型号" description="{{otinfo.model}}" hover />
     <t-cell title="发布日期" description="{{otinfo.rel_date}}" hover />
     <t-cell title="支持状态" description="{{otinfo.spt_status}}" hover />

@@ -6,7 +6,7 @@
 <view wx:if="{{now_loading == false}}">
   <x-ihead x_pd_name="{{pcinfo.pd_name}}" x_slogan="{{pcinfo.slogan}}" x_iconlist="{{pcinfo.icon_list}}" x_pd_img="{{pcinfo.pd_head_image}}"></x-ihead>
 
-  <t-cell-group theme="card" title="一般信息">
+  <t-cell-group theme="card">
     <t-cell title="型号" description="{{pcinfo.model}}" hover />
     <t-cell title="发布日期" description="{{pcinfo.rel_date}}" hover />
     <t-cell title="支持状态" description="{{pcinfo.spt_status}}" hover />
@@ -14,7 +14,6 @@
     <t-cell title="尺寸和重量" description="{{pcinfo.size_and_weight}}" hover />
     <t-cell title="售价" description="{{pcinfo.price}}" hover />
   </t-cell-group>
-
 
   <t-cell-group theme="card" title="系统">
     <t-cell title="处理器" description="{{pcinfo.system.cpu_name}}" hover />

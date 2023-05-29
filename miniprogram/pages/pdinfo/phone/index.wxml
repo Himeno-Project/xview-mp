@@ -9,7 +9,7 @@
   <!-- x-ihead 自定义介绍页组件 -->
   <x-ihead x_pd_name="{{phinfo.pd_name}}" x_slogan="{{phinfo.slogan}}" x_iconlist="{{phinfo.icon_list}}" x_pd_img="{{phinfo.pd_head_image}}"></x-ihead>
 
-  <t-cell-group theme="card" title="一般信息">
+  <t-cell-group theme="card">
     <t-cell title="型号" description="{{phinfo.model}}" hover />
     <t-cell title="发布日期" description="{{phinfo.rel_date}}" hover />
     <t-cell title="支持状态" description="{{phinfo.spt_status}}" hover />

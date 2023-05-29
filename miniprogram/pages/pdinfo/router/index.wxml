@@ -9,7 +9,7 @@
   <!-- x-ihead 自定义介绍页组件 -->
   <x-ihead x_pd_name="{{rtinfo.pd_name}}" x_slogan="{{rtinfo.slogan}}" x_iconlist="{{rtinfo.icon_list}}" x_pd_img="{{rtinfo.pd_head_image}}"></x-ihead>
 
-  <t-cell-group theme="card" title="一般信息">
+  <t-cell-group theme="card">
     <t-cell title="型号" description="{{rtinfo.model}}" hover />
     <t-cell title="发布日期" description="{{rtinfo.rel_date}}" hover />
     <t-cell title="支持状态" description="{{rtinfo.spt_status}}" hover />
