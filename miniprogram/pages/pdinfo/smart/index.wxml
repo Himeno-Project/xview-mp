@@ -6,7 +6,7 @@
 
 <view wx:if="{{now_loading == false}}">
   <!-- x-ihead 自定义介绍页组件 -->
-  <x-ihead x_pd_name="{{stinfo.pd_name}}" x_slogan="{{stinfo.slogan}}" x_iconlist="{{stinfo.icon_list}}" x_pd_img="{{stinfo.pd_imgs[0]}}"></x-ihead>
+  <x-ihead x_pd_name="{{stinfo.pd_name}}" x_slogan="{{stinfo.slogan}}" x_iconlist="{{stinfo.icon_list}}" x_pd_img="{{stinfo.pd_head_image}}"></x-ihead>
 
   <t-cell-group theme="card" title="一般信息">
     <t-cell title="型号" description="{{stinfo.model}}" hover />

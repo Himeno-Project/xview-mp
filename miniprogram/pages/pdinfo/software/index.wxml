@@ -5,7 +5,7 @@
 </view>
 
 <view wx:if="{{now_loading == false}}">
-  <x-ihead x_pd_name="{{swinfo.pd_name}}" x_slogan="{{swinfo.slogan}}" x_iconlist="{{swinfo.icon_list}}" x_pd_img="{{swinfo.pd_imgs[0]}}"></x-ihead>
+  <x-ihead x_pd_name="{{swinfo.pd_name}}" x_slogan="{{swinfo.slogan}}" x_iconlist="{{swinfo.icon_list}}" x_pd_img="{{swinfo.pd_head_image}}"></x-ihead>
 
   <t-cell-group theme="card" title="一般信息">
     <t-cell title="发布日期" description="{{swinfo.rel_date}}" hover />
