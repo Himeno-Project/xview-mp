@@ -44,4 +44,4 @@
   </t-cell-group>
 </view>
 
-<x-fav x_pd_id="{{otinfo.pd_id}}"></x-fav>
+<x-fav id="otherfav" x_pd_id="{{otinfo.pd_id}}"></x-fav>

@@ -1,7 +1,6 @@
 // pages/pdinfo/router/index.js
 
 var getinfo = require("../../../utils/getinfo.js");
-var favorite = require("../../../utils/favorite.js");
 
 Page({
   /**
@@ -29,6 +28,7 @@ Page({
         rtinfo,
         now_loading: false,
       });
+      this.selectComponent("#routerfav").refreshStatus();
     });
   },
 

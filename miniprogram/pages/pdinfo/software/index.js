@@ -1,7 +1,6 @@
 // pages/pdinfo/software/index.js
 
 var getinfo = require("../../../utils/getinfo.js");
-var favorite = require("../../../utils/favorite.js");
 
 Page({
   /**
@@ -63,6 +62,7 @@ Page({
         swinfo,
         now_loading: false,
       });
+      this.selectComponent("#softfav").refreshStatus();
     });
   },
 

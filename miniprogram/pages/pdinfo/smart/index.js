@@ -1,7 +1,6 @@
 // pages/pdinfo/smart/index.js
 
 var getinfo = require("../../../utils/getinfo.js");
-var favorite = require("../../../utils/favorite.js");
 
 Page({
   /**
@@ -31,6 +30,7 @@ Page({
         // 获取收藏状态，并更新数据
         fav_status: favorite.isFavorite(pd_id),
       });
+      this.selectComponent("#smartfav").refreshStatus();
     });
   },
 

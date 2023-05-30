@@ -177,4 +177,4 @@
   </t-cell-group>
 </view>
 
-<x-fav x_pd_id="{{phinfo.pd_id}}"></x-fav>
+<x-fav id="phonefav" x_pd_id="{{phinfo.pd_id}}"></x-fav>

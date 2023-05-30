@@ -75,4 +75,4 @@
   </t-cell-group>
 </view>
 
-<x-fav x_pd_id="{{rtinfo.pd_id}}"></x-fav>
+<x-fav id="routerfav" x_pd_id="{{rtinfo.pd_id}}"></x-fav>

@@ -61,4 +61,4 @@
   </t-cell-group>
 </view>
 
-<x-fav x_pd_id="{{stinfo.pd_id}}"></x-fav>
+<x-fav id="smartfav" x_pd_id="{{stinfo.pd_id}}"></x-fav>

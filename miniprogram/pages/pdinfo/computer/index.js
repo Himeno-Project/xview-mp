@@ -1,6 +1,5 @@
 // pages/pdinfo/computer/index.js
 var getinfo = require("../../../utils/getinfo.js");
-var favorite = require("../../../utils/favorite.js");
 
 Page({
   /**
@@ -29,6 +28,9 @@ Page({
         // 骨架屏
         now_loading: false,
       });
+      // 组件化后的收藏按钮不能及时更新收藏状态，需要手动刷新收藏状态
+      // 至于为什么定义在 getinfo 里面，因为异步，只有在页面信息获取完成之后才能搞收藏状态
+      this.selectComponent("#pcfav").refreshStatus();
     });
   },
 

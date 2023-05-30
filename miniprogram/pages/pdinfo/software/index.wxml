@@ -37,4 +37,4 @@
   </t-cell-group>
 </view>
 
-<x-fav x_pd_id="{{swinfo.pd_id}}"></x-fav>
+<x-fav id="softfav" x_pd_id="{{swinfo.pd_id}}"></x-fav>

@@ -1,7 +1,6 @@
 // pages/pdinfo/tv/index.js
 
 var getinfo = require("../../../utils/getinfo.js");
-var favorite = require("../../../utils/favorite.js");
 
 Page({
   /**
@@ -28,6 +27,7 @@ Page({
       this.setData({
         tvinfo,
       });
+      this.selectComponent("#tvfav").refreshStatus();
     });
   },
 

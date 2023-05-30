@@ -143,4 +143,4 @@
   </t-cell-group>
 </view>
 
-<x-fav x_pd_id="{{tvinfo.pd_id}}"></x-fav>
+<x-fav id="tvfav" x_pd_id="{{tvinfo.pd_id}}"></x-fav>

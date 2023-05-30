@@ -148,4 +148,4 @@
   </t-cell-group>
 </view>
 
-<x-fav x_pd_id="{{pcinfo.pd_id}}"></x-fav>
+<x-fav id="pcfav" x_pd_id="{{pcinfo.pd_id}}"></x-fav>
