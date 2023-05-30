@@ -91,6 +91,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "二级菜单",
+          "pathName": "pages/lists/series/index",
+          "query": "pd_type=phone&series_id=yeshou1",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

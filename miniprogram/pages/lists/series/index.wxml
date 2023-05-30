@@ -1,0 +1,43 @@
+<!--pages/lists/series/index.wxml-->
+
+<view wx:if="{{now_loading}}">
+  <x-skel skstyle="list"></x-skel>
+</view>
+
+<view wx:if="{{now_loading == false}}">
+  <t-cell-group theme="card">
+    <t-cell
+      title="{{seriesinfo.pd_series_title}}"
+      description="{{seriesinfo.pd_series_desc}}"
+      align="top"
+      image="{{seriesinfo.pd_series_pic}}"
+      hover
+      bordered=""
+    />
+  </t-cell-group>
+
+  <view class="detail-search">
+    <t-search
+      model:value="{{search_value}}"
+      placeholder="搜索"
+      bind:change="search_change"
+      bind:clear="search_change"
+      bind:submit="search"
+    />
+  </view>
+
+  <t-cell-group theme="card">
+    <t-cell
+      title="{{item.pd_name}}"
+      description="型号：{{item.model}}，{{item.rel_year}} 年"
+      align="top"
+      image="{{item.pd_head_image}}"
+      hover
+      bordered=""
+      url="../../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}"
+      wx:for="{{serieslist}}"
+      wx:key="index"
+      arrow
+    />
+  </t-cell-group>
+</view>

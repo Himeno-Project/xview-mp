@@ -1,15 +1,25 @@
-<!--pages/classlist/index.wxml-->
+<!--pages/lists/index.wxml-->
 
 <view wx:if="{{now_loading}}">
-  <x-skel skstyle="list" ></x-skel>
+  <x-skel skstyle="list"></x-skel>
 </view>
 
 <view wx:if="{{now_loading == false}}">
-  <view class="detail-search">
-    <t-search model:value="{{search_value}}" placeholder="搜索" bind:change="search_change" bind:clear="search_change" bind:submit="search" />
-  </view>
-
-  <t-cell-group title="列表" theme="card">
-    <t-cell title="{{item.pd_name}}" description="型号：{{item.model}}，{{item.rel_year}} 年" align="top" image="{{item.pd_head_image}}" hover bordered="{{false}}" url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}" wx:for="{{dtinfo}}" wx:key="index" arrow />
+  <t-cell-group
+    theme="card"
+    wx:for="{{mylists}}"
+    title="{{item.pd_type}}"
+    wx:key="index"
+  >
+    <t-cell
+      title="{{series_item.pd_series_title}}"
+      image="{{series_item.pd_series_pic}}"
+      description="{{series_item.pd_series_desc}}"
+      url="./series/index?pd_type={{item.pd_type}}&series_id={{series_item.pd_series_id}}"
+      wx:for="{{item.pd_series}}"
+      wx:for-index="series_index"
+      wx:for-item="series_item"
+      arrow
+    />
   </t-cell-group>
 </view>

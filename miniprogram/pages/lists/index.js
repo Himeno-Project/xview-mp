@@ -1,39 +1,30 @@
-// pages/classlist/index.js
+// pages/lists/index.js
 const http = require("../../utils/http.js");
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     now_loading: true,
-    pd_type: '',
-    page_type: '',
-    list_type: '',
-    dtinfo: {},
-    search_value: ''
+    pd_type: "",
+    page_type: "",
+    list_type: "",
+    mylists: {},
   },
 
-  search(e) {
-    this.show_device_list(this.data.search_value)
-  },
+  show_series_list() {
+    http
+      .cloudGet(`/api/model-query/models/${this.data.list_type}`)
+      .then((res) => {
+        let mylists = res.data.data;
+        this.setData({
+          mylists,
+          now_loading: false,
+        });
+        /* if (mylists.pd_type == "phone"){
 
-  search_change(e) {
-    console.log(e)
-    if (e.detail.value == "") {
-      this.show_device_list();
-    }
-  },
-
-  show_device_list(search_text = "") {
-    http.cloudGet(`/api/model-query/models/${this.data.list_type}/${encodeURIComponent(search_text)}`).then((res) => {
-      let dtinfo = res.data.data
-      this.setData({
-        dtinfo,
-        now_loading: false
-      })
-      console.log(dtinfo)
-    })
+        } */
+      });
   },
 
   /**
@@ -49,56 +40,42 @@ Page({
       list_type: listType,
     });
 
-    this.show_device_list();
+    this.show_series_list();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
 
-  onReady() {
-
-  },
+  onReady() {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow() {
-
-  },
+  onShow() {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide() {
-
-  },
+  onHide() {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload() {
-
-  },
+  onUnload() {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh() {
-
-  },
+  onPullDownRefresh() {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom() {
-
-  },
+  onReachBottom() {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage() {
-
-  }
-})
+  onShareAppMessage() {},
+});

@@ -13,7 +13,8 @@
     "pages/pdinfo/router/index",
     "pages/pdinfo/other/index",
     "pages/about/why_not_js/index",
-    "components/x-skel/x-skel"
+    "components/x-skel/x-skel",
+    "pages/lists/series/index"
   ],
   "subpackages": [],
   "tabBar": {
@@ -38,7 +39,7 @@
     ]
   },
   "usingComponents": {
-    "x-skel":"components/x-skel/x-skel",
+    "x-skel": "components/x-skel/x-skel",
     "t-icon": "tdesign-miniprogram/icon/icon",
     "t-cell": "tdesign-miniprogram/cell/cell",
     "t-cell-group": "tdesign-miniprogram/cell-group/cell-group"
@@ -47,7 +48,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f6f6f6",
     "backgroundColor": "#f6f6f6",
-    "navigationBarTitleText": "XView",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
