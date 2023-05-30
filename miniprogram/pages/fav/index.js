@@ -4,16 +4,15 @@ const favorite = require("../../utils/favorite.js");
 const http = require("../../utils/http.js");
 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    now_loading: '',
+    now_loading: "",
     favList: [],
     favInfo: [],
     emptyFav: false,
-    cledialogShow: false
+    cledialogShow: false,
   },
 
   // 收藏夹删除操作
@@ -30,7 +29,7 @@ Page({
   cleClick() {
     // 显示对话框
     this.setData({
-      cledialogShow: true
+      cledialogShow: true,
     });
   },
 
@@ -46,7 +45,7 @@ Page({
   closeDialog() {
     // 只需要将 cledialogShow 标记为 false 就可以
     this.setData({
-      cledialogShow: false
+      cledialogShow: false,
     });
   },
 
@@ -62,16 +61,19 @@ Page({
     // 只有收藏状态非空的时候才会考虑调接口，减轻服务器压力
     if (!this.data.emptyFav) {
       this.setData({
-        now_loading: true
-      })
+        now_loading: true,
+      });
 
       // 使用 try/catch 捕获可能的错误，避免程序崩溃
       try {
         // 使用 async/await 语法简化异步操作
-        const res = await http.cloudPost("/api/model-query/models/by-id", favList);
+        const res = await http.cloudPost(
+          "/api/model-query/models/by-id",
+          favList
+        );
         // 设置 data 对象的 favInfo 属性为返回的数据
         this.setData({
-          favInfo: res.data.data
+          favInfo: res.data.data,
         });
         // 打印数据
         console.log(this.data.favInfo);
@@ -81,7 +83,7 @@ Page({
       } finally {
         // 隐藏加载提示
         this.setData({
-          now_loading: false
+          now_loading: false,
         });
       }
     }
@@ -90,16 +92,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
-  },
+  onLoad(options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady() {
-
-  },
+  onReady() {},
 
   /**
    * 生命周期函数--监听页面显示
@@ -111,35 +109,25 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide() {
-
-  },
+  onHide() {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload() {
-
-  },
+  onUnload() {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh() {
-
-  },
+  onPullDownRefresh() {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom() {
-
-  },
+  onReachBottom() {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage() {
-
-  }
-})
+  onShareAppMessage() {},
+});

@@ -8,11 +8,11 @@ const getyouros = () => {
     system,
     model,
     screenWidth,
-    screenHeight
+    screenHeight,
   } = wx.getSystemInfoSync();
 
   return [brand, system, model, screenWidth, screenHeight];
-}
+};
 
 // 调用函数并赋值给变量
 const youros = getyouros();

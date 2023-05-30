@@ -1,30 +1,35 @@
 Component({
   data: {
-    value: 'index',
-    list: [{
-      icon: 'home',
-      value: 'index',
-      label: '首页'
-    }, {
-      icon: 'heart',
-      value: 'fav',
-      label: '收藏'
-    },{
-      icon: 'user',
-      value: 'my',
-      label: '我的'
-    }, {
-      icon: 'chat',
-      value: 'about',
-      label: '关于'
-    }]
+    value: "index",
+    list: [
+      {
+        icon: "home",
+        value: "index",
+        label: "首页",
+      },
+      {
+        icon: "heart",
+        value: "fav",
+        label: "收藏",
+      },
+      {
+        icon: "user",
+        value: "my",
+        label: "我的",
+      },
+      {
+        icon: "chat",
+        value: "about",
+        label: "关于",
+      },
+    ],
   },
 
   lifetimes: {
     ready() {
       const pages = getCurrentPages();
       const curPage = pages[pages.length - 1];
-    
+
       /* 
       优化说明：
       在 ready 函数中，使用可选链运算符来获取 nameRe 数组中的第一个元素，这样可以避免在数组为空时出现错误。
@@ -39,16 +44,12 @@ Component({
           this.setData({ value });
         }
       }
-    }
+    },
   },
 
   methods: {
-    handleChange({
-      detail
-    }) {
-      const {
-        value
-      } = detail;
+    handleChange({ detail }) {
+      const { value } = detail;
       wx.switchTab({
         url: `/pages/${value}/index`,
       });

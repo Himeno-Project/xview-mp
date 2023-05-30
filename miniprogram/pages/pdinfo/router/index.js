@@ -1,53 +1,52 @@
 // pages/pdinfo/router/index.js
 
-var getinfo = require("../../../utils/getinfo.js")
-var favorite = require("../../../utils/favorite.js")
+var getinfo = require("../../../utils/getinfo.js");
+var favorite = require("../../../utils/favorite.js");
 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     now_loading: true,
-    pd_type: '',
+    pd_type: "",
     rtinfo: {},
     deldialogShow: false,
-    fav_status: false
+    fav_status: false,
   },
 
   favOperate(e) {
     // 获取当前的产品id
-    var nowid = e.currentTarget.dataset.pd_id
+    var nowid = e.currentTarget.dataset.pd_id;
     // 获取当前的收藏状态
     var fav_status = favorite.isFavorite(nowid);
     // 如果已经被收藏，弹出删除对话框
     if (fav_status) {
       this.setData({
-        deldialogShow: true
+        deldialogShow: true,
       });
     } else {
       // 如果没有被收藏，添加到收藏列表，并更新收藏状态
-      favorite.addFavorite(nowid)
+      favorite.addFavorite(nowid);
       this.setData({
-        fav_status: true
-      })
+        fav_status: true,
+      });
     }
   },
 
   favRemove(e) {
-    var nowid = e.currentTarget.dataset.pd_id
-    favorite.removeFavorite(nowid)
+    var nowid = e.currentTarget.dataset.pd_id;
+    favorite.removeFavorite(nowid);
     this.setData({
-      fav_status: false
-    })
+      fav_status: false,
+    });
     this.closeDialog();
   },
 
   closeDialog() {
     this.setData({
-      deldialogShow: false
-    })
+      deldialogShow: false,
+    });
   },
 
   /**
@@ -65,7 +64,7 @@ Page({
         rtinfo,
         now_loading: false,
         // 获取收藏状态，并更新数据
-        fav_status: favorite.isFavorite(pd_id)
+        fav_status: favorite.isFavorite(pd_id),
       });
     });
   },
@@ -73,49 +72,35 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady() {
-
-  },
+  onReady() {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow() {
-
-  },
+  onShow() {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide() {
-
-  },
+  onHide() {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload() {
-
-  },
+  onUnload() {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh() {
-
-  },
+  onPullDownRefresh() {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom() {
-
-  },
+  onReachBottom() {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage() {
-
-  }
-})
+  onShareAppMessage() {},
+});

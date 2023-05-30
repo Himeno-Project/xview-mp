@@ -19,7 +19,10 @@
 
 .tips {
   font-size: 26rpx;
-  color: var(--td-cell-description-color, var(--td-font-gray-2, rgba(0, 0, 0, 0.6))); 
+  color: var(
+    --td-cell-description-color,
+    var(--td-font-gray-2, rgba(0, 0, 0, 0.6))
+  );
   text-align: center;
   flex-direction: column;
   margin-top: 50rpx;
