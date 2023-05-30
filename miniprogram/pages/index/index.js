@@ -34,7 +34,7 @@ Page({
       {
         icon: "desktop",
         title: "电脑设备",
-        to: "../lists/index?pd_type=all",
+        to: "../lists/index?pd_type=computer",
       },
       {
         icon: "cloud",

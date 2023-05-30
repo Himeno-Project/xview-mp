@@ -17,18 +17,16 @@ Component({
     fav_status: false,
   },
 
-  lifetimes: {
-    ready() {
-      this.setData({
-        fav_status: favorite.isFavorite(this.properties.x_pd_id),
-      });
-    },
-  },
-
   /**
    * 组件的方法列表
    */
   methods: {
+    refreshStatus() {
+      this.setData({
+        fav_status: favorite.isFavorite(this.properties.x_pd_id),
+      });
+    },
+
     favOperate() {
       // 获取当前的产品id
       var nowid = this.properties.x_pd_id;

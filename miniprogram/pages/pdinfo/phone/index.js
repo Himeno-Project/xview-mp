@@ -1,6 +1,5 @@
 // pages/pdinfo/index.js
 var getinfo = require("../../../utils/getinfo.js");
-var favorite = require("../../../utils/favorite.js");
 
 Page({
   /**
@@ -12,40 +11,6 @@ Page({
     phinfo: {},
     deldialogShow: false,
     fav_status: false,
-  },
-
-  favOperate(e) {
-    // 获取当前的产品id
-    var nowid = e.currentTarget.dataset.pd_id;
-    // 获取当前的收藏状态
-    var fav_status = favorite.isFavorite(nowid);
-    // 如果已经被收藏，弹出删除对话框
-    if (fav_status) {
-      this.setData({
-        deldialogShow: true,
-      });
-    } else {
-      // 如果没有被收藏，添加到收藏列表，并更新收藏状态
-      favorite.addFavorite(nowid);
-      this.setData({
-        fav_status: true,
-      });
-    }
-  },
-
-  favRemove(e) {
-    var nowid = e.currentTarget.dataset.pd_id;
-    favorite.removeFavorite(nowid);
-    this.setData({
-      fav_status: false,
-    });
-    this.closeDialog();
-  },
-
-  closeDialog() {
-    this.setData({
-      deldialogShow: false,
-    });
   },
 
   /**
@@ -63,9 +28,10 @@ Page({
         phinfo,
         // 骨架屏
         now_loading: false,
-        // 获取收藏状态，并更新数据
-        fav_status: favorite.isFavorite(pd_id),
       });
+      // 组件化后的收藏按钮不能及时更新收藏状态，需要手动刷新收藏状态（by 小何）
+      // 至于为什么定义在 getinfo 里面，因为异步，只有在页面信息获取完成之后才能搞收藏状态
+      this.selectComponent("#phonefav").refreshStatus();
     });
   },
 

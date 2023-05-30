@@ -20,6 +20,7 @@
       wx:for-index="series_index"
       wx:for-item="series_item"
       arrow
+      hover
     />
   </t-cell-group>
 </view>
