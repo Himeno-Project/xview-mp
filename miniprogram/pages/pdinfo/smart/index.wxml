@@ -6,7 +6,12 @@
 
 <view wx:if="{{now_loading == false}}">
   <!-- x-ihead 自定义介绍页组件 -->
-  <x-ihead x_pd_name="{{stinfo.pd_name}}" x_slogan="{{stinfo.slogan}}" x_iconlist="{{stinfo.icon_list}}" x_pd_img="{{stinfo.pd_head_image}}"></x-ihead>
+  <x-ihead
+    x_pd_name="{{stinfo.pd_name}}"
+    x_slogan="{{stinfo.slogan}}"
+    x_iconlist="{{stinfo.icon_list}}"
+    x_pd_img="{{stinfo.pd_head_image}}"
+  ></x-ihead>
 
   <t-cell-group theme="card" title="一般信息">
     <t-cell title="型号" description="{{stinfo.model}}" hover />
@@ -20,7 +25,11 @@
 
   <t-cell-group theme="card" title="显示">
     <t-cell title="屏幕" description="{{stinfo.displays.screen_name}}" hover />
-    <t-cell title="分辨率" description="{{stinfo.displays.screen_resol}}" hover />
+    <t-cell
+      title="分辨率"
+      description="{{stinfo.displays.screen_resol}}"
+      hover
+    />
     <t-cell title="显示模式" description="{{stinfo.displays.dis_mode}}" hover />
     <t-cell title="PPI" description="{{stinfo.displays.ppi}}" hover />
     <t-cell title="亮度" description="{{stinfo.displays.bright}}" hover />
@@ -30,7 +39,11 @@
   <t-cell-group theme="card" title="工作环境">
     <t-cell title="防水等级" description="{{stinfo.env.opt_water}}" hover="" />
     <t-cell title="工作温度" description="{{stinfo.env.opt_temp}}" hover="" />
-    <t-cell title="工作湿度" description="{{stinfo.env.opt_humidity}}" hover="" />
+    <t-cell
+      title="工作湿度"
+      description="{{stinfo.env.opt_humidity}}"
+      hover=""
+    />
     <t-cell title="工作海拔" description="{{stinfo.env.opt_alti}}" hover="" />
   </t-cell-group>
 
@@ -39,10 +52,13 @@
     <t-cell title="Wi-Fi" description="{{stinfo.connect.wifi}}" hover />
     <t-cell title="蓝牙" description="{{stinfo.connect.bluetooth}}" hover />
     <t-cell title="NFC" description="{{stinfo.connect.nfc}}" hover />
-    <t-cell title="调制解调器" description="{{stinfo.connect.bluetooth}}" hover />
+    <t-cell
+      title="调制解调器"
+      description="{{stinfo.connect.bluetooth}}"
+      hover
+    />
     <t-cell title="预装" description="{{stinfo.connect.modem}}" hover />
   </t-cell-group>
 </view>
-
 
 <x-fav x_pd_id="{{stinfo.pd_id}}"></x-fav>

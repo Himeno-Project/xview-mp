@@ -4,8 +4,6 @@
   <t-cell title="识别型号" note="{{nowmodel}}" hover />
   <t-cell title="屏幕宽度" note="{{scrwidth}}" hover />
   <t-cell title="屏幕高度" note="{{scrheight}}" hover />
-
 </t-cell-group>
 
-<view class="safe_bottom_view" style="height:190rpx;">
-</view>
+<view class="safe_bottom_view" style="height: 190rpx"> </view>

@@ -1,13 +1,13 @@
 page {
-    background: #f6f6f6;
-    padding-bottom: 50rpx;
-    --td-brand-color: #EA5952;
-    --td-brand-color-active:#CD5C5C;
+  background: #f6f6f6;
+  padding-bottom: 50rpx;
+  --td-brand-color: #ea5952;
+  --td-brand-color-active: #cd5c5c;
 }
 
 .safe_bottom_view {
-    padding-bottom: constant(safe-area-inset-bottom);
-    /*兼容 IOS<11.2*/
-    padding-bottom: env(safe-area-inset-bottom);
-    /*兼容 IOS>11.2*/
+  padding-bottom: constant(safe-area-inset-bottom);
+  /*兼容 IOS<11.2*/
+  padding-bottom: env(safe-area-inset-bottom);
+  /*兼容 IOS>11.2*/
 }

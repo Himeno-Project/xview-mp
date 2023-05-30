@@ -7,7 +7,12 @@
 <!-- 如果这里不加 {{now_loading == false}} 那么效果会不好看 -->
 <view wx:if="{{now_loading == false}}">
   <!-- x-ihead 自定义介绍页组件 -->
-  <x-ihead x_pd_name="{{rtinfo.pd_name}}" x_slogan="{{rtinfo.slogan}}" x_iconlist="{{rtinfo.icon_list}}" x_pd_img="{{rtinfo.pd_head_image}}"></x-ihead>
+  <x-ihead
+    x_pd_name="{{rtinfo.pd_name}}"
+    x_slogan="{{rtinfo.slogan}}"
+    x_iconlist="{{rtinfo.icon_list}}"
+    x_pd_img="{{rtinfo.pd_head_image}}"
+  ></x-ihead>
 
   <t-cell-group theme="card">
     <t-cell title="型号" description="{{rtinfo.model}}" hover />
@@ -34,7 +39,11 @@
 
   <t-cell-group theme="card" title="软件">
     <t-cell title="出厂系统" description="{{rtinfo.software.def_os}}" hover />
-    <t-cell title="最高支持系统" description="{{rtinfo.software.last_os}}" hover />
+    <t-cell
+      title="最高支持系统"
+      description="{{rtinfo.software.last_os}}"
+      hover
+    />
     <t-cell title="基础" description="{{rtinfo.software.base_ver}}" hover />
     <t-cell title="内核" description="{{rtinfo.software.krnl}}" hover />
     <t-cell title="预装" description="{{rtinfo.software.presoft}}" hover />
@@ -46,7 +55,11 @@
 
   <t-cell-group theme="card" title="工作环境">
     <t-cell title="工作温度" description="{{rtinfo.env.opt_temp}}" hover="" />
-    <t-cell title="工作湿度" description="{{rtinfo.env.opt_humidity}}" hover="" />
+    <t-cell
+      title="工作湿度"
+      description="{{rtinfo.env.opt_humidity}}"
+      hover=""
+    />
     <t-cell title="工作海拔" description="{{rtinfo.env.opt_alti}}" hover="" />
   </t-cell-group>
 
@@ -61,6 +74,5 @@
     <t-cell title="接口" description="{{rtinfo.connect.port}}" hover />
   </t-cell-group>
 </view>
-
 
 <x-fav x_pd_id="{{rtinfo.pd_id}}"></x-fav>
