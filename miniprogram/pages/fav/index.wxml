@@ -10,8 +10,23 @@
 
   <t-cell-group wx:if="{{now_loading == false}}" title="我的收藏" theme="card">
     <t-swipe-cell wx:for="{{favInfo}}" wx:key="index">
-      <t-cell title="{{item.pd_name}}" description="型号：{{item.model}}，{{item.rel_year}} 年" align="top" image="{{item.pd_head_image}}" hover bordered="{{false}}" url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}" arrow />
-      <view slot="right" data-pd_id="{{item.pd_id}}" class="btn delete-btn" bind:tap="onDelete">删除</view>
+      <t-cell
+        title="{{item.pd_name}}"
+        description="型号：{{item.model}}，{{item.rel_year}} 年"
+        align="top"
+        image="{{item.pd_head_image}}"
+        hover
+        bordered="{{false}}"
+        url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}"
+        arrow
+      />
+      <view
+        slot="right"
+        data-pd_id="{{item.pd_id}}"
+        class="btn delete-btn"
+        bind:tap="onDelete"
+        >删除</view
+      >
       <view slot="right" class="btn clear-btn" bind:tap="cleClick">清空</view>
     </t-swipe-cell>
   </t-cell-group>
@@ -22,4 +37,13 @@
   <view class="tips-item">清除微信缓存之后收藏夹也会被清空。</view>
 </view>
 
-<t-dialog visible="{{cledialogShow}}" data-pd_id="{{pcinfo.pd_id}}" title="警告" content="清空后收藏将无法恢复。" confirm-btn="清空" cancel-btn="返回" bind:cancel="closeDialog" bind:confirm="onClear" />
+<t-dialog
+  visible="{{cledialogShow}}"
+  data-pd_id="{{pcinfo.pd_id}}"
+  title="警告"
+  content="清空后收藏将无法恢复。"
+  confirm-btn="清空"
+  cancel-btn="返回"
+  bind:cancel="closeDialog"
+  bind:confirm="onClear"
+/>

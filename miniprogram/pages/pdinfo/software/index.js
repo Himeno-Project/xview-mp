@@ -12,7 +12,6 @@ Page({
     pd_type: "",
     swinfo: {},
     deldialogShow: false,
-    fav_status: false,
   },
 
   favOperate(e) {
@@ -63,8 +62,6 @@ Page({
       this.setData({
         swinfo,
         now_loading: false,
-        // 获取收藏状态，并更新数据
-        fav_status: favorite.isFavorite(pd_id),
       });
     });
   },
