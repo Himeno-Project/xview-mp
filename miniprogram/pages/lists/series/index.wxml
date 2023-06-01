@@ -5,16 +5,13 @@
 </view>
 
 <view wx:if="{{now_loading == false}}">
-  <t-cell-group theme="card">
-    <t-cell
-      title="{{seriesinfo.pd_series_title}}"
-      description="{{seriesinfo.pd_series_desc}}"
-      align="top"
-      image="{{seriesinfo.pd_series_pic}}"
-      hover
-      bordered=""
-    />
-  </t-cell-group>
+  <x-ihead
+    x_pd_name="{{seriesinfo.pd_series_title}}"
+    x_slogan="{{seriesinfo.pd_series_desc}}"
+    x_iconlist="{{seriesinfo.icon_list}}"
+    x_pd_img="{{seriesinfo.pd_series_pic}}"
+  >
+  </x-ihead>
 
   <view class="detail-search">
     <t-search
@@ -23,8 +20,7 @@
       bind:change="search_change"
       bind:clear="search_change"
       bind:submit="search"
-    />
-  </view>
+  /></view>
 
   <t-cell-group theme="card">
     <t-cell
