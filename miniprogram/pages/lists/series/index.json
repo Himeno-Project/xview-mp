@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "x-ihead": "../../../components/x-ihead/x-ihead",
     "t-search": "tdesign-miniprogram/search/search",
     "t-image": "tdesign-miniprogram/image/image"
   }

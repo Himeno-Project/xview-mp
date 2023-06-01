@@ -54,6 +54,10 @@ Page({
       });
   },
 
+  onBack() {
+    wx.navigateBack();
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -61,13 +65,13 @@ Page({
   onLoad(options) {
     const list_type = options.pd_type;
     const series_id = options.series_id;
-    console.log(options)
+    console.log(options);
     console.log(list_type);
     console.log(series_id);
 
     this.setData({
       list_type,
-      series_id
+      series_id,
     });
 
     console.log(list_type);

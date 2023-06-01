@@ -1,4 +1,5 @@
 <!--pages/index/index.wxml-->
+<x-navbar is_route="true" />
 
 <!-- x-card 自封装组件 -->
 <x-card
