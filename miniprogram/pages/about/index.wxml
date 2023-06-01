@@ -6,7 +6,7 @@
   title="{{about_info.project_name}}"
   subtitle="{{about_info.project_des}}"
 />
-<t-cell-group theme="card" title="关于我们">
+<t-cell-group theme="card">
   <t-cell
     title="{{item.title}}"
     description="{{item.desc}}"
