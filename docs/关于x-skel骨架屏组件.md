@@ -5,7 +5,7 @@ x-skel 骨架屏组件是基于 T-Design 组件库二次封装的骨架屏组件
 ## 说明
 
 使用例：
-```
+```html
 <view wx:if="{{now_loading}}">
   <x-skel skstyle="类型"></x-skel>
 </view>

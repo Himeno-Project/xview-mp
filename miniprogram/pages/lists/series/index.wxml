@@ -10,8 +10,7 @@
     x_slogan="{{seriesinfo.pd_series_desc}}"
     x_iconlist="{{seriesinfo.icon_list}}"
     x_pd_img="{{seriesinfo.pd_series_pic}}"
-  >
-  </x-ihead>
+  />
 
   <view class="detail-search">
     <t-search
