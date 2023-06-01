@@ -1,5 +1,10 @@
 /* pages/lists/series/index.wxss */
 
+.search-box {
+  --td-search-height: 64rpx;
+  margin-left: 14rpx;
+  width: 58vw;
+}
 .detail-search {
   // background-color: #fff;
   padding: 10rpx 32rpx 20rpx 32rpx;

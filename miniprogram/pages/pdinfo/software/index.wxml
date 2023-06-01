@@ -1,4 +1,5 @@
 <!--pages/pdinfo/software/index.wxml-->
+<x-navbar />
 
 <view wx:if="{{now_loading}}">
   <x-skel skstyle="detail"></x-skel>
