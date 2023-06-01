@@ -1,4 +1,15 @@
 <!--pages/lists/series/index.wxml-->
+<t-navbar left-arrow bind:go-back="onBack" slot="left">
+  <view class="search-box" slot="left">
+    <t-search
+      model:value="{{search_value}}"
+      placeholder="搜索"
+      bind:change="search_change"
+      bind:clear="search_change"
+      bind:submit="search"
+    />
+  </view>
+</t-navbar>
 
 <view wx:if="{{now_loading}}">
   <x-skel skstyle="list"></x-skel>
@@ -12,14 +23,14 @@
     x_pd_img="{{seriesinfo.pd_series_pic}}"
   />
 
-  <view class="detail-search">
+  <!-- <view class="detail-search">
     <t-search
       model:value="{{search_value}}"
       placeholder="搜索"
       bind:change="search_change"
       bind:clear="search_change"
       bind:submit="search"
-  /></view>
+  /></view> -->
 
   <t-cell-group theme="card">
     <t-cell
