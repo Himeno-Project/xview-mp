@@ -5,15 +5,8 @@
     "pages/my/index",
     "pages/about/index",
     "pages/lists/index",
-    "pages/pdinfo/phone/index",
-    "pages/pdinfo/computer/index",
-    "pages/pdinfo/software/index",
-    "pages/pdinfo/smart/index",
-    "pages/pdinfo/tv/index",
-    "pages/pdinfo/router/index",
-    "pages/pdinfo/other/index",
+    "pages/pdinfo/index",
     "pages/about/why_not_js/index",
-    "components/x-skel/x-skel",
     "pages/lists/series/index"
   ],
   "subpackages": [],
@@ -40,7 +33,7 @@
   },
   "usingComponents": {
     "t-navbar": "tdesign-miniprogram/navbar/navbar",
-    "x-navbar":"components/x-navbar/x-navbar",
+    "x-navbar": "components/x-navbar/x-navbar",
     "x-skel": "components/x-skel/x-skel",
     "t-icon": "tdesign-miniprogram/icon/icon",
     "t-cell": "tdesign-miniprogram/cell/cell",
@@ -48,10 +41,7 @@
   },
   "window": {
     "navigationStyle": "custom",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f6f6f6",
     "backgroundColor": "#f6f6f6",
-    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

@@ -1,9 +1,0 @@
-{
-    "usingComponents": {
-      "t-dialog": "tdesign-miniprogram/dialog/dialog",
-      "t-fab": "tdesign-miniprogram/fab/fab",
-      "t-image": "tdesign-miniprogram/image/image",
-      "x-ihead": "../../../components/x-ihead/x-ihead",
-      "x-fav": "../../../components/x-fav/x-fav"
-    }
-}

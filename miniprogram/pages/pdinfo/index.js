@@ -1,6 +1,6 @@
-// pages/pdinfo/tv/index.js
+// pages/pdinfo/index.js
 
-var getinfo = require("../../../utils/getinfo.js");
+const http = require("../../utils/http.js");
 
 Page({
   /**
@@ -9,26 +9,29 @@ Page({
   data: {
     now_loading: true,
     pd_type: "",
-    tvinfo: {},
+    pdinfo: {},
     deldialogShow: false,
+  },
+
+  get_pdinfo(nowid) {
+    // 获取产品信息，并更新数据
+    http.cloudGet(`/api/model-query/detail/${nowid}`).then((res) => {
+      let pdinfo = res.data.data;
+      //let {};
+      this.setData({
+        pdinfo,
+        now_loading: false,
+      });
+    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    // 优化说明：将获取收藏状态的代码放在了 getinfo 的回调函数中，
-    // 这样可以保证在获取产品信息后才更新收藏状态，避免了可能的异步问题。
-
     // 获取产品id
     var pd_id = options.pd_id;
-    // 获取产品信息，并更新数据
-    getinfo(pd_id).then((tvinfo) => {
-      this.setData({
-        tvinfo,
-      });
-      this.selectComponent("#tvfav").refreshStatus();
-    });
+    this.get_pdinfo(pd_id);
   },
 
   /**

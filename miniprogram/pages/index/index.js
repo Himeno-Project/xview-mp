@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    now_loading: true,
     nowbrand: "",
     nowos: "",
     nowmodel: "",
@@ -15,59 +16,37 @@ Page({
     scrheight: "",
     rd_type: "",
     rd_id: "",
-    typemenu: [
-      {
-        icon: "layers",
-        title: "现有产品",
-        to: "../lists/index?pd_type=all",
-      },
-      {
-        icon: "mobile",
-        title: "智能手机",
-        to: "../lists/index?pd_type=phone",
-      },
-      {
-        icon: "mobile",
-        title: "平板电脑",
-        to: "../lists/index?pd_type=tablet",
-      },
-      {
-        icon: "desktop",
-        title: "电脑设备",
-        to: "../lists/index?pd_type=computer",
-      },
-      {
-        icon: "cloud",
-        title: "智能穿戴",
-        to: "../lists/index?pd_type=smart",
-      },
-      {
-        icon: "play-circle",
-        title: "电视产品",
-        to: "../lists/index?pd_type=tv",
-      },
-      {
-        icon: "server",
-        title: "网络设备",
-        to: "../lists/index?pd_type=router",
-      },
-      {
-        icon: "tools",
-        title: "软件应用",
-        to: "../lists/index?pd_type=software",
-      },
-      {
-        icon: "more",
-        title: "其他产品",
-        to: "../lists/index?pd_type=other",
-      },
-    ],
+    typemenu: [],
+  },
+
+  // 获取动态菜单
+  get_dyn_menu() {
+    http.cloudGet("/api/model-query/types").then((res) => {
+      let typemenu = res.data.data;
+      this.setData({
+        typemenu,
+      });
+    });
+  },
+
+  // 随机获取产品ID然后进入之
+  get_random_id() {
+    http.cloudGet("/api/model-query/models/random-id").then((res) => {
+      let productType = res.data.data.pd_type;
+      let productId = res.data.data.pd_id;
+
+      this.setData({
+        rd_id: productId,
+        rd_type: productType,
+      });
+    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   async onLoad() {
+    // 加载系统信息
     const [brand, system, model, screenWidth, screenHeight] = youros;
     await this.setData({
       nowbrand: brand,
@@ -92,6 +71,10 @@ Page({
         nowbrand: "Macintosh",
       });
     }
+
+    this.get_dyn_menu();
+
+    this.setData({ now_loading: false });
   },
 
   /**
@@ -104,17 +87,8 @@ Page({
    */
   onShow() {
     // 在页面显示的时候调取随机产品接口 ID
-    http.cloudGet("/api/model-query/models/random-id").then((res) => {
-      let productType = res.data.data.productType;
-      let productId = res.data.data.productId;
-
-      this.setData({
-        rd_id: productId,
-        rd_type: productType,
-      });
-    });
+    this.get_random_id();
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */
