@@ -27,9 +27,9 @@
   <!-- 菜单根据接口动态获取 -->
   <t-cell-group theme="card">
     <t-cell
-      leftIcon="{{item.typeIcon}}"
-      title="{{item.typeName}}"
-      url="../lists/index?pd_type={{item.productType}}"
+      leftIcon="{{item.icon}}"
+      title="{{item.name}}"
+      url="../lists/index?pd_type={{item.type}}"
       wx:for="{{typemenu}}"
       wx:key="index"
       hover

@@ -23,15 +23,6 @@
     x_pd_img="{{seriesinfo.pd_series_pic}}"
   />
 
-  <!-- <view class="detail-search">
-    <t-search
-      model:value="{{search_value}}"
-      placeholder="搜索"
-      bind:change="search_change"
-      bind:clear="search_change"
-      bind:submit="search"
-  /></view> -->
-
   <t-cell-group theme="card">
     <t-cell
       title="{{item.pd_name}}"

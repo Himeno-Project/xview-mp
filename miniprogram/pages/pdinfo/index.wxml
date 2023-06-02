@@ -8,7 +8,7 @@
 <view wx:if="{{now_loading == false}}">
   <x-ihead
     x_pd_name="{{pdinfo.pd_name}}"
-    x_slogan="{{pdinfo.slogan}}"
+    x_slogan="{{pdinfo.pd_slogan}}"
     x_iconlist="{{pdinfo.icon_list}}"
     x_pd_img="{{pdinfo.pd_head_image}}"
   />
