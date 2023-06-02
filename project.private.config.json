@@ -11,7 +11,7 @@
         {
           "name": "产品信息",
           "pathName": "pages/pdinfo/index",
-          "query": "",
+          "query": "pd_id=b5aeb2e15a924dc09f778195278a604f",
           "launchMode": "default",
           "scene": null
         },

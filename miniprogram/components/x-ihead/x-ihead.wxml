@@ -1,7 +1,7 @@
 <!--components/x-ihead/x-ihead.wxml-->
 
 <view class="ihead-class">
-  <t-grid column="3" theme="card">
+  <t-grid column="3" theme="card" hover>
     <t-cell
       title="{{x_pd_name}}"
       description="{{x_slogan}}"

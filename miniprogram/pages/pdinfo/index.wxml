@@ -7,11 +7,26 @@
 
 <view wx:if="{{now_loading == false}}">
   <x-ihead
-    x_pd_name="{{tvinfo.pd_name}}"
-    x_slogan="{{tvinfo.slogan}}"
-    x_iconlist="{{tvinfo.icon_list}}"
-    x_pd_img="{{tvinfo.pd_head_image}}"
-  ></x-ihead>
+    x_pd_name="{{pdinfo.pd_name}}"
+    x_slogan="{{pdinfo.slogan}}"
+    x_iconlist="{{pdinfo.icon_list}}"
+    x_pd_img="{{pdinfo.pd_head_image}}"
+  />
 </view>
 
-<x-fav id="tvfav" x_pd_id="{{tvinfo.pd_id}}"></x-fav>
+<t-cell-group
+  wx:for="{{pdinfo.product_item}}"
+  wx:key="index"
+  title="{{item.name}}"
+  theme="card"
+>
+  <t-cell
+    title="{{info_index}}"
+    description="{{info_item}}"
+    wx:for="{{item.contents}}"
+    wx:for-index="info_index"
+    wx:for-item="info_item"
+  ></t-cell>
+</t-cell-group>
+
+<x-fav id="pdfav" x_pd_id="{{pdinfo.pd_id}}"></x-fav>
