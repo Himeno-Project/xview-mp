@@ -1,6 +1,6 @@
-// pages/pdinfo/tv/index.js
+// pages/pdinfo/index.js
 
-var getinfo = require("../../../utils/getinfo.js");
+var getinfo = require("../utils/getinfo.js");
 
 Page({
   /**

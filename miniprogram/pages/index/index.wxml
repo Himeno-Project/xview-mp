@@ -11,7 +11,7 @@
   <t-cell
     leftIcon="browse"
     title="随便看看"
-    url="../pdinfo/{{rd_type == 'tablet' ? 'phone' : rd_type}}/index?pd_id={{rd_id}}"
+    url="../pdinfo/index?pd_id={{rd_id}}"
     hover
     arrow
   />

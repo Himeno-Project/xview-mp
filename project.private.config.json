@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "产品信息",
+          "pathName": "pages/pdinfo/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "产品列表页",
           "pathName": "pages/lists/index",
           "query": "pd_type=all",
@@ -16,64 +23,15 @@
           "scene": null
         },
         {
-          "name": "手机",
-          "pathName": "pages/pdinfo/phone/index",
-          "query": "pd_id=32ca67668152468bb59c8e94ba67b467&pd_type=phone",
+          "name": "二级菜单",
+          "pathName": "pages/lists/series/index",
+          "query": "pd_type=phone&series_id=yeshou1",
           "launchMode": "default",
           "scene": null
         },
         {
-          "name": "路由器",
-          "pathName": "pages/pdinfo/router/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "关于",
-          "pathName": "pages/about/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "收藏夹",
+          "name": "收藏",
           "pathName": "pages/fav/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "彩蛋",
-          "pathName": "pages/about/why_not_js/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "软件",
-          "pathName": "pages/pdinfo/software/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "可穿戴",
-          "pathName": "pages/pdinfo/smart/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "电视",
-          "pathName": "pages/pdinfo/tv/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "其他",
-          "pathName": "pages/pdinfo/other/index",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -86,6 +44,13 @@
           "scene": null
         },
         {
+          "name": "关于",
+          "pathName": "pages/about/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "骨架屏",
           "pathName": "components/x-skel/x-skel",
           "query": "",
@@ -93,9 +58,9 @@
           "scene": null
         },
         {
-          "name": "二级菜单",
-          "pathName": "pages/lists/series/index",
-          "query": "pd_type=phone&series_id=yeshou1",
+          "name": "彩蛋",
+          "pathName": "pages/about/why_not_js/index",
+          "query": "",
           "launchMode": "default",
           "scene": null
         }

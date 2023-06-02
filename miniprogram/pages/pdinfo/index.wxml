@@ -1,0 +1,17 @@
+<!--pages/pdinfo/index.wxml-->
+<x-navbar />
+
+<view wx:if="{{now_loading}}">
+  <x-skel skstyle="detail"></x-skel>
+</view>
+
+<view wx:if="{{now_loading == false}}">
+  <x-ihead
+    x_pd_name="{{tvinfo.pd_name}}"
+    x_slogan="{{tvinfo.slogan}}"
+    x_iconlist="{{tvinfo.icon_list}}"
+    x_pd_img="{{tvinfo.pd_head_image}}"
+  ></x-ihead>
+</view>
+
+<x-fav id="tvfav" x_pd_id="{{tvinfo.pd_id}}"></x-fav>
