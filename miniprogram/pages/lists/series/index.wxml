@@ -31,7 +31,7 @@
       image="{{item.pd_head_image}}"
       hover
       bordered=""
-      url="../../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}"
+      url="../../pdinfo/index?pd_id={{item.pd_id}}"
       wx:for="{{serieslist}}"
       wx:key="index"
       arrow
