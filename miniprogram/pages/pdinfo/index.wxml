@@ -29,4 +29,4 @@
   ></t-cell>
 </t-cell-group>
 
-<x-fav id="pdfav" x_pd_id="{{pdinfo.pd_id}}"></x-fav>
+<x-fav id="pdfav" x_pd_id="{{pd_id}}"></x-fav>

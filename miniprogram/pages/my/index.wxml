@@ -1,4 +1,4 @@
-<x-navbar />
+<x-navbar is_show_capsule="{{false}}" />
 <t-cell-group theme="card" title="我的机型">
   <t-cell title="我的品牌" note="{{nowbrand}}" hover />
   <t-cell title="我的系统" note="{{nowos}}" hover />

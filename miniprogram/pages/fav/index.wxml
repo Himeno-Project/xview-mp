@@ -1,5 +1,5 @@
 <!--pages/fav/index.wxml-->
-<x-navbar />
+<x-navbar is_show_capsule="{{false}}" />
 
 <view wx:if="{{emptyFav}}" class="empty-view">
   <t-empty icon="info-circle-filled" description="你还没有收藏商品呢~" />
@@ -19,7 +19,7 @@
         image="{{item.pd_head_image}}"
         hover
         bordered="{{false}}"
-        url="../pdinfo/{{item.pd_type == 'tablet' ? 'phone' : item.pd_type}}/index?pd_id={{item.pd_id}}"
+        url="../pdinfo/index?pd_id={{item.pd_id}}"
         arrow
       />
       <view

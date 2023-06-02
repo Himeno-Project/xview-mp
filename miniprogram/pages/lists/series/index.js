@@ -54,8 +54,7 @@ Page({
       });
   },
 
-  onBack() {
-    wx.navigateBack();
+  onBack(e) {
   },
 
   /**

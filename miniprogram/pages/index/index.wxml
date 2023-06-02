@@ -1,5 +1,5 @@
 <!--pages/index/index.wxml-->
-<x-navbar is_route="true" />
+<x-navbar is_show_capsule="{{false}}" />
 
 <view wx:if="{{now_loading == true}}">
   <x-skel skstyle="detail"></x-skel>

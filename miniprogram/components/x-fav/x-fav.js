@@ -6,7 +6,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    x_pd_id: "",
+    x_pd_id: {
+      type: String,
+      value: "",
+    },
   },
 
   /**

@@ -9,6 +9,7 @@ Page({
   data: {
     now_loading: true,
     pd_type: "",
+    pd_id: "",
     pdinfo: {},
     deldialogShow: false,
   },
@@ -30,7 +31,16 @@ Page({
    */
   onLoad(options) {
     // 获取产品id
+    let that = this;
     var pd_id = options.pd_id;
+    this.setData(
+      {
+        pd_id: pd_id,
+      },
+      function () {
+        that.selectComponent("#pdfav").refreshStatus();
+      }
+    );
     this.get_pdinfo(pd_id);
   },
 
