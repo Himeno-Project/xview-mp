@@ -1,6 +1,6 @@
 <!--components/x-navbar/x-navbar.wxml-->
 <t-navbar>
-  <view slot="capsule" class="custom-capsule">
+  <view wx:if="{{is_show_capsule}}" slot="capsule" class="custom-capsule">
     <t-icon
       size="20"
       bind:tap="onBack"

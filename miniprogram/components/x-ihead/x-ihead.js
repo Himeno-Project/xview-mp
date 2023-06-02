@@ -4,11 +4,26 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    head_image: "",
-    x_iconlist: "",
-    x_pd_name: "",
-    x_pd_img: "",
-    x_slogan: "",
+    head_image: {
+      type: String,
+      value: ""
+    },
+    x_iconlist: {
+      type: Array,
+      value: ""
+    },
+    x_pd_name: {
+      type: String,
+      value: ""
+    },
+    x_pd_img: {
+      type: String,
+      value: ""
+    },
+    x_slogan: {
+      type: String,
+      value: ""
+    },
   },
 
   /**

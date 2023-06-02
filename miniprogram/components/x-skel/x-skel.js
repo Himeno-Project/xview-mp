@@ -6,7 +6,10 @@ Component({
 
   // 属性只能接受 list(列表) 和 detail （产品页） 两种
   properties: {
-    skstyle: "",
+    skstyle: {
+      type: String,
+      value: ""
+    }
   },
 
   /**

@@ -1,5 +1,5 @@
 <!--pages/about/about.wxml-->
-<x-navbar />
+<x-navbar is_show_capsule="{{false}}" />
 
 <x-card
   bindtap="handleTap"

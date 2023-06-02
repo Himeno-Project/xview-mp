@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    now_loading: "",
+    now_loading: false,
     favList: [],
     favInfo: [],
     emptyFav: false,
@@ -60,9 +60,11 @@ Page({
 
     // 只有收藏状态非空的时候才会考虑调接口，减轻服务器压力
     if (!this.data.emptyFav) {
-      this.setData({
-        now_loading: true,
-      });
+      let timeout = setTimeout(() => {
+        this.setData({
+          now_loading: true,
+        });
+      }, 300);
 
       // 使用 try/catch 捕获可能的错误，避免程序崩溃
       try {
@@ -72,12 +74,18 @@ Page({
           favList
         );
         // 设置 data 对象的 favInfo 属性为返回的数据
-        this.setData({
-          favInfo: res.data.data,
-        });
+        this.setData(
+          {
+            favInfo: res.data.data,
+          },
+          () => {
+            clearTimeout(timeout);
+          }
+        );
         // 打印数据
         console.log(this.data.favInfo);
       } catch (err) {
+        clearTimeout(timeout);
         // 处理错误情况，例如提示用户或者记录日志
         console.error(err);
       } finally {
