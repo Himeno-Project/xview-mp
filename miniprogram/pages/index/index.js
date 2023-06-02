@@ -32,8 +32,8 @@ Page({
   // 随机获取产品ID然后进入之
   get_random_id() {
     http.cloudGet("/api/model-query/models/random-id").then((res) => {
-      let productType = res.data.data.productType;
-      let productId = res.data.data.productId;
+      let productType = res.data.data.pd_type;
+      let productId = res.data.data.pd_id;
 
       this.setData({
         rd_id: productId,
