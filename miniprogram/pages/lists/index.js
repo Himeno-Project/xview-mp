@@ -21,9 +21,6 @@ Page({
           mylists,
           now_loading: false,
         });
-        /* if (mylists.pd_type == "phone"){
-
-        } */
       });
   },
 

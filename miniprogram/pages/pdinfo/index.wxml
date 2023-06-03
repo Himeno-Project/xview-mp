@@ -26,6 +26,7 @@
     wx:for="{{item.contents}}"
     wx:for-index="info_index"
     wx:for-item="info_item"
+    hover
   ></t-cell>
 </t-cell-group>
 
