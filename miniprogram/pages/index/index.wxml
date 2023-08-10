@@ -31,7 +31,7 @@
       title="{{item.name}}"
       url="../lists/index?pd_type={{item.type}}"
       wx:for="{{typemenu}}"
-      wx:key="index"
+      wx:key="item.name"
       hover
       arrow
     />

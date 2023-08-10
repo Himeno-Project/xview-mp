@@ -11,7 +11,7 @@
     title="{{item.title}}"
     description="{{item.desc}}"
     wx:for="{{about_info.cell_desc}}"
-    wx:key="index"
+    wx:key="item.title"
     hover
   />
 
@@ -24,7 +24,7 @@
     note="{{item.note}}"
     hover
     wx:for="{{about_info.icon_cell_desc}}"
-    wx:key="index"
+    wx:key="item.title"
   />
 </t-cell-group>
 

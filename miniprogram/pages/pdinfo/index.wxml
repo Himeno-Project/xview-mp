@@ -16,7 +16,7 @@
 
 <t-cell-group
   wx:for="{{pdinfo.product_item}}"
-  wx:key="index"
+  wx:key="item.name"
   title="{{item.name}}"
   theme="card"
 >

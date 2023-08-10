@@ -3,7 +3,7 @@
   "projectname": "xview-mp",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false
+    "urlCheck": true
   },
   "condition": {
     "miniprogram": {
@@ -67,5 +67,5 @@
       ]
     }
   },
-  "libVersion": "2.32.0"
+  "libVersion": "2.33.0"
 }
