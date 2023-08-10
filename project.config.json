@@ -1,12 +1,7 @@
 {
   "description": "项目配置文件",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
   "miniprogramRoot": "miniprogram/",
   "compileType": "miniprogram",
-  "projectname": "xview-mp",
   "setting": {
     "useCompilerPlugins": [
       "sass"
@@ -18,17 +13,25 @@
     },
     "es6": true,
     "enhance": true,
-    "condition": false,
-    "minified": true
+    "condition": true,
+    "minified": true,
+    "coverView": false,
+    "postcss": false,
+    "showShadowRootInWxmlPanel": false,
+    "packNpmRelationList": [],
+    "ignoreUploadUnusedFiles": true
   },
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {},
   "srcMiniprogramRoot": "miniprogram/",
-  "appid": "wx63f26b52e112da9d",
-  "libVersion": "2.31.0",
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "appid": "wx63f26b52e112da9d"
 }

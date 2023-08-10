@@ -7,15 +7,15 @@
   margin: 30rpx 32rpx;
   border-radius: 18rpx;
   background-color: var(
-    --td-cell-bg-color,
-    var(--td-bg-color-container, var(--td-font-white-1, #ffffff))
+    --td-bg-color-container,
+    var(--td-font-white-1, #ffffff)
   );
   padding: 40rpx 40rpx;
 
   &:active {
     background-color: var(
-      --td-cell-hover-color,
-      var(--td-bg-color-secondarycontainer, var(--td-gray-color-1, #f3f3f3))
+      --td-bg-color-secondarycontainer,
+      var(--td-gray-color-1, #f3f3f3)
     );
   }
 }
@@ -34,8 +34,5 @@
 }
 
 .x-t-grey {
-  color: var(
-    --td-cell-description-color,
-    var(--td-font-gray-2, rgba(0, 0, 0, 0.6))
-  );
+  color: var(--td-font-gray-2, rgba(0, 0, 0, 0.6));
 }

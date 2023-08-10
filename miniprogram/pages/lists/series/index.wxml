@@ -26,7 +26,7 @@
   <t-cell-group theme="card">
     <t-cell
       title="{{item.pd_name}}"
-      description="型号：{{item.model}}，{{item.rel_year}} 年"
+      description="{{item.rel_year}} - {{item.model}}"
       align="top"
       image="{{item.pd_head_image}}"
       hover
@@ -34,7 +34,6 @@
       url="../../pdinfo/index?pd_id={{item.pd_id}}"
       wx:for="{{serieslist}}"
       wx:key="index"
-      arrow
     />
   </t-cell-group>
 </view>
