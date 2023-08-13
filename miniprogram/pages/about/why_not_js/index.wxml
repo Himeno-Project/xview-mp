@@ -7,8 +7,8 @@ https://www.gnu.org/philosophy/javascript-trap.en.html
 -->
 <x-navbar />
 
-<view class="why_not_js">
-  <view style="font-weight: bolder; text-align: center"
+<view class="why_not_js x-view-bg mx-distance-m my-distance-m x-border-r">
+  <view class="x-text-center" style="font-weight: bolder"
     >Important Message of XView</view
   >
   <view
