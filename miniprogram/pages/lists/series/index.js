@@ -20,7 +20,7 @@ Page({
   },
 
   search_change(e) {
-    if (e.detail.value == "") {
+    if (e.detail.value === "") {
       this.show_device_list();
     }
   },

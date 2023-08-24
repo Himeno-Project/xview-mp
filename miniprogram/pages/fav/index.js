@@ -55,7 +55,7 @@ Page({
 
     // 判断收藏是否为空或者空数组，设置data对象的emptyFav属性
     this.setData({
-      emptyFav: !favList || favList.length == 0,
+      emptyFav: !favList || favList.length === 0,
     });
 
     // 只有收藏状态非空的时候才会考虑调接口，减轻服务器压力

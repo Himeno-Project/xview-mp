@@ -57,7 +57,7 @@ Page({
     });
 
     // 对于电脑的处理
-    if (this.data.nowbrand == "microsoft") {
+    if (this.data.nowbrand === "microsoft") {
       this.setData({
         nowbrand: "PC",
       });
@@ -65,7 +65,7 @@ Page({
       this.setData({
         nowbrand: "Macintosh",
       });
-    } else if (this.data.nowbrand == "apple") {
+    } else if (this.data.nowbrand === "apple") {
       // 新版微信客户的判断
       this.setData({
         nowbrand: "Macintosh",
