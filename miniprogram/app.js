@@ -7,11 +7,30 @@ var secret = require("./utils/secret.js");
 App({
   onLaunch: function () {
     wx.cloud.init({
-      appid: secret.getAppid(),
-      envid: secret.getProdId(),
+      env: secret.getProdId(),
     });
   },
-  onShow() {},
+  
+  onShow() {
+    const updateManager = wx.getUpdateManager();
+    updateManager.onCheckForUpdate(function (res) {
+      // 请求完新版本信息的回调
+      if (res.hasUpdate) {
+        wx.showModal({
+          title: "有新版本",
+          content: "检测到新版本，您应该更新小程序至最新版本。",
+          confirmText: "更新",
+          success(res) {
+            if (res.confirm) {
+              updateManager.applyUpdate();
+            } else if (res.cancel) {
+              console.log("用户点击取消");
+            }
+          },
+        });
+      }
+    });
+  },
 
   onload() {},
 });
