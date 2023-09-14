@@ -19,26 +19,22 @@ Page({
     typemenu: [],
   },
 
-  // 获取动态菜单
-  get_dyn_menu() {
-    http.cloudGet("/api/model-query/types").then((res) => {
-      let typemenu = res.data.data;
-      this.setData({
-        typemenu,
-      });
-    });
-  },
-
-  // 随机获取产品ID然后进入之
-  get_random_id() {
-    http.cloudGet("/api/model-query/models/random-id").then((res) => {
-      let productType = res.data.data.pd_type;
-      let productId = res.data.data.pd_id;
-
-      this.setData({
-        rd_id: productId,
-        rd_type: productType,
-      });
+  async get_home_data() {
+    const dyn_menu_data = await http.cloudReq(
+      "/api/model-query/types",
+      null,
+      "GET"
+    );
+    const random_id_data = await http.cloudReq(
+      "/api/model-query/models/random-id",
+      null,
+      "GET"
+    );
+    this.setData({
+      typemenu: dyn_menu_data.data.data,
+      rd_id: random_id_data.data.data.pd_id,
+      rd_type: random_id_data.data.data.pd_type,
+      now_loading: false,
     });
   },
 
@@ -72,9 +68,7 @@ Page({
       });
     }
 
-    this.get_dyn_menu();
-
-    this.setData({ now_loading: false });
+    this.get_home_data();
   },
 
   /**
