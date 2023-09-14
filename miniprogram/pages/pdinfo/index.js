@@ -1,6 +1,6 @@
 // pages/pdinfo/index.js
 
-const http = require("../../utils/http.js");
+import http from "../../utils/http";
 
 Page({
   /**
@@ -16,14 +16,16 @@ Page({
 
   get_pdinfo(nowid) {
     // 获取产品信息，并更新数据
-    http.cloudGet(`/api/model-query/detail/${nowid}`).then((res) => {
-      let pdinfo = res.data.data;
-      //let {};
-      this.setData({
-        pdinfo,
-        now_loading: false,
+    http
+      .cloudReq(`/api/model-query/detail/${nowid}`, null, "GET")
+      .then((res) => {
+        let pdinfo = res.data.data;
+        //let {};
+        this.setData({
+          pdinfo,
+          now_loading: false,
+        });
       });
-    });
   },
 
   /**
@@ -32,7 +34,7 @@ Page({
   onLoad(options) {
     // 获取产品id
     let that = this;
-    var pd_id = options.pd_id;
+    const pd_id = options.pd_id;
     this.setData(
       {
         pd_id: pd_id,

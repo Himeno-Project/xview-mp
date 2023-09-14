@@ -1,11 +1,9 @@
 <!--pages/pdinfo/index.wxml-->
 <x-navbar />
 
-<view wx:if="{{now_loading}}">
-  <x-skel skstyle="detail"></x-skel>
-</view>
+<x-skel skstyle="detail" wx:if="{{now_loading}}"></x-skel>
 
-<view wx:if="{{now_loading == false}}">
+<view wx:if="{{!now_loading}}">
   <x-ihead
     x_pd_name="{{pdinfo.pd_name}}"
     x_slogan="{{pdinfo.pd_slogan}}"
