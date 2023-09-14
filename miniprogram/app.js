@@ -2,15 +2,15 @@
 // 之前用了 TS 插件，引入模块的时候提示不可用，JS 倒是没问题。
 
 // secret.js 是微信云托管的密钥，因此不开源。去掉密钥的 secret.js 为 secret_public.js。
-var secret = require("./utils/secret.js");
+import secret from "./utils/secret";
 
 App({
-  onLaunch: function () {
+  onLaunch() {
     wx.cloud.init({
       env: secret.getProdId(),
     });
   },
-  
+
   onShow() {
     const updateManager = wx.getUpdateManager();
     updateManager.onCheckForUpdate(function (res) {

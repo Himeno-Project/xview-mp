@@ -1,5 +1,6 @@
 // pages/lists/series/index.js
-const http = require("../../../utils/http.js");
+import http from "../../../utils/http";
+
 Page({
   /**
    * 页面的初始数据

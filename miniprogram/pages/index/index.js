@@ -1,7 +1,7 @@
 // pages/index/index.ts
 
 const youros = require("../../utils/youros.js");
-const http = require("../../utils/http.js");
+import http from "../../utils/http";
 
 Page({
   /**

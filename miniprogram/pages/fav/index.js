@@ -1,7 +1,7 @@
 // pages/fav/index.js
 
 const favorite = require("../../utils/favorite.js");
-const http = require("../../utils/http.js");
+import http from "../../utils/http";
 
 Page({
   /**
