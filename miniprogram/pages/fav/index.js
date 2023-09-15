@@ -69,9 +69,10 @@ Page({
       // 使用 try/catch 捕获可能的错误，避免程序崩溃
       try {
         // 使用 async/await 语法简化异步操作
-        const res = await http.cloudPost(
+        const res = await http.cloudReq(
           "/api/model-query/models/by-id",
-          favList
+          favList,
+          "POST"
         );
         // 设置 data 对象的 favInfo 属性为返回的数据
         this.setData(

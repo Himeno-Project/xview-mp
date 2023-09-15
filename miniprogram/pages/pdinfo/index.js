@@ -19,7 +19,7 @@ Page({
     http
       .cloudReq(`/api/model-query/detail/${nowid}`, null, "GET")
       .then((res) => {
-        let pdinfo = res.data.data;
+        const pdinfo = res.data.data;
         //let {};
         this.setData({
           pdinfo,
