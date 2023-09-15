@@ -9,32 +9,32 @@
 */
 
 // 设置收藏夹更改状态
-function setFavChange(opt) {
+const setFavChange = (opt) => {
   // 使用布尔值作为参数，避免字符串比较
   wx.setStorageSync("fav_status", opt);
-}
+};
 
 // 检查收藏夹是否被更改
-function checkFavChange() {
+const checkFavChange = () => {
   // 直接返回布尔值，无需判断
   return wx.getStorageSync("fav_status");
-}
+};
 
 // 获取收藏列表
-function getFavorites() {
+const getFavorites = () => {
   return wx.getStorageSync("favorites") || [];
-}
+};
 
 // 判断是否已经收藏过
-function isFavorite(id) {
+const isFavorite = (id) => {
   let favorites = getFavorites();
   console.log(favorites);
   // 直接返回布尔值，无需使用 if-else 语句
   return favorites.indexOf(id) !== -1;
-}
+};
 
 // 添加收藏
-function addFavorite(id) {
+const addFavorite = (id) => {
   let favorites = getFavorites();
   // 判断是否已经收藏过，避免重复添加
   if (isFavorite(id)) {
@@ -50,10 +50,10 @@ function addFavorite(id) {
       icon: "success",
     });
   }
-}
+};
 
 // 删除收藏
-function removeFavorite(id) {
+const removeFavorite = (id) => {
   let favorites = getFavorites();
   let index = favorites.indexOf(id);
   // 判断是否存在该收藏，避免删除失败
@@ -70,12 +70,12 @@ function removeFavorite(id) {
       icon: "error",
     });
   }
-}
+};
 
 // 清空收藏
-function clearFavorites() {
+const clearFavorites = () => {
   wx.removeStorageSync("favorites");
-}
+};
 
 module.exports = {
   setFavChange,

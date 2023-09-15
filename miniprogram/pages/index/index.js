@@ -1,7 +1,7 @@
 // pages/index/index.ts
 
 const youros = require("../../utils/youros.js");
-const http = require("../../utils/http.js");
+import http from "../../utils/http";
 
 Page({
   /**
@@ -19,26 +19,22 @@ Page({
     typemenu: [],
   },
 
-  // 获取动态菜单
-  get_dyn_menu() {
-    http.cloudGet("/api/model-query/types").then((res) => {
-      let typemenu = res.data.data;
-      this.setData({
-        typemenu,
-      });
-    });
-  },
-
-  // 随机获取产品ID然后进入之
-  get_random_id() {
-    http.cloudGet("/api/model-query/models/random-id").then((res) => {
-      let productType = res.data.data.pd_type;
-      let productId = res.data.data.pd_id;
-
-      this.setData({
-        rd_id: productId,
-        rd_type: productType,
-      });
+  async get_home_data() {
+    const dyn_menu_data = await http.cloudReq(
+      "/api/model-query/types",
+      null,
+      "GET"
+    );
+    const random_id_data = await http.cloudReq(
+      "/api/model-query/models/random-id",
+      null,
+      "GET"
+    );
+    this.setData({
+      typemenu: dyn_menu_data.data.data,
+      rd_id: random_id_data.data.data.pd_id,
+      rd_type: random_id_data.data.data.pd_type,
+      now_loading: false,
     });
   },
 
@@ -57,7 +53,7 @@ Page({
     });
 
     // 对于电脑的处理
-    if (this.data.nowbrand == "microsoft") {
+    if (this.data.nowbrand === "microsoft") {
       this.setData({
         nowbrand: "PC",
       });
@@ -65,16 +61,14 @@ Page({
       this.setData({
         nowbrand: "Macintosh",
       });
-    } else if (this.data.nowbrand == "apple") {
+    } else if (this.data.nowbrand === "apple") {
       // 新版微信客户的判断
       this.setData({
         nowbrand: "Macintosh",
       });
     }
 
-    this.get_dyn_menu();
-
-    this.setData({ now_loading: false });
+    this.get_home_data();
   },
 
   /**

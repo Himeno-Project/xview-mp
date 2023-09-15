@@ -1,6 +1,6 @@
 // pages/about/about.js
 
-const http = require("../../utils/http.js");
+import http from "../../utils/http";
 
 Page({
   /**
@@ -29,12 +29,15 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
-    http.cloudGet("/api/page-data/page-data/about").then((res) => {
-      let about_info = res.data.data.data;
-      this.setData({
-        about_info,
-      });
+  async onLoad() {
+    const about_data = await http.cloudReq(
+      "/api/page-data/page-data/about",
+      null,
+      "GET"
+    );
+
+    this.setData({
+      about_info: about_data.data.data.data,
     });
   },
 

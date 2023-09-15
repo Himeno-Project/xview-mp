@@ -1,7 +1,7 @@
 // pages/fav/index.js
 
 const favorite = require("../../utils/favorite.js");
-const http = require("../../utils/http.js");
+import http from "../../utils/http";
 
 Page({
   /**
@@ -55,7 +55,7 @@ Page({
 
     // 判断收藏是否为空或者空数组，设置data对象的emptyFav属性
     this.setData({
-      emptyFav: !favList || favList.length == 0,
+      emptyFav: !favList || favList.length === 0,
     });
 
     // 只有收藏状态非空的时候才会考虑调接口，减轻服务器压力
@@ -69,9 +69,10 @@ Page({
       // 使用 try/catch 捕获可能的错误，避免程序崩溃
       try {
         // 使用 async/await 语法简化异步操作
-        const res = await http.cloudPost(
+        const res = await http.cloudReq(
           "/api/model-query/models/by-id",
-          favList
+          favList,
+          "POST"
         );
         // 设置 data 对象的 favInfo 属性为返回的数据
         this.setData(

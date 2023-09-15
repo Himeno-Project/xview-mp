@@ -1,11 +1,9 @@
 <!--pages/index/index.wxml-->
 <x-navbar is_show_capsule="{{false}}" />
 
-<view wx:if="{{now_loading == true}}">
-  <x-skel skstyle="detail"></x-skel>
-</view>
+<x-skel wx:if="{{now_loading}}" skstyle="detail"></x-skel>
 
-<view wx:if="{{now_loading == false}}">
+<view wx:if="{{!now_loading}}">
   <!-- x-card 自封装组件 -->
   <x-card
     title="You are using {{nowbrand}}"

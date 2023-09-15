@@ -1,40 +1,57 @@
 // Made By XiaoHe321
 // 2023.05.05
 
-var secret = require("./secret.js")
+import secret from "./secret";
 
-const app = getApp()
+const cloudReq = (url, data, method) => {
+  return wx.cloud.callContainer({
+    config: {
+      env: secret.getProdId(),
+    },
+    data: data,
+    path: url,
+    header: {
+      "X-WX-SERVICE": "mi-tracker",
+      "X-WX-EXCLUDE-CREDENTIALS":
+        "unionid, from-openid, from-appid, from-unionid",
+    },
+    method: method,
+  });
+};
 
 const cloudGet = (url) => {
   return wx.cloud.callContainer({
-    "config": {
-      "env": secret.getProdId()
+    config: {
+      env: secret.getProdId(),
     },
-    "path": url,
-    "header": {
+    path: url,
+    header: {
       "X-WX-SERVICE": "mi-tracker",
-      'X-WX-EXCLUDE-CREDENTIALS': 'unionid, from-openid, from-appid, from-unionid'
+      "X-WX-EXCLUDE-CREDENTIALS":
+        "unionid, from-openid, from-appid, from-unionid",
     },
-    "method": "GET",
-  })
-}
+    method: "GET",
+  });
+};
 
 const cloudPost = (url, data) => {
   return wx.cloud.callContainer({
-    "config": {
-      "env": secret.getProdId()
+    config: {
+      env: secret.getProdId(),
     },
-    "data": data,
-    "path": url,
-    "header": {
+    data: data,
+    path: url,
+    header: {
       "X-WX-SERVICE": "mi-tracker",
-      'X-WX-EXCLUDE-CREDENTIALS': 'unionid, from-openid, from-appid, from-unionid'
+      "X-WX-EXCLUDE-CREDENTIALS":
+        "unionid, from-openid, from-appid, from-unionid",
     },
-    "method": "POST",
-  })
-}
+    method: "POST",
+  });
+};
 
-module.exports = {
+export default {
+  cloudReq,
   cloudGet,
-  cloudPost
-}
+  cloudPost,
+};

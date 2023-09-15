@@ -1,5 +1,6 @@
 // pages/lists/series/index.js
-const http = require("../../../utils/http.js");
+import http from "../../../utils/http";
+
 Page({
   /**
    * 页面的初始数据
@@ -20,7 +21,7 @@ Page({
   },
 
   search_change(e) {
-    if (e.detail.value == "") {
+    if (e.detail.value === "") {
       this.show_device_list();
     }
   },
@@ -31,7 +32,7 @@ Page({
         `/api/model-query/models/${this.data.list_type}/${this.data.series_id}`
       )
       .then((res) => {
-        let seriesinfo = res.data.data.series;
+        const seriesinfo = res.data.data.series;
         this.setData({
           seriesinfo,
         });
@@ -46,7 +47,7 @@ Page({
         }/${encodeURIComponent(search_text)}`
       )
       .then((res) => {
-        let serieslist = res.data.data.list;
+        const serieslist = res.data.data.list;
         this.setData({
           serieslist,
           now_loading: false,
@@ -73,8 +74,6 @@ Page({
       series_id,
     });
 
-    console.log(list_type);
-    console.log(series_id);
     this.show_series_info();
     this.show_device_list();
   },

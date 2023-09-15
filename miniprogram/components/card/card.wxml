@@ -1,0 +1,7 @@
+<!--components/x-card/x-card.wxml-->
+<!-- 自制卡片组件 -->
+
+<view class="x-card mx-distance-m my-distance-m x-border-r">
+  <view class="x-title my-distance-es"> {{ title }} </view>
+  <view class="x-color-gray x-text-m">{{ subtitle }} </view>
+</view>

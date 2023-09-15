@@ -1,5 +1,6 @@
 // pages/lists/index.js
-const http = require("../../utils/http.js");
+import http from "../../utils/http";
+
 Page({
   /**
    * 页面的初始数据
@@ -12,16 +13,14 @@ Page({
     mylists: {},
   },
 
-  show_series_list() {
-    http
-      .cloudGet(`/api/model-query/models/${this.data.list_type}`)
-      .then((res) => {
-        let mylists = res.data.data;
-        this.setData({
-          mylists,
-          now_loading: false,
-        });
-      });
+  async show_series_list() {
+    const listData = await http.cloudGet(
+      `/api/model-query/models/${this.data.list_type}`
+    );
+    this.setData({
+      mylists: listData.data.data,
+      now_loading: false,
+    });
   },
 
   /**

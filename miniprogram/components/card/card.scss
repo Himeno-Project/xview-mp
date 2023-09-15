@@ -4,8 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30rpx 32rpx;
-  border-radius: 18rpx;
   background-color: var(
     --td-bg-color-container,
     var(--td-font-white-1, #ffffff)
@@ -18,10 +16,6 @@
       var(--td-gray-color-1, #f3f3f3)
     );
   }
-}
-
-.x-text {
-  margin: 3rpx;
 }
 
 .x-title {

@@ -33,11 +33,12 @@
   },
   "usingComponents": {
     "t-navbar": "tdesign-miniprogram/navbar/navbar",
-    "x-navbar": "components/x-navbar/x-navbar",
-    "x-skel": "components/x-skel/x-skel",
+    "x-navbar": "components/navbar/navbar",
+    "x-skel": "components/skel/skel",
     "t-icon": "tdesign-miniprogram/icon/icon",
     "t-cell": "tdesign-miniprogram/cell/cell",
-    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group"
+    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+    "t-footer":"tdesign-miniprogram/footer/footer"
   },
   "window": {
     "navigationStyle": "custom",

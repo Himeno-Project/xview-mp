@@ -34,9 +34,8 @@
   </t-cell-group>
 </view>
 
-<view class="tips">
-  <view class="tips-item">向左滑动可以取消收藏或清空收藏列表，</view>
-  <view class="tips-item">清除微信缓存之后收藏夹也会被清空。</view>
+<view class="my-distance-m x-w-preline x-text-center">
+  <t-footer text="向左滑动可以取消收藏或清空收藏列表，\n 清除微信缓存之后收藏夹也会被清空。"></t-footer>
 </view>
 
 <t-dialog
